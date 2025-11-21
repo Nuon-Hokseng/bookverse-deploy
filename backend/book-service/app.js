@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import bookRoutes from "./src/routes/book.routes.js";
-import { swaggerDocs } from './src/swagger/swagger.js';
 
 dotenv.config();
 
@@ -29,7 +28,6 @@ mongoose.connect(process.env.MONGO_URI, {
 })
 .then(() => {
     console.log("MongoDB connected");
-    swaggerDocs(app, PORT);
     // Start server only after DB connection
     app.listen(PORT, () => {
         console.log(`Server running on http://localhost:${PORT}`);
