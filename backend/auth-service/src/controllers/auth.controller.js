@@ -3,16 +3,19 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
 export const signup = async (req, res) => {
-    const { name, email, password } = req.body;
+    const { username, email, password } = req.body;
 
     try {
         const userAlreadyExists = await User.findOne({ email });
-
         if (userAlreadyExists) {
             return res.status(400).json({ message: "Email already registered" });
         }
 
-        res.json({ message: "User registered successfully" });
+        // Create new user
+        const newUser = new User({ username, email, password });
+        await newUser.save(); // pre('save') hook will hash password
+
+        res.status(201).json({ message: "User registered successfully" });
 
     } catch (error) {
         res.status(500).json({ message: error.message });

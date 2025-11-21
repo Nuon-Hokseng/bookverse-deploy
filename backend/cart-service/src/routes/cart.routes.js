@@ -5,7 +5,9 @@ import {
   addToCart,
   removeOneFromCart,
   removeCartItem,
+  clearCart
 } from "../controllers/cart.controller.js";
+import serviceAuthMiddleware from "../middleware/service.middleware.js";
 
 const router = express.Router();
 
@@ -28,5 +30,6 @@ router.post("/cart/remove", authMiddleware, removeOneFromCart);
 // REMOVE CART ITEM COMPLETELY
 // ================================
 router.delete("/cart/item/:itemId", authMiddleware, removeCartItem);
+router.delete("/cart/clear", serviceAuthMiddleware, clearCart);
 
 export default router;

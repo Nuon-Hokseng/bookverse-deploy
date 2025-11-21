@@ -1,5 +1,5 @@
 import express from 'express';
-import { signup, login } from '../controllers/auth.controller.js';
+import { signup, login, logout } from '../controllers/auth.controller.js';
 import { registerValidator, loginValidator } from '../middleware/validators/auth.validator.js';
 import { validate } from '../middleware/validators/validator.js';
 
@@ -65,4 +65,5 @@ router.post('/register', registerValidator, validate, signup);
  *         description: Access and refresh tokens
  */
 router.post('/login', loginValidator, validate, login);
+router.post("/logout", logout);
 export default router;

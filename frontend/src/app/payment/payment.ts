@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { CartService } from '../services/cart.service';
+import { OrderService } from '../services/order.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-payment',
@@ -18,6 +20,8 @@ export class Payment {
   notes = '';
 
   private cart = inject(CartService);
+  private orderService = inject(OrderService);
+  private router = inject(Router);
 
   get items() {
     return this.cart.items();
@@ -28,11 +32,26 @@ export class Payment {
   }
 
   pay() {
-    // small demo handler — replace with real payment integration
-    alert(
-      `Processing payment of $${this.getTotal()} for ${this.name || 'guest'}`
-    );
-    // clear cart after demo payment
-    this.cart.clear();
+    const order = {
+      customer: {
+        name: this.name,
+        address: this.address,
+        card: this.cardNumber
+      },
+      items: this.cart.items(),
+      total: this.getTotal()
+    };
+
+    this.orderService.createOrder(order).subscribe({
+      next: () => {
+        alert(`Payment successful! Order created for ${this.name}`);
+        this.cart.clear();
+        this.router.navigate(['/']);
+      },
+      error: (err) => {
+        alert('Payment failed. Please try again.');
+        console.error(err);
+      }
+    });
   }
 }
