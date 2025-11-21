@@ -1,0 +1,7 @@
+services:
+  auth-user-service:
+    build: ./auth-service       # path to Dockerfile folder
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./auth-service/.env     # correct relative path

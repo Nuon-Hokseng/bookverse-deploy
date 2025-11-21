@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../services/cart.service';
+import { BookService } from '../services/book.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class Homescreen {
   private cart = inject(CartService);
+  private bookService = inject(BookService);
   private router = inject(Router);
 
   // toast UI state for add-to-cart confirmation
@@ -19,23 +21,14 @@ export class Homescreen {
   toastMessage = '';
 
   categories = ['All', 'Fiction', 'Classic', 'Mystery', 'Fantasy', 'Romance'];
-  books = [
-    { title: 'Dune', author: 'Frank Herbert', price: 13, genre: 'Classic' },
-    {
-      title: 'Harry Potter',
-      author: 'J.K. Rowling',
-      price: 14,
-      genre: 'Fiction',
-    },
-    {
-      title: 'Sherlock Holmes',
-      author: 'Arthur Conan Doyle',
-      price: 15,
-      genre: 'Romance',
-    },
-    { title: 'The Avenger', author: 'Stanlee', price: 20, genre: 'Fiction' },
-    { title: 'DC', author: 'random dudue', price: 69, genre: 'Lerb' },
-  ];
+
+  get books() {
+    return this.bookService.books();
+  }
+
+  constructor() {
+    this.bookService.fetchBooks();
+  }
 
   addToCart(book: any) {
     this.cart.add({
