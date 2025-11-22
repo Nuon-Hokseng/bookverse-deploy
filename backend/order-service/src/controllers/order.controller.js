@@ -13,7 +13,7 @@ export const createOrder = async (req, res) => {
       return res.status(400).json({ message: "Missing required order fields" });
     }
 
-    const CART_SERVICE_URL = process.env.CART_SERVICE_URL; // e.g., http://localhost:5003/api
+    const CART_SERVICE_URL = process.env.CART_SERVICE_URL;
     const CART_SERVICE_TOKEN = process.env.CART_SERVICE_TOKEN;
 
     if (!CART_SERVICE_URL) {
