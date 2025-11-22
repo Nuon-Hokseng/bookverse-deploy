@@ -3,7 +3,7 @@ import CartItem from "../models/cartItem.model.js";
 import axios from "axios";
 
 // For fetching book details from book-service
-const BOOK_SERVICE_URL = process.env.BOOK_SERVICE_URL || "http://localhost:3000/api/books";
+const BOOK_SERVICE_URL = process.env.BOOK_SERVICE_URL || "http://localhost:3004/api/books";
 
 // ================================
 // Helper: fetch book details

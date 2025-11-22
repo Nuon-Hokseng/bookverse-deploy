@@ -1,39 +1,26 @@
-// app.js
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 import orderRoutes from './routes/order.routes.js';
 
-// Load .env from project root (explicit path) to avoid cwd issues
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
-// Log important env for diagnostics
-console.log('Loaded CART_SERVICE_URL=', process.env.CART_SERVICE_URL);
+const SERVICE_PORT = process.env.PORT || 3002;
 
 const app = express();
-
-// Middleware
 app.use(cors());
 app.use(express.json());
-
-// Routes
 app.use('/api/orders', orderRoutes);
+app.get('/health', (req, res) => res.json({ status: 'UP' }));
 
-// Root endpoint
-app.get('/', (req, res) => res.send('Order Service running...'));
-
-// Connect to MongoDB and start server
-const PORT = process.env.PORT || 5001;
-mongoose
-  .connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB connected');
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    app.listen(SERVICE_PORT, () => console.log(`Order Service running on port ${SERVICE_PORT}`));
   })
-  .catch(err => console.log(err));
+  .catch(err => console.error(err));

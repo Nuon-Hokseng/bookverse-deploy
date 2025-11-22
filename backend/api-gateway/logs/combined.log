@@ -1,0 +1,846 @@
+2025-11-22 05:38:01 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-22 05:38:01 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-22 05:38:01 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-22 05:38:01 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-22 05:38:01 [info]: 🚀 API Gateway started successfully
+2025-11-22 05:38:01 [info]: 📍 Environment: development
+2025-11-22 05:38:01 [info]: 🌐 Port: 3000
+2025-11-22 05:38:01 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-22 05:38:01 [info]: 📊 Redis: Enabled
+2025-11-22 05:38:01 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-22 05:38:01 [info]: ✅ Ready to handle requests
+2025-11-22 05:38:01 [info]: Redis connected successfully
+2025-11-22 05:38:56 [info]: POST /api/auth/login
+2025-11-22 05:38:56 [warn]: 404 Not Found: POST /api/auth/login
+2025-11-22 05:39:39 [info]: GET /api/books
+2025-11-22 05:39:39 [warn]: 404 Not Found: GET /api/books
+2025-11-22 05:41:18 [info]: GET /api/books
+2025-11-22 05:41:18 [warn]: 404 Not Found: GET /api/books
+2025-11-22 05:41:40 [info]: GET /api/books
+2025-11-22 05:41:40 [warn]: 404 Not Found: GET /api/books
+2025-11-22 05:43:45 [info]: POST /api/auth/register
+2025-11-22 05:43:45 [warn]: 404 Not Found: POST /api/auth/register
+2025-11-22 05:47:06 [info]: GET /health
+2025-11-22 05:48:45 [info]: GET /health
+2025-11-22 05:48:46 [info]: POST /v1/auth/login
+2025-11-22 05:48:46 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 05:48:46 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 05:48:46 [info]: GET /v1/books
+2025-11-22 05:48:46 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-22 05:48:46 [debug]: Response from http://book-service:3000: 200
+2025-11-22 05:48:46 [info]: GET /v1/cart
+2025-11-22 05:48:46 [warn]: Authentication failed: No token provided for GET /
+2025-11-22 05:49:18 [info]: POST /api/auth/register
+2025-11-22 05:49:18 [warn]: 404 Not Found: POST /api/auth/register
+2025-11-22 05:49:20 [info]: POST /api/auth/register
+2025-11-22 05:49:20 [warn]: 404 Not Found: POST /api/auth/register
+2025-11-22 05:49:22 [info]: POST /api/auth/register
+2025-11-22 05:49:22 [warn]: 404 Not Found: POST /api/auth/register
+2025-11-22 05:49:28 [info]: POST /api/register
+2025-11-22 05:49:28 [warn]: 404 Not Found: POST /api/register
+2025-11-22 05:49:47 [info]: POST /api/auth/register
+2025-11-22 05:49:47 [warn]: 404 Not Found: POST /api/auth/register
+2025-11-22 05:51:24 [info]: GET /health
+2025-11-22 05:51:37 [info]: POST /v1/auth/register
+2025-11-22 05:51:37 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 05:51:37 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 05:53:04 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-22 05:53:04 [info]: HTTP server closed
+2025-11-22 05:53:04 [info]: Redis connection closed
+2025-11-22 05:53:04 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 05:53:04 [info]: HTTP server closed
+2025-11-22 05:53:04 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 05:53:04 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 05:53:04 [info]: HTTP server closed
+2025-11-22 05:53:04 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 05:53:05 [info]: Shutdown complete, exiting process
+2025-11-22 05:53:07 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-22 05:53:07 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-22 05:53:07 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-22 05:53:07 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-22 05:53:07 [info]: 🚀 API Gateway started successfully
+2025-11-22 05:53:07 [info]: 📍 Environment: development
+2025-11-22 05:53:07 [info]: 🌐 Port: 3000
+2025-11-22 05:53:07 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-22 05:53:07 [info]: 📊 Redis: Enabled
+2025-11-22 05:53:07 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-22 05:53:07 [info]: ✅ Ready to handle requests
+2025-11-22 05:53:07 [info]: Redis connected successfully
+2025-11-22 05:53:25 [info]: POST /v1/auth/register
+2025-11-22 05:53:25 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 05:53:25 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 05:53:50 [info]: POST /v1/auth/register
+2025-11-22 05:53:50 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 05:53:50 [debug]: Response from http://auth-service:5000: 201
+2025-11-22 05:54:23 [info]: POST /api/auth/register
+2025-11-22 05:54:23 [warn]: 404 Not Found: POST /api/auth/register
+2025-11-22 05:54:32 [info]: POST /v1/auth/register
+2025-11-22 05:54:32 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 05:54:32 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 05:54:36 [info]: POST /v1/auth/register
+2025-11-22 05:54:36 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 05:54:36 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 05:54:38 [info]: POST /v1/auth/register
+2025-11-22 05:54:38 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 05:54:38 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 05:54:40 [info]: POST /v1/auth/register
+2025-11-22 05:54:40 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 05:54:40 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 05:54:50 [info]: POST /v1/auth/register
+2025-11-22 05:54:50 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 05:54:50 [debug]: Response from http://auth-service:5000: 201
+2025-11-22 05:55:21 [info]: GET /api/books
+2025-11-22 05:55:21 [warn]: 404 Not Found: GET /api/books
+2025-11-22 05:55:25 [info]: GET /v2/books
+2025-11-22 05:55:25 [warn]: 404 Not Found: GET /v2/books
+2025-11-22 05:55:28 [info]: GET /v1/books
+2025-11-22 05:55:28 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-22 05:55:28 [debug]: Response from http://book-service:3000: 200
+2025-11-22 05:55:56 [info]: POST /api/auth/login
+2025-11-22 05:55:56 [warn]: 404 Not Found: POST /api/auth/login
+2025-11-22 05:56:03 [info]: POST /v1/auth/login
+2025-11-22 05:56:03 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 05:56:03 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 05:58:11 [info]: GET /v1/user/profile
+2025-11-22 05:58:11 [warn]: 404 Not Found: GET /v1/user/profile
+2025-11-22 05:58:34 [info]: POST /v1/auth/login
+2025-11-22 05:58:34 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 05:58:35 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 05:59:55 [info]: GET /v1/user/profile
+2025-11-22 05:59:55 [warn]: 404 Not Found: GET /v1/user/profile
+2025-11-22 06:00:14 [info]: GET /v1/books
+2025-11-22 06:00:14 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-22 06:00:14 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:01:05 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-22 06:01:05 [info]: HTTP server closed
+2025-11-22 06:01:05 [info]: Redis connection closed
+2025-11-22 06:01:05 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:01:05 [info]: HTTP server closed
+2025-11-22 06:01:05 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:01:05 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:01:05 [info]: HTTP server closed
+2025-11-22 06:01:05 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:01:06 [info]: Shutdown complete, exiting process
+2025-11-22 06:01:07 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-22 06:01:07 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-22 06:01:07 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-22 06:01:07 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-22 06:01:07 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-22 06:01:07 [info]: 🚀 API Gateway started successfully
+2025-11-22 06:01:07 [info]: 📍 Environment: development
+2025-11-22 06:01:07 [info]: 🌐 Port: 3000
+2025-11-22 06:01:07 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-22 06:01:07 [info]: 📊 Redis: Enabled
+2025-11-22 06:01:07 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-22 06:01:07 [info]: ✅ Ready to handle requests
+2025-11-22 06:01:07 [info]: Redis connected successfully
+2025-11-22 06:02:58 [info]: GET /health
+2025-11-22 06:02:58 [info]: POST /v1/auth/register
+2025-11-22 06:02:58 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 06:02:58 [debug]: Response from http://auth-service:5000: 201
+2025-11-22 06:02:59 [info]: POST /v1/auth/login
+2025-11-22 06:02:59 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:02:59 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:02:59 [info]: GET /v1/user/profile
+2025-11-22 06:02:59 [warn]: Authentication failed: No token provided for GET /profile
+2025-11-22 06:02:59 [info]: GET /v1/books
+2025-11-22 06:02:59 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-22 06:02:59 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:02:59 [info]: GET /v1/books/search
+2025-11-22 06:02:59 [debug]: Proxying: /v1/books/search?query=test -> http://book-service:3000/api/books/search?query=test
+2025-11-22 06:02:59 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:02:59 [info]: GET /v1/cart
+2025-11-22 06:02:59 [warn]: Authentication failed: No token provided for GET /
+2025-11-22 06:02:59 [info]: POST /v1/cart/add
+2025-11-22 06:02:59 [warn]: Authentication failed: No token provided for POST /add
+2025-11-22 06:02:59 [info]: GET /v1/orders
+2025-11-22 06:02:59 [warn]: Authentication failed: No token provided for GET /
+2025-11-22 06:02:59 [info]: GET /v1/books/69202da8473b4dce4dfe8918
+2025-11-22 06:02:59 [debug]: Proxying: /v1/books/69202da8473b4dce4dfe8918 -> http://book-service:3000/api/books/69202da8473b4dce4dfe8918
+2025-11-22 06:02:59 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:02:59 [info]: POST /v1/auth/logout
+2025-11-22 06:02:59 [debug]: Proxying: /v1/auth/logout -> http://auth-service:5000/api/auth/logout
+2025-11-22 06:02:59 [debug]: Response from http://auth-service:5000: 204
+2025-11-22 06:03:49 [info]: POST /v1/auth/login
+2025-11-22 06:03:49 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:03:49 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:03:49 [info]: GET /v1/user/profile
+2025-11-22 06:03:49 [warn]: Authentication failed: No token provided for GET /profile
+2025-11-22 06:04:04 [info]: POST /v1/auth/login
+2025-11-22 06:04:04 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:04:05 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:04:05 [info]: GET /v1/cart
+2025-11-22 06:04:05 [warn]: Authentication failed: No token provided for GET /
+2025-11-22 06:07:56 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-22 06:07:56 [info]: HTTP server closed
+2025-11-22 06:07:56 [info]: Redis connection closed
+2025-11-22 06:07:56 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:07:56 [info]: HTTP server closed
+2025-11-22 06:07:56 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:07:56 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:07:56 [info]: HTTP server closed
+2025-11-22 06:07:56 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:07:57 [info]: Shutdown complete, exiting process
+2025-11-22 06:07:58 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-22 06:07:58 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-22 06:07:58 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-22 06:07:58 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-22 06:07:58 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-22 06:07:58 [info]: 🚀 API Gateway started successfully
+2025-11-22 06:07:58 [info]: 📍 Environment: development
+2025-11-22 06:07:58 [info]: 🌐 Port: 3000
+2025-11-22 06:07:58 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-22 06:07:58 [info]: 📊 Redis: Enabled
+2025-11-22 06:07:58 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-22 06:07:58 [info]: ✅ Ready to handle requests
+2025-11-22 06:07:58 [info]: Redis connected successfully
+2025-11-22 06:08:05 [info]: POST /v1/auth/login
+2025-11-22 06:08:05 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:08:05 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:08:05 [info]: GET /v1/user/profile
+2025-11-22 06:08:05 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:08:05 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:08:05 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:08:05 [warn]: Authentication failed: No token provided for GET /profile
+2025-11-22 06:09:06 [info]: POST /v1/auth/login
+2025-11-22 06:09:06 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:09:06 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:09:07 [info]: GET /v1/user/profile
+2025-11-22 06:09:07 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:09:07 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:09:07 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:09:07 [warn]: Authentication failed: No token provided for GET /profile
+2025-11-22 06:09:57 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-22 06:09:57 [info]: HTTP server closed
+2025-11-22 06:09:57 [info]: Redis connection closed
+2025-11-22 06:09:57 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:09:57 [info]: HTTP server closed
+2025-11-22 06:09:57 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:09:57 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:09:57 [info]: HTTP server closed
+2025-11-22 06:09:57 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:09:58 [info]: Shutdown complete, exiting process
+2025-11-22 06:09:59 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-22 06:09:59 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-22 06:09:59 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-22 06:09:59 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-22 06:09:59 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-22 06:09:59 [info]: 🚀 API Gateway started successfully
+2025-11-22 06:09:59 [info]: 📍 Environment: development
+2025-11-22 06:09:59 [info]: 🌐 Port: 3000
+2025-11-22 06:09:59 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-22 06:09:59 [info]: 📊 Redis: Enabled
+2025-11-22 06:09:59 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-22 06:09:59 [info]: ✅ Ready to handle requests
+2025-11-22 06:09:59 [info]: Redis connected successfully
+2025-11-22 06:10:07 [info]: GET /health
+2025-11-22 06:10:08 [info]: POST /v1/auth/register
+2025-11-22 06:10:08 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 06:10:08 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:10:08 [info]: POST /v1/auth/login
+2025-11-22 06:10:08 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:10:08 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:10:08 [info]: GET /v1/user/profile
+2025-11-22 06:10:08 [error]: Authentication error: token is not defined
+2025-11-22 06:10:08 [info]: GET /v1/books
+2025-11-22 06:10:08 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-22 06:10:08 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:10:08 [info]: GET /v1/books/search
+2025-11-22 06:10:08 [debug]: Proxying: /v1/books/search?query=test -> http://book-service:3000/api/books/search?query=test
+2025-11-22 06:10:08 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:10:08 [info]: GET /v1/cart
+2025-11-22 06:10:08 [error]: Authentication error: token is not defined
+2025-11-22 06:10:08 [info]: POST /v1/cart/add
+2025-11-22 06:10:08 [error]: Authentication error: token is not defined
+2025-11-22 06:10:08 [info]: GET /v1/orders
+2025-11-22 06:10:08 [error]: Authentication error: token is not defined
+2025-11-22 06:10:08 [info]: GET /v1/books/69202da8473b4dce4dfe8918
+2025-11-22 06:10:08 [debug]: Proxying: /v1/books/69202da8473b4dce4dfe8918 -> http://book-service:3000/api/books/69202da8473b4dce4dfe8918
+2025-11-22 06:10:08 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:10:08 [info]: POST /v1/auth/logout
+2025-11-22 06:10:08 [debug]: Proxying: /v1/auth/logout -> http://auth-service:5000/api/auth/logout
+2025-11-22 06:10:08 [debug]: Response from http://auth-service:5000: 204
+2025-11-22 06:10:39 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-22 06:10:39 [info]: HTTP server closed
+2025-11-22 06:10:39 [info]: Redis connection closed
+2025-11-22 06:10:39 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:10:39 [info]: HTTP server closed
+2025-11-22 06:10:39 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:10:39 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:10:39 [info]: HTTP server closed
+2025-11-22 06:10:39 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:10:40 [info]: Shutdown complete, exiting process
+2025-11-22 06:10:41 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-22 06:10:41 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-22 06:10:41 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-22 06:10:41 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-22 06:10:41 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-22 06:10:41 [info]: 🚀 API Gateway started successfully
+2025-11-22 06:10:41 [info]: 📍 Environment: development
+2025-11-22 06:10:41 [info]: 🌐 Port: 3000
+2025-11-22 06:10:41 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-22 06:10:41 [info]: 📊 Redis: Enabled
+2025-11-22 06:10:41 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-22 06:10:41 [info]: ✅ Ready to handle requests
+2025-11-22 06:10:41 [info]: Redis connected successfully
+2025-11-22 06:10:43 [info]: GET /health
+2025-11-22 06:10:43 [info]: POST /v1/auth/register
+2025-11-22 06:10:43 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 06:10:43 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:10:43 [info]: POST /v1/auth/login
+2025-11-22 06:10:43 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:10:43 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:10:43 [info]: GET /v1/user/profile
+2025-11-22 06:10:43 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:10:43 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:10:43 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:10:43 [warn]: Authentication failed: No token provided for GET /profile
+2025-11-22 06:10:43 [info]: GET /v1/books
+2025-11-22 06:10:43 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-22 06:10:43 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:10:43 [info]: GET /v1/books/search
+2025-11-22 06:10:43 [debug]: Proxying: /v1/books/search?query=test -> http://book-service:3000/api/books/search?query=test
+2025-11-22 06:10:43 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:10:43 [info]: GET /v1/cart
+2025-11-22 06:10:43 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:10:43 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-22 06:10:43 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:10:43 [warn]: Authentication failed: No token provided for GET /
+2025-11-22 06:10:44 [info]: POST /v1/cart/add
+2025-11-22 06:10:44 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","content-type":"application/json","host":"localhost:3000","content-length":"50"}
+2025-11-22 06:10:44 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-22 06:10:44 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:10:44 [warn]: Authentication failed: No token provided for POST /add
+2025-11-22 06:10:44 [info]: GET /v1/orders
+2025-11-22 06:10:44 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:10:44 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-22 06:10:44 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:10:44 [warn]: Authentication failed: No token provided for GET /
+2025-11-22 06:10:44 [info]: GET /v1/books/69202da8473b4dce4dfe8918
+2025-11-22 06:10:44 [debug]: Proxying: /v1/books/69202da8473b4dce4dfe8918 -> http://book-service:3000/api/books/69202da8473b4dce4dfe8918
+2025-11-22 06:10:44 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:10:44 [info]: POST /v1/auth/logout
+2025-11-22 06:10:44 [debug]: Proxying: /v1/auth/logout -> http://auth-service:5000/api/auth/logout
+2025-11-22 06:10:44 [debug]: Response from http://auth-service:5000: 204
+2025-11-22 06:12:36 [info]: POST /v1/auth/login
+2025-11-22 06:12:36 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:12:36 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:14:01 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-22 06:14:01 [info]: HTTP server closed
+2025-11-22 06:14:01 [info]: Redis connection closed
+2025-11-22 06:14:01 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:14:01 [info]: HTTP server closed
+2025-11-22 06:14:01 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:14:01 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:14:01 [info]: HTTP server closed
+2025-11-22 06:14:01 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:14:02 [info]: Shutdown complete, exiting process
+2025-11-22 06:14:04 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-22 06:14:04 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-22 06:14:04 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-22 06:14:04 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-22 06:14:04 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-22 06:14:04 [info]: 🚀 API Gateway started successfully
+2025-11-22 06:14:04 [info]: 📍 Environment: development
+2025-11-22 06:14:04 [info]: 🌐 Port: 3000
+2025-11-22 06:14:04 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-22 06:14:04 [info]: 📊 Redis: Enabled
+2025-11-22 06:14:04 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-22 06:14:04 [info]: ✅ Ready to handle requests
+2025-11-22 06:14:04 [info]: Redis connected successfully
+2025-11-22 06:14:15 [info]: GET /health
+2025-11-22 06:14:15 [info]: POST /v1/auth/register
+2025-11-22 06:14:15 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 06:14:15 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:14:15 [info]: POST /v1/auth/login
+2025-11-22 06:14:15 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:14:15 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:14:15 [info]: GET /v1/user/profile
+2025-11-22 06:14:15 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:14:15 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:14:15 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:14:15 [warn]: Authentication failed: No token provided for GET /profile
+2025-11-22 06:14:15 [info]: GET /v1/books
+2025-11-22 06:14:15 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-22 06:14:15 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:14:15 [info]: GET /v1/books/search
+2025-11-22 06:14:15 [debug]: Proxying: /v1/books/search?query=test -> http://book-service:3000/api/books/search?query=test
+2025-11-22 06:14:15 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:14:15 [info]: GET /v1/cart
+2025-11-22 06:14:15 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:14:15 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-22 06:14:15 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:14:15 [warn]: Authentication failed: No token provided for GET /
+2025-11-22 06:14:15 [info]: POST /v1/cart/add
+2025-11-22 06:14:15 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","content-type":"application/json","host":"localhost:3000","content-length":"50"}
+2025-11-22 06:14:15 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-22 06:14:15 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:14:15 [warn]: Authentication failed: No token provided for POST /add
+2025-11-22 06:14:15 [info]: GET /v1/orders
+2025-11-22 06:14:15 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:14:15 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-22 06:14:15 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:14:15 [warn]: Authentication failed: No token provided for GET /
+2025-11-22 06:14:15 [info]: GET /v1/books/69202da8473b4dce4dfe8918
+2025-11-22 06:14:15 [debug]: Proxying: /v1/books/69202da8473b4dce4dfe8918 -> http://book-service:3000/api/books/69202da8473b4dce4dfe8918
+2025-11-22 06:14:15 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:14:15 [info]: POST /v1/auth/logout
+2025-11-22 06:14:15 [debug]: Proxying: /v1/auth/logout -> http://auth-service:5000/api/auth/logout
+2025-11-22 06:14:15 [debug]: Response from http://auth-service:5000: 204
+2025-11-22 06:16:09 [info]: POST /v1/auth/login
+2025-11-22 06:16:09 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:16:09 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:16:28 [info]: GET /health
+2025-11-22 06:16:28 [info]: POST /v1/auth/register
+2025-11-22 06:16:28 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 06:16:28 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:16:28 [info]: POST /v1/auth/login
+2025-11-22 06:16:28 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:16:28 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:16:28 [info]: GET /v1/user/profile
+2025-11-22 06:16:28 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:16:28 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:16:28 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:16:28 [warn]: Authentication failed: No token provided for GET /profile
+2025-11-22 06:16:28 [info]: GET /v1/books
+2025-11-22 06:16:28 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-22 06:16:28 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:16:28 [info]: GET /v1/books/search
+2025-11-22 06:16:28 [debug]: Proxying: /v1/books/search?query=test -> http://book-service:3000/api/books/search?query=test
+2025-11-22 06:16:29 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:16:29 [info]: GET /v1/cart
+2025-11-22 06:16:29 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:16:29 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-22 06:16:29 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:16:29 [warn]: Authentication failed: No token provided for GET /
+2025-11-22 06:16:29 [info]: POST /v1/cart/add
+2025-11-22 06:16:29 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","content-type":"application/json","host":"localhost:3000","content-length":"50"}
+2025-11-22 06:16:29 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-22 06:16:29 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:16:29 [warn]: Authentication failed: No token provided for POST /add
+2025-11-22 06:16:29 [info]: GET /v1/orders
+2025-11-22 06:16:29 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:16:29 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-22 06:16:29 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:16:29 [warn]: Authentication failed: No token provided for GET /
+2025-11-22 06:16:29 [info]: GET /v1/books/69202da8473b4dce4dfe8918
+2025-11-22 06:16:29 [debug]: Proxying: /v1/books/69202da8473b4dce4dfe8918 -> http://book-service:3000/api/books/69202da8473b4dce4dfe8918
+2025-11-22 06:16:29 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:16:29 [info]: POST /v1/auth/logout
+2025-11-22 06:16:29 [debug]: Proxying: /v1/auth/logout -> http://auth-service:5000/api/auth/logout
+2025-11-22 06:16:29 [debug]: Response from http://auth-service:5000: 204
+2025-11-22 06:17:11 [info]: POST /v1/auth/login
+2025-11-22 06:17:11 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:17:11 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:17:12 [info]: GET /v1/user/profile
+2025-11-22 06:17:12 [debug]: Auth middleware - Headers: {"authorization":"Bearer","user-agent":"PowerShell","host":"localhost:3000"}
+2025-11-22 06:17:12 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:17:12 [debug]: Auth middleware - Authorization header: Bearer
+2025-11-22 06:17:12 [warn]: Authentication failed: No token provided for GET /profile
+2025-11-22 06:18:30 [info]: POST /v1/auth/login
+2025-11-22 06:18:30 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:18:30 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:19:44 [info]: GET /health
+2025-11-22 06:19:44 [info]: POST /v1/auth/register
+2025-11-22 06:19:44 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 06:19:44 [debug]: Response from http://auth-service:5000: 201
+2025-11-22 06:19:44 [info]: POST /v1/auth/login
+2025-11-22 06:19:44 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:19:44 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:19:44 [info]: GET /v1/user/profile
+2025-11-22 06:19:44 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjM4NCwiZXhwIjoxNzYzNzk1OTg0fQ.cow88KKHkhyvGyXBT6WmAgzlKMdDhg7BhOapzvnX9eU","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:19:44 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:19:44 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjM4NCwiZXhwIjoxNzYzNzk1OTg0fQ.cow88KKHkhyvGyXBT6WmAgzlKMdDhg7BhOapzvnX9eU
+2025-11-22 06:19:44 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:19:44 [warn]: Invalid token for GET /profile: invalid signature
+2025-11-22 06:19:44 [info]: GET /v1/books
+2025-11-22 06:19:44 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-22 06:19:44 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:19:45 [info]: GET /v1/books/search
+2025-11-22 06:19:45 [debug]: Proxying: /v1/books/search?query=test -> http://book-service:3000/api/books/search?query=test
+2025-11-22 06:19:45 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:19:45 [info]: GET /v1/cart
+2025-11-22 06:19:45 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjM4NCwiZXhwIjoxNzYzNzk1OTg0fQ.cow88KKHkhyvGyXBT6WmAgzlKMdDhg7BhOapzvnX9eU","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:19:45 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-22 06:19:45 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjM4NCwiZXhwIjoxNzYzNzk1OTg0fQ.cow88KKHkhyvGyXBT6WmAgzlKMdDhg7BhOapzvnX9eU
+2025-11-22 06:19:45 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:19:45 [warn]: Invalid token for GET /: invalid signature
+2025-11-22 06:19:45 [info]: POST /v1/cart/add
+2025-11-22 06:19:45 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjM4NCwiZXhwIjoxNzYzNzk1OTg0fQ.cow88KKHkhyvGyXBT6WmAgzlKMdDhg7BhOapzvnX9eU","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","content-type":"application/json","host":"localhost:3000","content-length":"50"}
+2025-11-22 06:19:45 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-22 06:19:45 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjM4NCwiZXhwIjoxNzYzNzk1OTg0fQ.cow88KKHkhyvGyXBT6WmAgzlKMdDhg7BhOapzvnX9eU
+2025-11-22 06:19:45 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:19:45 [warn]: Invalid token for POST /add: invalid signature
+2025-11-22 06:19:45 [info]: GET /v1/orders
+2025-11-22 06:19:45 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjM4NCwiZXhwIjoxNzYzNzk1OTg0fQ.cow88KKHkhyvGyXBT6WmAgzlKMdDhg7BhOapzvnX9eU","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:19:45 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-22 06:19:45 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjM4NCwiZXhwIjoxNzYzNzk1OTg0fQ.cow88KKHkhyvGyXBT6WmAgzlKMdDhg7BhOapzvnX9eU
+2025-11-22 06:19:45 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:19:45 [warn]: Invalid token for GET /: invalid signature
+2025-11-22 06:19:45 [info]: GET /v1/books/69202da8473b4dce4dfe8918
+2025-11-22 06:19:45 [debug]: Proxying: /v1/books/69202da8473b4dce4dfe8918 -> http://book-service:3000/api/books/69202da8473b4dce4dfe8918
+2025-11-22 06:19:45 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:19:45 [info]: POST /v1/auth/logout
+2025-11-22 06:19:45 [debug]: Optional auth: Invalid or expired token, continuing without auth
+2025-11-22 06:19:45 [debug]: Proxying: /v1/auth/logout -> http://auth-service:5000/api/auth/logout
+2025-11-22 06:19:45 [debug]: Response from http://auth-service:5000: 204
+2025-11-22 06:20:09 [info]: POST /v1/auth/login
+2025-11-22 06:20:09 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:20:09 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:20:09 [info]: GET /v1/user/profile
+2025-11-22 06:20:09 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjQwOSwiZXhwIjoxNzYzNzk2MDA5fQ.yD-85VBCGntSWsPEm3XXKpB5PSVRUQf0PTv4BGpFLUg","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:20:09 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:20:09 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjQwOSwiZXhwIjoxNzYzNzk2MDA5fQ.yD-85VBCGntSWsPEm3XXKpB5PSVRUQf0PTv4BGpFLUg
+2025-11-22 06:20:09 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:20:09 [warn]: Invalid token for GET /profile: invalid signature
+2025-11-22 06:28:36 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-22 06:28:36 [info]: HTTP server closed
+2025-11-22 06:28:36 [info]: Redis connection closed
+2025-11-22 06:28:36 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:28:36 [info]: HTTP server closed
+2025-11-22 06:28:36 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:28:36 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:28:36 [info]: HTTP server closed
+2025-11-22 06:28:36 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:28:37 [info]: Shutdown complete, exiting process
+2025-11-22 06:28:39 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-22 06:28:39 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-22 06:28:39 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-22 06:28:39 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-22 06:28:39 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-22 06:28:39 [info]: 🚀 API Gateway started successfully
+2025-11-22 06:28:39 [info]: 📍 Environment: development
+2025-11-22 06:28:39 [info]: 🌐 Port: 3000
+2025-11-22 06:28:39 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-22 06:28:39 [info]: 📊 Redis: Enabled
+2025-11-22 06:28:39 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-22 06:28:39 [info]: ✅ Ready to handle requests
+2025-11-22 06:28:39 [info]: Redis connected successfully
+2025-11-22 06:28:42 [info]: GET /health
+2025-11-22 06:28:42 [info]: POST /v1/auth/register
+2025-11-22 06:28:42 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 06:28:42 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:28:42 [info]: POST /v1/auth/login
+2025-11-22 06:28:42 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:28:43 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:28:43 [info]: GET /v1/user/profile
+2025-11-22 06:28:43 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjkyMywiZXhwIjoxNzYzNzk2NTIzfQ.cEAVCm7l3WmImw-dWhtb2L6Md-E-STCbqcxWifVJlzY","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:28:43 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:28:43 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjkyMywiZXhwIjoxNzYzNzk2NTIzfQ.cEAVCm7l3WmImw-dWhtb2L6Md-E-STCbqcxWifVJlzY
+2025-11-22 06:28:43 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:28:43 [debug]: User authenticated: test4@bookverse.com (69215600c9ebaa6ac724df2e)
+2025-11-22 06:28:43 [debug]: Proxying: /v1/user/profile -> http://auth-service:5000/api/user/profile
+2025-11-22 06:28:43 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:28:43 [info]: GET /v1/books
+2025-11-22 06:28:43 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-22 06:28:43 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:28:43 [info]: GET /v1/books/search
+2025-11-22 06:28:43 [debug]: Proxying: /v1/books/search?query=test -> http://book-service:3000/api/books/search?query=test
+2025-11-22 06:28:43 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:28:43 [info]: GET /v1/cart
+2025-11-22 06:28:43 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjkyMywiZXhwIjoxNzYzNzk2NTIzfQ.cEAVCm7l3WmImw-dWhtb2L6Md-E-STCbqcxWifVJlzY","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:28:43 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-22 06:28:43 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjkyMywiZXhwIjoxNzYzNzk2NTIzfQ.cEAVCm7l3WmImw-dWhtb2L6Md-E-STCbqcxWifVJlzY
+2025-11-22 06:28:43 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:28:43 [debug]: User authenticated: test4@bookverse.com (69215600c9ebaa6ac724df2e)
+2025-11-22 06:28:43 [debug]: Proxying: /v1/cart -> http://cart-service:3001/api/cart
+2025-11-22 06:28:43 [debug]: Response from http://cart-service:3001: 200
+2025-11-22 06:28:43 [info]: POST /v1/cart/add
+2025-11-22 06:28:43 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjkyMywiZXhwIjoxNzYzNzk2NTIzfQ.cEAVCm7l3WmImw-dWhtb2L6Md-E-STCbqcxWifVJlzY","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","content-type":"application/json","host":"localhost:3000","content-length":"50"}
+2025-11-22 06:28:43 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-22 06:28:43 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjkyMywiZXhwIjoxNzYzNzk2NTIzfQ.cEAVCm7l3WmImw-dWhtb2L6Md-E-STCbqcxWifVJlzY
+2025-11-22 06:28:43 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:28:43 [debug]: User authenticated: test4@bookverse.com (69215600c9ebaa6ac724df2e)
+2025-11-22 06:28:43 [debug]: Proxying: /v1/cart/add -> http://cart-service:3001/api/cart/add
+2025-11-22 06:28:44 [debug]: Response from http://cart-service:3001: 200
+2025-11-22 06:28:44 [info]: GET /v1/orders
+2025-11-22 06:28:44 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjkyMywiZXhwIjoxNzYzNzk2NTIzfQ.cEAVCm7l3WmImw-dWhtb2L6Md-E-STCbqcxWifVJlzY","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22621.6133","host":"localhost:3000"}
+2025-11-22 06:28:44 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-22 06:28:44 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1NjAwYzllYmFhNmFjNzI0ZGYyZSIsImVtYWlsIjoidGVzdDRAYm9va3ZlcnNlLmNvbSIsImlhdCI6MTc2Mzc5MjkyMywiZXhwIjoxNzYzNzk2NTIzfQ.cEAVCm7l3WmImw-dWhtb2L6Md-E-STCbqcxWifVJlzY
+2025-11-22 06:28:44 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:28:44 [debug]: User authenticated: test4@bookverse.com (69215600c9ebaa6ac724df2e)
+2025-11-22 06:28:44 [debug]: Proxying: /v1/orders -> http://order-service:3002/api/orders
+2025-11-22 06:28:44 [debug]: Response from http://order-service:3002: 200
+2025-11-22 06:28:44 [info]: GET /v1/books/69202da8473b4dce4dfe8918
+2025-11-22 06:28:44 [debug]: Proxying: /v1/books/69202da8473b4dce4dfe8918 -> http://book-service:3000/api/books/69202da8473b4dce4dfe8918
+2025-11-22 06:28:44 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:28:44 [info]: POST /v1/auth/logout
+2025-11-22 06:28:44 [debug]: Optional auth: User authenticated: test4@bookverse.com
+2025-11-22 06:28:44 [debug]: Proxying: /v1/auth/logout -> http://auth-service:5000/api/auth/logout
+2025-11-22 06:28:44 [debug]: Response from http://auth-service:5000: 204
+2025-11-22 06:38:29 [info]: POST /v1/auth/register
+2025-11-22 06:38:29 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 06:38:29 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:38:36 [info]: POST /v1/auth/login
+2025-11-22 06:38:36 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:38:36 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:38:40 [info]: POST /v1/auth/login
+2025-11-22 06:38:40 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:38:40 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:38:51 [info]: GET /v1/user/profile
+2025-11-22 06:38:51 [debug]: Auth middleware - Headers: {"content-type":"application/json","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjAzMGQ0MTg2ODViNDk3MTA0YWUzMyIsImVtYWlsIjoibm95Y2hhbGluaDI0QGtpdC5lZHUua2giLCJpYXQiOjE3NjM3MTc1NjgsImV4cCI6MTc2MzcyMTE2OH0.dT3ORXGsNxZ1mWLJLcB1ALNPbxGtimCMelxRK88NmD0","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"f2c53c18-f571-41d5-9869-1b9caded4ea1","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"75","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjQzOTgzMjB9.Bpa-dgEBz111rf2emDPKTw5B9_mEtU4dESk6jZU24kw"}
+2025-11-22 06:38:51 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:38:51 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjAzMGQ0MTg2ODViNDk3MTA0YWUzMyIsImVtYWlsIjoibm95Y2hhbGluaDI0QGtpdC5lZHUua2giLCJpYXQiOjE3NjM3MTc1NjgsImV4cCI6MTc2MzcyMTE2OH0.dT3ORXGsNxZ1mWLJLcB1ALNPbxGtimCMelxRK88NmD0
+2025-11-22 06:38:51 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:38:51 [warn]: Token expired for GET /profile
+2025-11-22 06:39:22 [info]: GET /v1/user/profile
+2025-11-22 06:39:22 [debug]: Auth middleware - Headers: {"content-type":"application/json","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"124ddd4c-f53e-4cac-a419-5625e54e3fe1","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"75","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjQzOTgzMjB9.Bpa-dgEBz111rf2emDPKTw5B9_mEtU4dESk6jZU24kw"}
+2025-11-22 06:39:22 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:39:22 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:39:22 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:39:22 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:39:22 [debug]: Proxying: /v1/user/profile -> http://auth-service:5000/api/user/profile
+2025-11-22 06:39:22 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:39:46 [info]: POST /v1/auth/register
+2025-11-22 06:39:46 [debug]: Proxying: /v1/auth/register -> http://auth-service:5000/api/auth/register
+2025-11-22 06:39:46 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:40:26 [info]: PATCH /v1/user/profile
+2025-11-22 06:40:26 [debug]: Auth middleware - Headers: {"content-type":"application/json","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"d17770da-be0a-40d0-ae9e-cc53a7064c07","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"30","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjQzOTgzMjB9.Bpa-dgEBz111rf2emDPKTw5B9_mEtU4dESk6jZU24kw"}
+2025-11-22 06:40:26 [debug]: Auth middleware - Path: /profile, OriginalUrl: /v1/user/profile
+2025-11-22 06:40:26 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:40:26 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:40:26 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:40:26 [debug]: Proxying: /v1/user/profile -> http://auth-service:5000/api/user/profile
+2025-11-22 06:40:26 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:41:20 [info]: PATCH /v1/user/password
+2025-11-22 06:41:20 [debug]: Auth middleware - Headers: {"content-type":"application/json","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"d0ca02ce-fb5a-4796-a9ae-745149eb3d6b","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"64","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjQzOTgzMjB9.Bpa-dgEBz111rf2emDPKTw5B9_mEtU4dESk6jZU24kw"}
+2025-11-22 06:41:20 [debug]: Auth middleware - Path: /password, OriginalUrl: /v1/user/password
+2025-11-22 06:41:20 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:41:20 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:41:20 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:41:20 [debug]: Proxying: /v1/user/password -> http://auth-service:5000/api/user/password
+2025-11-22 06:41:20 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:42:08 [info]: PATCH /v1/user/password
+2025-11-22 06:42:08 [debug]: Auth middleware - Headers: {"content-type":"application/json","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"781f68ed-17a9-4cb5-9021-8b41bd202e18","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"69","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjQzOTgzMjB9.Bpa-dgEBz111rf2emDPKTw5B9_mEtU4dESk6jZU24kw"}
+2025-11-22 06:42:08 [debug]: Auth middleware - Path: /password, OriginalUrl: /v1/user/password
+2025-11-22 06:42:08 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:42:08 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:42:08 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:42:08 [debug]: Proxying: /v1/user/password -> http://auth-service:5000/api/user/password
+2025-11-22 06:42:08 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:42:39 [info]: PATCH /v1/user/password
+2025-11-22 06:42:39 [debug]: Auth middleware - Headers: {"content-type":"application/json","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"69ba4b5d-bfb7-4529-a039-88899fca8dfb","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"69","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjQzOTgzMjB9.Bpa-dgEBz111rf2emDPKTw5B9_mEtU4dESk6jZU24kw"}
+2025-11-22 06:42:39 [debug]: Auth middleware - Path: /password, OriginalUrl: /v1/user/password
+2025-11-22 06:42:39 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:42:39 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:42:39 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:42:39 [debug]: Proxying: /v1/user/password -> http://auth-service:5000/api/user/password
+2025-11-22 06:42:39 [debug]: Response from http://auth-service:5000: 200
+2025-11-22 06:43:15 [info]: POST /v1/auth/logout
+2025-11-22 06:43:15 [debug]: Proxying: /v1/auth/logout -> http://auth-service:5000/api/auth/logout
+2025-11-22 06:43:15 [debug]: Response from http://auth-service:5000: 204
+2025-11-22 06:43:27 [info]: PATCH /v1/user/password
+2025-11-22 06:43:27 [debug]: Auth middleware - Headers: {"content-type":"application/json","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"beaeec70-9738-4063-a4cf-97fe9131c0e1","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"69","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:43:27 [debug]: Auth middleware - Path: /password, OriginalUrl: /v1/user/password
+2025-11-22 06:43:27 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:43:27 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:43:27 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:43:27 [debug]: Proxying: /v1/user/password -> http://auth-service:5000/api/user/password
+2025-11-22 06:43:27 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:43:38 [info]: GET /v1/books
+2025-11-22 06:43:38 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-22 06:43:38 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:43:41 [info]: GET /api/books/search
+2025-11-22 06:43:41 [warn]: 404 Not Found: GET /api/books/search
+2025-11-22 06:43:50 [info]: GET /v1/books/search
+2025-11-22 06:43:50 [debug]: Proxying: /v1/books/search?query=bob -> http://book-service:3000/api/books/search?query=bob
+2025-11-22 06:43:50 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:44:05 [info]: GET /v1/books/69202da8473b4dce4dfe8918
+2025-11-22 06:44:05 [debug]: Proxying: /v1/books/69202da8473b4dce4dfe8918 -> http://book-service:3000/api/books/69202da8473b4dce4dfe8918
+2025-11-22 06:44:05 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:44:16 [info]: GET /v1/books/category
+2025-11-22 06:44:16 [debug]: Proxying: /v1/books/category?category=fig -> http://book-service:3000/api/books/category?category=fig
+2025-11-22 06:44:16 [debug]: Response from http://book-service:3000: 404
+2025-11-22 06:44:20 [info]: GET /v1/books/category
+2025-11-22 06:44:20 [debug]: Proxying: /v1/books/category?category=e -> http://book-service:3000/api/books/category?category=e
+2025-11-22 06:44:20 [debug]: Response from http://book-service:3000: 200
+2025-11-22 06:44:46 [info]: GET /v1/cart
+2025-11-22 06:44:46 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"5adfa6ff-7add-4adc-af2f-ad44d0f2bf0a","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:44:46 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-22 06:44:46 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:44:46 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:44:46 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:44:46 [debug]: Proxying: /v1/cart -> http://cart-service:3001/api/cart
+2025-11-22 06:44:46 [debug]: Response from http://cart-service:3001: 200
+2025-11-22 06:45:02 [info]: POST /v1/cart/add
+2025-11-22 06:45:02 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjAzMGQ0MTg2ODViNDk3MTA0YWUzMyIsImVtYWlsIjoibm95Y2hhbGluaDI0QGtpdC5lZHUua2giLCJpYXQiOjE3NjM3MTgwMDQsImV4cCI6MTc2MzcyMTYwNH0.oWtdWeRCVhX2lALuFv_e3hzygWrlG0FFQA0l2QHrLP8","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"f60ff7b0-0540-4c54-9cb1-fafd5f1d8f92","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:45:02 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-22 06:45:02 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjAzMGQ0MTg2ODViNDk3MTA0YWUzMyIsImVtYWlsIjoibm95Y2hhbGluaDI0QGtpdC5lZHUua2giLCJpYXQiOjE3NjM3MTgwMDQsImV4cCI6MTc2MzcyMTYwNH0.oWtdWeRCVhX2lALuFv_e3hzygWrlG0FFQA0l2QHrLP8
+2025-11-22 06:45:02 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:45:02 [warn]: Token expired for POST /add
+2025-11-22 06:45:09 [info]: POST /v1/cart/add
+2025-11-22 06:45:09 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"8c7c61d9-6731-4222-97f1-4429d0f859c9","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:45:09 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-22 06:45:09 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:45:09 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:45:09 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:45:09 [debug]: Proxying: /v1/cart/add -> http://cart-service:3001/api/cart/add
+2025-11-22 06:45:09 [debug]: Response from http://cart-service:3001: 200
+2025-11-22 06:46:08 [info]: POST /v1/cart/remove
+2025-11-22 06:46:08 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjAzMGQ0MTg2ODViNDk3MTA0YWUzMyIsImVtYWlsIjoibm95Y2hhbGluaDI0QGtpdC5lZHUua2giLCJpYXQiOjE3NjM3MTgwMDQsImV4cCI6MTc2MzcyMTYwNH0.oWtdWeRCVhX2lALuFv_e3hzygWrlG0FFQA0l2QHrLP8","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"5f2ee4e9-77b7-41cd-846b-42ce8cfccb4b","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:46:08 [debug]: Auth middleware - Path: /remove, OriginalUrl: /v1/cart/remove
+2025-11-22 06:46:08 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjAzMGQ0MTg2ODViNDk3MTA0YWUzMyIsImVtYWlsIjoibm95Y2hhbGluaDI0QGtpdC5lZHUua2giLCJpYXQiOjE3NjM3MTgwMDQsImV4cCI6MTc2MzcyMTYwNH0.oWtdWeRCVhX2lALuFv_e3hzygWrlG0FFQA0l2QHrLP8
+2025-11-22 06:46:08 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:46:08 [warn]: Token expired for POST /remove
+2025-11-22 06:46:12 [info]: POST /v1/cart/remove
+2025-11-22 06:46:12 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"7bafd0a6-329f-4dd2-bcae-c89907221d0a","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:46:12 [debug]: Auth middleware - Path: /remove, OriginalUrl: /v1/cart/remove
+2025-11-22 06:46:12 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:46:12 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:46:12 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:46:12 [debug]: Proxying: /v1/cart/remove -> http://cart-service:3001/api/cart/remove
+2025-11-22 06:46:12 [debug]: Response from http://cart-service:3001: 500
+2025-11-22 06:46:42 [info]: POST /v1/cart/add
+2025-11-22 06:46:42 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"7301b586-baa9-49fb-bb94-987744e18e70","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:46:42 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-22 06:46:42 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:46:42 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:46:42 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:46:42 [debug]: Proxying: /v1/cart/add -> http://cart-service:3001/api/cart/add
+2025-11-22 06:46:43 [debug]: Response from http://cart-service:3001: 200
+2025-11-22 06:46:44 [info]: POST /v1/cart/add
+2025-11-22 06:46:44 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"3d8c9c7f-dcda-4f24-9f49-76f6180ecc96","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:46:44 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-22 06:46:44 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:46:44 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:46:44 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:46:44 [debug]: Proxying: /v1/cart/add -> http://cart-service:3001/api/cart/add
+2025-11-22 06:46:44 [debug]: Response from http://cart-service:3001: 200
+2025-11-22 06:46:49 [info]: POST /v1/cart/remove
+2025-11-22 06:46:49 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"9d81395a-4f98-4c87-b06b-0fb37e0c9a1e","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:46:49 [debug]: Auth middleware - Path: /remove, OriginalUrl: /v1/cart/remove
+2025-11-22 06:46:49 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:46:49 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:46:49 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:46:49 [debug]: Proxying: /v1/cart/remove -> http://cart-service:3001/api/cart/remove
+2025-11-22 06:46:49 [debug]: Response from http://cart-service:3001: 200
+2025-11-22 06:46:51 [info]: POST /v1/cart/remove
+2025-11-22 06:46:51 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"ed840159-2424-47c0-83b1-356fd8ec11c1","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:46:51 [debug]: Auth middleware - Path: /remove, OriginalUrl: /v1/cart/remove
+2025-11-22 06:46:51 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:46:51 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:46:51 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:46:51 [debug]: Proxying: /v1/cart/remove -> http://cart-service:3001/api/cart/remove
+2025-11-22 06:46:51 [debug]: Response from http://cart-service:3001: 200
+2025-11-22 06:46:53 [info]: POST /v1/cart/remove
+2025-11-22 06:46:53 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"5523a020-7d86-49ca-a865-46e5f3bf660e","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:46:53 [debug]: Auth middleware - Path: /remove, OriginalUrl: /v1/cart/remove
+2025-11-22 06:46:53 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:46:53 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:46:53 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:46:53 [debug]: Proxying: /v1/cart/remove -> http://cart-service:3001/api/cart/remove
+2025-11-22 06:46:53 [debug]: Response from http://cart-service:3001: 500
+2025-11-22 06:47:36 [info]: DELETE /api/cart/item/692033e2ebe47b05964f40fb
+2025-11-22 06:47:36 [warn]: 404 Not Found: DELETE /api/cart/item/692033e2ebe47b05964f40fb
+2025-11-22 06:47:42 [info]: DELETE /v1/cart/item/692033e2ebe47b05964f40fb
+2025-11-22 06:47:42 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjAzMGQ0MTg2ODViNDk3MTA0YWUzMyIsImVtYWlsIjoibm95Y2hhbGluaDI0QGtpdC5lZHUua2giLCJpYXQiOjE3NjM3MTgwMDQsImV4cCI6MTc2MzcyMTYwNH0.oWtdWeRCVhX2lALuFv_e3hzygWrlG0FFQA0l2QHrLP8","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"5d031a49-4328-4c36-8198-0800d8637cc0","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:47:42 [debug]: Auth middleware - Path: /item/692033e2ebe47b05964f40fb, OriginalUrl: /v1/cart/item/692033e2ebe47b05964f40fb
+2025-11-22 06:47:42 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjAzMGQ0MTg2ODViNDk3MTA0YWUzMyIsImVtYWlsIjoibm95Y2hhbGluaDI0QGtpdC5lZHUua2giLCJpYXQiOjE3NjM3MTgwMDQsImV4cCI6MTc2MzcyMTYwNH0.oWtdWeRCVhX2lALuFv_e3hzygWrlG0FFQA0l2QHrLP8
+2025-11-22 06:47:42 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:47:42 [warn]: Token expired for DELETE /item/692033e2ebe47b05964f40fb
+2025-11-22 06:47:50 [info]: DELETE /v1/cart/item/692033e2ebe47b05964f40fb
+2025-11-22 06:47:50 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"88a71587-ef17-49aa-850d-dfc0ec710805","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:47:50 [debug]: Auth middleware - Path: /item/692033e2ebe47b05964f40fb, OriginalUrl: /v1/cart/item/692033e2ebe47b05964f40fb
+2025-11-22 06:47:50 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:47:50 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:47:50 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:47:50 [debug]: Proxying: /v1/cart/item/692033e2ebe47b05964f40fb -> http://cart-service:3001/api/cart/item/692033e2ebe47b05964f40fb
+2025-11-22 06:47:50 [debug]: Response from http://cart-service:3001: 404
+2025-11-22 06:48:00 [info]: POST /v1/cart/add
+2025-11-22 06:48:00 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"57557c6b-a3f9-4432-b44d-2c542277c6b3","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:48:00 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-22 06:48:00 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:48:00 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:48:00 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:48:00 [debug]: Proxying: /v1/cart/add -> http://cart-service:3001/api/cart/add
+2025-11-22 06:48:01 [debug]: Response from http://cart-service:3001: 200
+2025-11-22 06:48:04 [info]: POST /v1/cart/remove
+2025-11-22 06:48:04 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"1672ae79-4938-4c29-81a8-dfc32d25c620","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:48:04 [debug]: Auth middleware - Path: /remove, OriginalUrl: /v1/cart/remove
+2025-11-22 06:48:04 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:48:04 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:48:04 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:48:04 [debug]: Proxying: /v1/cart/remove -> http://cart-service:3001/api/cart/remove
+2025-11-22 06:48:05 [debug]: Response from http://cart-service:3001: 200
+2025-11-22 06:48:17 [info]: DELETE /v1/cart/item/69215bf59f024ee37f2dd753
+2025-11-22 06:48:17 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"a198afac-b4b6-49af-b160-1ef50424cddf","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:48:17 [debug]: Auth middleware - Path: /item/69215bf59f024ee37f2dd753, OriginalUrl: /v1/cart/item/69215bf59f024ee37f2dd753
+2025-11-22 06:48:17 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:48:17 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:48:17 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:48:17 [debug]: Proxying: /v1/cart/item/69215bf59f024ee37f2dd753 -> http://cart-service:3001/api/cart/item/69215bf59f024ee37f2dd753
+2025-11-22 06:48:17 [debug]: Response from http://cart-service:3001: 200
+2025-11-22 06:48:46 [info]: DELETE /v1/cart/clear
+2025-11-22 06:48:46 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWRmNzlkMDBmZTFjNjQwMGFlZjUwMiIsImVtYWlsIjoibm95LmNoYWxpbmgyNEBraXQuZWR1LmtoIiwiaWF0IjoxNzYzNzA4NDM1LCJleHAiOjE3NjM3MTIwMzV9.mBFLJDDdIMSKGd-0Zza185QpRGRzzAYTCF-3C_Qru5Y","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"f1d4ba5d-e31a-4e39-bd59-bc210feedcdc","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:48:46 [debug]: Auth middleware - Path: /clear, OriginalUrl: /v1/cart/clear
+2025-11-22 06:48:46 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWRmNzlkMDBmZTFjNjQwMGFlZjUwMiIsImVtYWlsIjoibm95LmNoYWxpbmgyNEBraXQuZWR1LmtoIiwiaWF0IjoxNzYzNzA4NDM1LCJleHAiOjE3NjM3MTIwMzV9.mBFLJDDdIMSKGd-0Zza185QpRGRzzAYTCF-3C_Qru5Y
+2025-11-22 06:48:46 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:48:46 [warn]: Token expired for DELETE /clear
+2025-11-22 06:49:02 [info]: DELETE /v1/cart/clear
+2025-11-22 06:49:02 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"e1d7aa35-cd2c-4c16-9650-e7dd7442b981","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:49:02 [debug]: Auth middleware - Path: /clear, OriginalUrl: /v1/cart/clear
+2025-11-22 06:49:02 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:49:02 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:49:02 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:49:02 [debug]: Proxying: /v1/cart/clear -> http://cart-service:3001/api/cart/clear
+2025-11-22 06:49:02 [debug]: Response from http://cart-service:3001: 403
+2025-11-22 06:49:29 [info]: POST /v1/orders
+2025-11-22 06:49:29 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"application/json","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"4decad28-8e4c-4474-b6de-35c329f04b0d","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"203","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:49:29 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-22 06:49:29 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:49:29 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:49:29 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:49:29 [debug]: Proxying: /v1/orders -> http://order-service:3002/api/orders
+2025-11-22 06:49:29 [debug]: Response from http://order-service:3002: 400
+2025-11-22 06:50:00 [info]: GET /v1/orders
+2025-11-22 06:50:00 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjAzMGQ0MTg2ODViNDk3MTA0YWUzMyIsImVtYWlsIjoibm95Y2hhbGluaDI0QGtpdC5lZHUua2giLCJpYXQiOjE3NjM3MjIzODYsImV4cCI6MTc2MzcyNTk4Nn0.JCLPVATw1fSZjRMo9uAyySmQcWeZhQYRtzBt3VBK_gE","content-type":"text/plain","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"8f904c2c-7f5d-4106-ac29-2057245d0d35","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"196","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:50:00 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-22 06:50:00 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjAzMGQ0MTg2ODViNDk3MTA0YWUzMyIsImVtYWlsIjoibm95Y2hhbGluaDI0QGtpdC5lZHUua2giLCJpYXQiOjE3NjM3MjIzODYsImV4cCI6MTc2MzcyNTk4Nn0.JCLPVATw1fSZjRMo9uAyySmQcWeZhQYRtzBt3VBK_gE
+2025-11-22 06:50:00 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:50:00 [warn]: Token expired for GET /
+2025-11-22 06:50:04 [info]: GET /v1/orders
+2025-11-22 06:50:04 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"text/plain","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"3ff143a7-1aa4-49ee-b20f-1a4b1e3d3124","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"196","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:50:04 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-22 06:50:04 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:50:04 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:50:04 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:50:04 [debug]: Proxying: /v1/orders -> http://order-service:3002/api/orders
+2025-11-22 06:50:04 [debug]: Response from http://order-service:3002: 200
+2025-11-22 06:50:25 [info]: GET /v1/orders
+2025-11-22 06:50:25 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","content-type":"text/plain","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"28f98d5d-dae3-406f-b599-978ce405f31d","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"196","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:50:25 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-22 06:50:25 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:50:25 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:50:25 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:50:25 [debug]: Proxying: /v1/orders -> http://order-service:3002/api/orders
+2025-11-22 06:50:25 [debug]: Response from http://order-service:3002: 200
+2025-11-22 06:50:37 [info]: GET /v1/orders
+2025-11-22 06:50:37 [debug]: Auth middleware - Headers: {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw","user-agent":"PostmanRuntime/7.49.1","accept":"*/*","postman-token":"01345383-005e-49d6-a28b-7e91d59dde9a","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","cookie":"Cookie_1=value; better-auth.session_token=4Dqax8vsAVKBso9YbjuU2zuoVHgoOVVs.Mp5jWEGT%2FXHurqjfXhyILhlQHNyZdGC9tZU3yKXNlPc%3D"}
+2025-11-22 06:50:37 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-22 06:50:37 [debug]: Auth middleware - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1MDJhYzllYmFhNmFjNzI0ZGYwNiIsImVtYWlsIjoidGVzdEB0ZXQuY29tIiwiaWF0IjoxNzYzNzkzNTIwLCJleHAiOjE3NjM3OTcxMjB9.X7f36gFfwKdFx3sr1Mdu17Va9rMlEQJeryjSlmzZGrw
+2025-11-22 06:50:37 [debug]: Auth middleware - Token extracted from header: eyJhbGciOiJIUzI1NiIs...
+2025-11-22 06:50:37 [debug]: User authenticated: test@tet.com (6921502ac9ebaa6ac724df06)
+2025-11-22 06:50:37 [debug]: Proxying: /v1/orders -> http://order-service:3002/api/orders
+2025-11-22 06:50:37 [debug]: Response from http://order-service:3002: 200
+2025-11-22 06:51:29 [info]: POST /v1/auth/login
+2025-11-22 06:51:29 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:51:29 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:51:53 [info]: POST /v1/auth/login
+2025-11-22 06:51:53 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:51:53 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:52:03 [info]: POST /v1/auth/login
+2025-11-22 06:52:03 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:52:03 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:52:20 [info]: POST /v1/auth/login
+2025-11-22 06:52:20 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-22 06:52:20 [debug]: Response from http://auth-service:5000: 400
+2025-11-22 06:54:15 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-22 06:54:15 [info]: HTTP server closed
+2025-11-22 06:54:15 [info]: Redis connection closed
+2025-11-22 06:54:15 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:54:15 [info]: HTTP server closed
+2025-11-22 06:54:15 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:54:15 [info]: SIGINT received, starting graceful shutdown...
+2025-11-22 06:54:15 [info]: HTTP server closed
+2025-11-22 06:54:15 [error]: Error closing Redis connection: Connection is closed.
+2025-11-22 06:54:16 [info]: Shutdown complete, exiting process
