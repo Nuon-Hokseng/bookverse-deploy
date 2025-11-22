@@ -1,17 +1,50 @@
-# Use Node.js LTS
+# Multi-stage build for production
+FROM node:24-alpine AS builder
+
+WORKDIR /usr/src/app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies (including dev dependencies for build)
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Production stage
 FROM node:24-alpine
 
 WORKDIR /usr/src/app
 
-# Copy package files and install dependencies
+# Copy package files
 COPY package*.json ./
-RUN npm install
 
-# Copy all other files
-COPY . .
+# Install production dependencies only
+RUN npm ci --only=production
 
-# Expose the port your app listens on
+# Copy source from builder
+COPY --from=builder /usr/src/app/src ./src
+
+# Create logs directory
+RUN mkdir -p logs
+
+# Create non-root user for security
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001
+
+# Change ownership
+RUN chown -R nodejs:nodejs /usr/src/app
+
+# Switch to non-root user
+USER nodejs
+
+# Expose port
 EXPOSE 3000
 
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+    CMD node -e "require('http').get('http://localhost:3000/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
+
 # Start the app
-CMD ["node", "src/index.js"]
+CMD ["node", "src/server.js"]

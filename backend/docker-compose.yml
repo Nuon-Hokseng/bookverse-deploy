@@ -1,20 +1,39 @@
 services:
-  eureka:
-    image: jhipster/jhipster-registry:latest
-    container_name: eureka
-    environment:
-      - SPRING_SECURITY_USER_NAME=admin
-      - SPRING_SECURITY_USER_PASSWORD=admin
+  # Redis for rate limiting and caching
+  redis:
+    image: redis:7-alpine
+    container_name: redis
     ports:
-      - "8761:8761"
-    restart: unless-stopped
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
     healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:8761/management/health" ]
-      interval: 30s
-      timeout: 10s
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 3s
       retries: 5
     networks:
       - backend
+    restart: unless-stopped
+
+  # Eureka service - COMMENTED OUT (no longer needed with direct routing)
+  # eureka:
+  #   image: jhipster/jhipster-registry:latest
+  #   container_name: eureka
+  #   environment:
+  #     - SPRING_SECURITY_USER_NAME=admin
+  #     - SPRING_SECURITY_USER_PASSWORD=admin
+  #   ports:
+  #     - "8761:8761"
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: [ "CMD", "curl", "-f", "http://localhost:8761/management/health" ]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 5
+  #   networks:
+  #     - backend
 
   auth-service:
     container_name: auth-service
@@ -24,14 +43,7 @@ services:
     env_file:
       - ./auth-service/.env
     environment:
-      - SERVICE_NAME=auth-service
-      - EUREKA_HOST=eureka
-      - EUREKA_PORT=8761
-      - EUREKA_USER=admin
-      - EUREKA_PASS=admin
-    depends_on:
-      eureka:
-        condition: service_healthy
+      - PORT=5000
     networks:
       - backend
 
@@ -43,14 +55,7 @@ services:
     env_file:
       - ./book-service/.env
     environment:
-      - SERVICE_NAME=book-service
-      - EUREKA_HOST=eureka
-      - EUREKA_PORT=8761
-      - EUREKA_USER=admin
-      - EUREKA_PASS=admin
-    depends_on:
-      eureka:
-        condition: service_healthy
+      - PORT=3000
     networks:
       - backend
 
@@ -62,17 +67,11 @@ services:
     env_file:
       - ./cart-service/.env
     environment:
-      - SERVICE_NAME=cart-service
-      - BOOK_SERVICE_URL=http://book-service:3004/api/books
-      - EUREKA_HOST=eureka
-      - EUREKA_PORT=8761
-      - EUREKA_USER=admin
-      - EUREKA_PASS=admin
+      - PORT=3001
+      - BOOK_SERVICE_URL=http://book-service:3000/api/books
     depends_on:
       book-service:
         condition: service_started
-      eureka:
-        condition: service_healthy
     networks:
       - backend
 
@@ -84,17 +83,11 @@ services:
     env_file:
       - ./order-service/.env
     environment:
-      - SERVICE_NAME=order-service
+      - PORT=3002
       - CART_SERVICE_URL=http://cart-service:3001/api
-      - EUREKA_HOST=eureka
-      - EUREKA_PORT=8761
-      - EUREKA_USER=admin
-      - EUREKA_PASS=admin
     depends_on:
       cart-service:
         condition: service_started
-      eureka:
-        condition: service_healthy
     networks:
       - backend
 
@@ -102,18 +95,29 @@ services:
     container_name: api-gateway
     build:
       context: ./api-gateway
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev # Use dev dockerfile for hot-reload
     env_file:
       - ./api-gateway/.env
     environment:
-      - SERVICE_NAME=api-gateway
-      - EUREKA_HOST=eureka
-      - EUREKA_PORT=8761
-      - EUREKA_USER=admin
-      - EUREKA_PASS=admin
+      - NODE_ENV=development
+      - PORT=3000
+      - JWT_SECRET=a2e4a10182a2f076129507d2dc95f4dc3602db94f9eed8367d226b86e4969727
+      - REDIS_URL=redis://redis:6379
+      - CORS_ORIGIN=http://localhost:4200
+      - LOG_LEVEL=debug
+      # Service URLs
+      - AUTH_SERVICE_URL=http://auth-service:5000
+      - BOOK_SERVICE_URL=http://book-service:3000
+      - CART_SERVICE_URL=http://cart-service:3001
+      - ORDER_SERVICE_URL=http://order-service:3002
     ports:
       - "3000:3000"
+    volumes:
+      - ./api-gateway/src:/usr/src/app/src # Mount source for hot-reload
+      - ./api-gateway/logs:/usr/src/app/logs # Mount logs directory
     depends_on:
+      redis:
+        condition: service_healthy
       auth-service:
         condition: service_started
       book-service:
@@ -122,11 +126,12 @@ services:
         condition: service_started
       order-service:
         condition: service_started
-      eureka:
-        condition: service_healthy
     networks:
       - backend
 
 networks:
   backend:
     driver: bridge
+
+volumes:
+  redis-data:

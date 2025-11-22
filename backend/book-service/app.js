@@ -3,39 +3,10 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import bookRoutes from "./src/routes/book.routes.js";
-import { Eureka } from 'eureka-js-client';
 
 dotenv.config();
 
-const EUREKA_HOST = process.env.EUREKA_HOST || 'eureka';
-const EUREKA_PORT = process.env.EUREKA_PORT || 8761;
-const EUREKA_USER = process.env.EUREKA_USER || 'admin';
-const EUREKA_PASS = process.env.EUREKA_PASS || 'admin';
-const SERVICE_NAME = process.env.SERVICE_NAME || 'book-service';
 const SERVICE_PORT = process.env.PORT || 3000;
-
-const eurekaClient = new Eureka({
-  instance: {
-    app: SERVICE_NAME.toUpperCase(),
-    instanceId: `${SERVICE_NAME}:${SERVICE_PORT}`,
-    hostName: SERVICE_NAME,
-    ipAddr: SERVICE_NAME,
-    port: { $: SERVICE_PORT, '@enabled': true },
-    vipAddress: SERVICE_NAME,
-    statusPageUrl: `http://${SERVICE_NAME}:${SERVICE_PORT}/health`,
-    healthCheckUrl: `http://${SERVICE_NAME}:${SERVICE_PORT}/health`,
-    dataCenterInfo: { '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo', name: 'MyOwn' }
-  },
-  eureka: {
-    host: EUREKA_HOST,
-    port: EUREKA_PORT,
-    servicePath: '/eureka/apps/',
-    auth: { user: EUREKA_USER, password: EUREKA_PASS }
-  }
-});
-
-eurekaClient.logger.level('debug');
-eurekaClient.start(err => { if (err) console.error(err); else console.log('Book Service registered with Eureka'); });
 
 const app = express();
 app.use(cors());
