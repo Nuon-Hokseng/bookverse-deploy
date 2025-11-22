@@ -55,6 +55,13 @@
             class="hidden md:block ml-4 transition-all duration-200 hover:scale-105 hover:text-[#D4AF37] cursor-pointer"
           ></lucide-angular>
 
+          <div
+            class="w-15 h-10 border bg-[#D4AF37] text-black justify-center items-center flex ml-6 mr-6 rounded-xl cursor-pointer"
+            (click)="toggleLogin()"
+          >
+            <p>Login</p>
+          </div>
+
           <!-- Hamburger Menu (Mobile Only) -->
           <button
             (click)="toggleMenu()"
@@ -134,6 +141,178 @@
     </header>
   </section>
   <router-outlet></router-outlet>
+  <!-- Login / Signup Modal -->
+  <div
+    *ngIf="LoginOpen"
+    class="fixed inset-0 z-50 flex items-center justify-center"
+  >
+    <div
+      class="absolute inset-0 bg-white-700/85 backdrop-blur-sm"
+      (click)="toggleLogin()"
+    ></div>
+    <div
+      class="relative bg-[#2A2520] border border-[#5A534C] rounded-lg w-11/12 max-w-md mx-auto p-6 shadow-lg"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="relative mb-4">
+        <h2 class="text-2xl font-semibold text-[#EDE1D6] text-center">
+          {{ authTab === "login" ? "Welcome back" : "Create account" }}
+        </h2>
+        <button
+          (click)="toggleLogin()"
+          aria-label="Close"
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 text-[#CFC3B6] hover:text-white"
+        >
+          &times;
+        </button>
+      </div>
+
+      <div class="mb-5 flex justify-center">
+        <div class="flex bg-[#3d352f] rounded-full p-1">
+          <button
+            type="button"
+            (click)="setAuthTab('login')"
+            [ngClass]="
+              authTab === 'login'
+                ? 'px-4 py-2 rounded-full bg-[#D4AF37] text-[#2A2520] font-semibold'
+                : 'px-4 py-2 rounded-full text-[#CFC3B6]'
+            "
+          >
+            Login
+          </button>
+          <button
+            type="button"
+            (click)="setAuthTab('signup')"
+            [ngClass]="
+              authTab === 'signup'
+                ? 'px-4 py-2 rounded-full bg-[#D4AF37] text-[#2A2520] font-semibold'
+                : 'px-4 py-2 rounded-full text-[#CFC3B6]'
+            "
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+
+      <form
+        *ngIf="authTab === 'login'"
+        (submit)="onLogin(); $event.preventDefault()"
+      >
+        <label class="block text-sm text-[#CFC3B6] mb-1">Email</label>
+        <div class="relative mb-3">
+          <input
+            type="email"
+            [(ngModel)]="loginEmail"
+            name="loginEmail"
+            required
+            class="w-full px-4 py-2 mb-3 border border-[#5A534C] rounded bg-[#3b332f] text-[#EDE1D6] placeholder-[#BDAF8F]"
+            placeholder="john@example.com"
+          />
+        </div>
+
+        <label class="block text-sm text-[#CFC3B6] mb-1">Password</label>
+        <div class="relative mb-4">
+          <input
+            placeholder="••••••••"
+            type="password"
+            [(ngModel)]="loginPassword"
+            name="loginPassword"
+            required
+            class="w-full px-4 py-2 mb-4 border border-[#5A534C] rounded bg-[#3b332f] text-[#EDE1D6] placeholder-[#BDAF8F]"
+          />
+        </div>
+
+        <div class="mb-3">
+          <button
+            type="submit"
+            class="w-full bg-[#D4AF37] text-[#2A2520] px-4 py-2 rounded"
+          >
+            Login
+          </button>
+        </div>
+        <p class="text-center text-sm text-[#CFC3B6]">
+          Don't have an account?
+          <a
+            (click)="setAuthTab('signup')"
+            class="text-[#D4AF37] underline cursor-pointer"
+            >Sign up</a
+          >
+        </p>
+      </form>
+
+      <form
+        *ngIf="authTab === 'signup'"
+        (submit)="onSignup(); $event.preventDefault()"
+      >
+        <label class="block text-sm text-[#CFC3B6] mb-1">Full Name</label>
+        <div class="relative mb-3">
+          <input
+            type="text"
+            [(ngModel)]="signupName"
+            name="signupName"
+            required
+            class="w-full px-4 py-2 mb-3 border border-[#5A534C] rounded bg-[#3b332f] text-[#EDE1D6] placeholder-[#BDAF8F]"
+            placeholder="John Doe"
+          />
+        </div>
+
+        <label class="block text-sm text-[#CFC3B6] mb-1">Email</label>
+        <div class="relative mb-3">
+          <input
+            type="email"
+            [(ngModel)]="signupEmail"
+            name="signupEmail"
+            required
+            class="w-full px-4 py-2 mb-3 border border-[#5A534C] rounded bg-[#3b332f] text-[#EDE1D6] placeholder-[#BDAF8F]"
+            placeholder="john@example.com"
+          />
+        </div>
+
+        <label class="block text-sm text-[#CFC3B6] mb-1">Password</label>
+        <div class="relative mb-3">
+          <input
+            type="password"
+            placeholder="••••••••"
+            [(ngModel)]="signupPassword"
+            name="signupPassword"
+            required
+            class="w-full px-4 py-2 mb-3 border border-[#5A534C] rounded bg-[#3b332f] text-[#EDE1D6] placeholder-[#BDAF8F]"
+          />
+        </div>
+
+        <label class="block text-sm text-[#CFC3B6] mb-1"
+          >Confirm Password</label
+        >
+        <div class="relative mb-4">
+          <input
+            placeholder="••••••••"
+            type="password"
+            [(ngModel)]="signupConfirm"
+            name="signupConfirm"
+            required
+            class="w-full px-4 py-2 mb-4 border border-[#5A534C] rounded bg-[#3b332f] text-[#EDE1D6] placeholder-[#BDAF8F]"
+          />
+        </div>
+
+        <div class="mb-3">
+          <button
+            type="submit"
+            class="w-full bg-[#D4AF37] text-[#2A2520] px-4 py-2 rounded"
+          >
+            Create account
+          </button>
+        </div>
+        <p class="text-center text-sm text-[#CFC3B6]">
+          Already have an account?
+          <a
+            (click)="setAuthTab('login')"
+            class="text-[#D4AF37] underline cursor-pointer"
+            >Login</a
+          >
+        </p>
+      </form>
+    </div>
+  </div>
   <footer
     class="w-full p-8 bg-[#2A2520] border-t border-[#D4AF37] text-center justify-center text-white"
   >
