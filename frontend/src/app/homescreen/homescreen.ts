@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CartService } from '../services/cart.service';
 import { BookService } from '../services/book.service';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-homescreen',
@@ -21,9 +22,14 @@ export class Homescreen {
   toastMessage = '';
 
   categories = ['All', 'Fiction', 'Classic', 'Mystery', 'Fantasy', 'Romance'];
+  selectedCategory = 'All';
 
   get books() {
-    return this.bookService.books();
+    const allBooks = this.bookService.books();
+    if (this.selectedCategory === 'All') {
+      return allBooks;
+    }
+    return allBooks.filter((book) => book.genre === this.selectedCategory);
   }
 
   constructor() {
@@ -36,6 +42,7 @@ export class Homescreen {
       author: book.author,
       price: book.price,
       genre: book.genre,
+      bookId: book._id, // Pass book ID for backend sync
     });
     this.showToast(`${book.title} added to cart`);
   }
@@ -47,10 +54,15 @@ export class Homescreen {
       author: book.author,
       price: book.price,
       genre: book.genre,
+      bookId: book._id, // Pass book ID for backend sync
       quantity: 1,
     });
     // navigate to payment screen
     this.router.navigate(['/payment']);
+  }
+
+  selectCategory(category: string) {
+    this.selectedCategory = category;
   }
 
   private showToast(msg: string, ms = 1800) {

@@ -18,3 +18,19 @@
 2025-11-22 06:28:36 [error]: Error closing Redis connection: Connection is closed.
 2025-11-22 06:54:15 [error]: Error closing Redis connection: Connection is closed.
 2025-11-22 06:54:15 [error]: Error closing Redis connection: Connection is closed.
+2025-11-25 16:06:45 [error]: Redis connection error: getaddrinfo ENOTFOUND redis
+2025-11-25 16:06:49 [error]: Redis connection error: getaddrinfo ENOTFOUND redis
+2025-11-25 16:06:53 [error]: Redis connection error: getaddrinfo ENOTFOUND redis
+2025-11-25 16:06:57 [error]: Redis connection error: getaddrinfo ENOTFOUND redis
+2025-11-25 16:06:57 [error]: MaxRetriesPerRequestError: Reached the max retries per request limit (which is 3). Refer to "maxRetriesPerRequest" option for details.
+    at Socket.<anonymous> (/home/sengz/Documents/BookVerse/backend/api-gateway/node_modules/ioredis/built/redis/event_handler.js:207:37)
+    at Object.onceWrapper (node:events:634:26)
+    at Socket.emit (node:events:519:28)
+    at TCP.<anonymous> (node:net:346:12)
+2025-11-25 16:06:57 [error]: Unhandled Rejection at: [object Promise], reason: MaxRetriesPerRequestError: Reached the max retries per request limit (which is 3). Refer to "maxRetriesPerRequest" option for details.
+2025-11-25 16:06:57 [error]: MaxRetriesPerRequestError: Reached the max retries per request limit (which is 3). Refer to "maxRetriesPerRequest" option for details.
+    at Socket.<anonymous> (/home/sengz/Documents/BookVerse/backend/api-gateway/node_modules/ioredis/built/redis/event_handler.js:207:37)
+    at Object.onceWrapper (node:events:634:26)
+    at Socket.emit (node:events:519:28)
+    at TCP.<anonymous> (node:net:346:12)
+2025-11-25 16:06:57 [error]: Unhandled Rejection at: [object Promise], reason: MaxRetriesPerRequestError: Reached the max retries per request limit (which is 3). Refer to "maxRetriesPerRequest" option for details.

@@ -22,7 +22,12 @@
       <ul class="flex space-x-4 md:space-x-10 mt-5">
         <li
           *ngFor="let cat of categories"
-          class="px-4 md:px-6 py-2 cursor-pointer hover:bg-[#D4AF37] hover:text-black transition rounded-xl bg-[#5A534C] whitespace-nowrap"
+          (click)="selectCategory(cat)"
+          [class]="
+            selectedCategory === cat
+              ? 'px-4 md:px-6 py-2 cursor-pointer transition rounded-xl whitespace-nowrap bg-[#D4AF37] text-black font-semibold'
+              : 'px-4 md:px-6 py-2 cursor-pointer hover:bg-[#D4AF37] hover:text-black transition rounded-xl bg-[#5A534C] whitespace-nowrap'
+          "
         >
           {{ cat }}
         </li>

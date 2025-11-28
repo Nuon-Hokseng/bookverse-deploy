@@ -1,9 +1,12 @@
 import express from "express";
 import {
-    getAllBooks,
-    searchBooks,
-    getBooksByCategory,
-    getBookDetail
+  getAllBooks,
+  searchBooks,
+  getBooksByCategory,
+  getBookDetail,
+  createBook,
+  updateBook,
+  deleteBook,
 } from "../controllers/book.controller.js";
 
 const router = express.Router();
@@ -111,5 +114,88 @@ router.get("/category", getBooksByCategory);
  *                   type: string
  */
 router.get("/:id", getBookDetail);
+
+/**
+ * @swagger
+ * /books:
+ *   post:
+ *     summary: Create a new book
+ *     tags: [Books]
+ *     security: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - title
+ *               - author
+ *               - price
+ *               - category
+ *             properties:
+ *               title:
+ *                 type: string
+ *               author:
+ *                 type: string
+ *               price:
+ *                 type: number
+ *               category:
+ *                 type: string
+ *               description:
+ *                 type: string
+ *               image_url:
+ *                 type: string
+ *               publication_year:
+ *                 type: number
+ *     responses:
+ *       201:
+ *         description: Book created successfully
+ */
+router.post("/", createBook);
+
+/**
+ * @swagger
+ * /books/{id}:
+ *   put:
+ *     summary: Update a book
+ *     tags: [Books]
+ *     security: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *     responses:
+ *       200:
+ *         description: Book updated successfully
+ */
+router.put("/:id", updateBook);
+
+/**
+ * @swagger
+ * /books/{id}:
+ *   delete:
+ *     summary: Delete a book
+ *     tags: [Books]
+ *     security: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Book deleted successfully
+ */
+router.delete("/:id", deleteBook);
 
 export default router;

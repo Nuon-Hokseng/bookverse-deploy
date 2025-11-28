@@ -844,3 +844,132 @@
 2025-11-22 06:54:15 [info]: HTTP server closed
 2025-11-22 06:54:15 [error]: Error closing Redis connection: Connection is closed.
 2025-11-22 06:54:16 [info]: Shutdown complete, exiting process
+2025-11-25 16:06:44 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-25 16:06:44 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-25 16:06:44 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-25 16:06:44 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-25 16:06:44 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-25 16:06:44 [info]: 🚀 API Gateway started successfully
+2025-11-25 16:06:44 [info]: 📍 Environment: development
+2025-11-25 16:06:44 [info]: 🌐 Port: 3000
+2025-11-25 16:06:44 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-25 16:06:44 [info]: 📊 Redis: Enabled
+2025-11-25 16:06:44 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-25 16:06:44 [info]: ✅ Ready to handle requests
+2025-11-25 16:06:45 [error]: Redis connection error: getaddrinfo ENOTFOUND redis
+2025-11-25 16:06:45 [warn]: Redis connection retry attempt 1, delay: 50ms
+2025-11-25 16:06:49 [error]: Redis connection error: getaddrinfo ENOTFOUND redis
+2025-11-25 16:06:49 [warn]: Redis connection retry attempt 2, delay: 100ms
+2025-11-25 16:06:53 [error]: Redis connection error: getaddrinfo ENOTFOUND redis
+2025-11-25 16:06:53 [warn]: Redis connection retry attempt 3, delay: 150ms
+2025-11-25 16:06:57 [error]: Redis connection error: getaddrinfo ENOTFOUND redis
+2025-11-25 16:06:57 [warn]: Redis connection retry attempt 4, delay: 200ms
+2025-11-25 16:06:57 [error]: MaxRetriesPerRequestError: Reached the max retries per request limit (which is 3). Refer to "maxRetriesPerRequest" option for details.
+    at Socket.<anonymous> (/home/sengz/Documents/BookVerse/backend/api-gateway/node_modules/ioredis/built/redis/event_handler.js:207:37)
+    at Object.onceWrapper (node:events:634:26)
+    at Socket.emit (node:events:519:28)
+    at TCP.<anonymous> (node:net:346:12)
+2025-11-25 16:06:57 [error]: Unhandled Rejection at: [object Promise], reason: MaxRetriesPerRequestError: Reached the max retries per request limit (which is 3). Refer to "maxRetriesPerRequest" option for details.
+2025-11-25 16:06:57 [info]: UNHANDLED_REJECTION received, starting graceful shutdown...
+2025-11-25 16:06:57 [error]: MaxRetriesPerRequestError: Reached the max retries per request limit (which is 3). Refer to "maxRetriesPerRequest" option for details.
+    at Socket.<anonymous> (/home/sengz/Documents/BookVerse/backend/api-gateway/node_modules/ioredis/built/redis/event_handler.js:207:37)
+    at Object.onceWrapper (node:events:634:26)
+    at Socket.emit (node:events:519:28)
+    at TCP.<anonymous> (node:net:346:12)
+2025-11-25 16:06:57 [error]: Unhandled Rejection at: [object Promise], reason: MaxRetriesPerRequestError: Reached the max retries per request limit (which is 3). Refer to "maxRetriesPerRequest" option for details.
+2025-11-25 16:06:57 [info]: UNHANDLED_REJECTION received, starting graceful shutdown...
+2025-11-25 16:06:57 [info]: HTTP server closed
+2025-11-25 16:06:57 [info]: HTTP server closed
+2025-11-25 16:06:57 [info]: Redis connection closed
+2025-11-25 16:06:57 [info]: Redis connection closed
+2025-11-25 16:08:20 [info]: Redis disabled, using in-memory rate limiting
+2025-11-25 16:08:20 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-25 16:08:20 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-25 16:08:20 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-25 16:08:20 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-25 16:08:20 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-25 16:08:20 [info]: 🚀 API Gateway started successfully
+2025-11-25 16:08:20 [info]: 📍 Environment: development
+2025-11-25 16:08:20 [info]: 🌐 Port: 3000
+2025-11-25 16:08:20 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-25 16:08:20 [info]: 📊 Redis: Disabled
+2025-11-25 16:08:20 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-25 16:08:20 [info]: ✅ Ready to handle requests
+2025-11-25 16:23:08 [info]: Redis disabled, using in-memory rate limiting
+2025-11-25 16:23:08 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-25 16:23:08 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-25 16:23:08 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-25 16:23:08 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-25 16:23:08 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-25 16:23:08 [info]: 🚀 API Gateway started successfully
+2025-11-25 16:23:08 [info]: 📍 Environment: development
+2025-11-25 16:23:08 [info]: 🌐 Port: 3000
+2025-11-25 16:23:08 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-25 16:23:08 [info]: 📊 Redis: Disabled
+2025-11-25 16:23:08 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-25 16:23:08 [info]: ✅ Ready to handle requests
+2025-11-29 01:58:56 [info]: Redis disabled, using in-memory rate limiting
+2025-11-29 01:58:56 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-29 01:58:56 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-29 01:58:56 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-29 01:58:56 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-29 01:58:56 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-29 01:58:56 [info]: 🚀 API Gateway started successfully
+2025-11-29 01:58:56 [info]: 📍 Environment: development
+2025-11-29 01:58:56 [info]: 🌐 Port: 3000
+2025-11-29 01:58:56 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-29 01:58:56 [info]: 📊 Redis: Disabled
+2025-11-29 01:58:56 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-29 01:58:56 [info]: ✅ Ready to handle requests
+2025-11-29 01:59:24 [info]: Redis disabled, using in-memory rate limiting
+2025-11-29 01:59:24 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-29 01:59:24 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-29 01:59:24 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-29 01:59:24 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-29 01:59:24 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-29 01:59:24 [info]: 🚀 API Gateway started successfully
+2025-11-29 01:59:24 [info]: 📍 Environment: development
+2025-11-29 01:59:24 [info]: 🌐 Port: 3000
+2025-11-29 01:59:24 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-29 01:59:24 [info]: 📊 Redis: Disabled
+2025-11-29 01:59:24 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-29 01:59:24 [info]: ✅ Ready to handle requests
+2025-11-29 02:01:16 [info]: Redis disabled, using in-memory rate limiting
+2025-11-29 02:01:16 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-29 02:01:16 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-29 02:01:16 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-29 02:01:16 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-29 02:01:16 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-29 02:01:16 [info]: 🚀 API Gateway started successfully
+2025-11-29 02:01:16 [info]: 📍 Environment: development
+2025-11-29 02:01:16 [info]: 🌐 Port: 3000
+2025-11-29 02:01:16 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-29 02:01:16 [info]: 📊 Redis: Disabled
+2025-11-29 02:01:16 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-29 02:01:16 [info]: ✅ Ready to handle requests
+2025-11-29 02:01:40 [info]: GET /v1/books
+2025-11-29 02:01:49 [info]: DELETE /v1/books/1
+2025-11-29 02:02:11 [info]: DELETE /v1/books/2
+2025-11-29 02:02:27 [info]: GET /v1/books
+2025-11-29 02:02:46 [info]: DELETE /v1/books/692573bc154d8e8a803b494f
+2025-11-29 02:04:19 [info]: GET /v1/books
+2025-11-29 02:05:05 [info]: POST /v1/books
+2025-11-29 02:05:36 [info]: GET /v1/books
+2025-11-29 02:05:58 [info]: GET /v1/books
+2025-11-29 02:06:24 [info]: GET /v1/books
+2025-11-29 02:06:59 [info]: GET /v1/books
+2025-11-29 02:07:07 [info]: DELETE /v1/books/692573bc154d8e8a803b4950
+2025-11-29 02:07:47 [info]: POST /v1/books
+2025-11-29 02:07:54 [info]: POST /v1/books
+2025-11-29 02:09:57 [info]: POST /v1/books
+2025-11-29 02:10:28 [info]: POST /v1/books
+2025-11-29 02:10:36 [info]: DELETE /v1/books/6929f3a4d0bc1ebc58877328
+2025-11-29 02:11:21 [info]: GET /v1/books
+2025-11-29 02:11:36 [info]: GET /v1/books
+2025-11-29 02:11:52 [info]: GET /v1/books
+2025-11-29 02:12:02 [info]: GET /v1/books
+2025-11-29 02:12:06 [info]: DELETE /v1/books/692573bc154d8e8a803b4951
+2025-11-29 02:12:09 [info]: GET /v1/books
+2025-11-29 02:12:15 [info]: GET /v1/books
+2025-11-29 02:12:42 [info]: POST /v1/books
+2025-11-29 02:12:47 [info]: GET /v1/books
