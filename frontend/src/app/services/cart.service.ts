@@ -10,6 +10,7 @@ export interface CartItem {
   price: number;
   quantity: number;
   bookId?: string; // Backend book ID
+  coverImage?: string; // Book cover image URL
 }
 
 interface BackendCartItem {

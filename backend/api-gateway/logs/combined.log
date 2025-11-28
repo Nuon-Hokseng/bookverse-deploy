@@ -973,3 +973,14 @@
 2025-11-29 02:12:15 [info]: GET /v1/books
 2025-11-29 02:12:42 [info]: POST /v1/books
 2025-11-29 02:12:47 [info]: GET /v1/books
+2025-11-29 02:14:14 [info]: GET /v1/books
+2025-11-29 02:14:27 [info]: GET /v1/books
+2025-11-29 02:15:00 [info]: GET /v1/books
+2025-11-29 02:15:18 [info]: GET /v1/books
+2025-11-29 02:15:35 [info]: POST /v1/books
+2025-11-29 02:15:42 [info]: GET /v1/books/6929f4d7d0bc1ebc58877339
+2025-11-29 02:15:54 [info]: GET /v1/books
+2025-11-29 02:17:07 [info]: GET /v1/books
+2025-11-29 02:17:17 [info]: GET /v1/books
+2025-11-29 02:17:32 [info]: GET /v1/books
+2025-11-29 02:17:36 [info]: DELETE /v1/books/692573bc154d8e8a803b4952

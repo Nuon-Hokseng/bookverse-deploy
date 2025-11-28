@@ -43,6 +43,7 @@ export class Homescreen {
       price: book.price,
       genre: book.genre,
       bookId: book._id, // Pass book ID for backend sync
+      coverImage: book.coverImage, // Pass cover image URL
     });
     this.showToast(`${book.title} added to cart`);
   }
@@ -55,6 +56,7 @@ export class Homescreen {
       price: book.price,
       genre: book.genre,
       bookId: book._id, // Pass book ID for backend sync
+      coverImage: book.coverImage, // Pass cover image URL
       quantity: 1,
     });
     // navigate to payment screen

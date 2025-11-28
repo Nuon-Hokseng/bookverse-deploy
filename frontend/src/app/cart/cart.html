@@ -15,9 +15,18 @@
         >
           <!-- Book Logo / Image -->
           <div
-            class="flex w-full h-60 md:h-72 items-center justify-center bg-[#2A2520] rounded-xl mb-3"
+            class="flex w-full h-80 md:h-96 items-center justify-center bg-[#2A2520] rounded-xl mb-3 overflow-hidden"
           >
-            Logo
+            <img
+              *ngIf="item.coverImage"
+              [src]="item.coverImage"
+              [alt]="item.title"
+              class="w-full h-full object-cover"
+              (error)="$event.target.src = ''"
+            />
+            <span *ngIf="!item.coverImage" class="text-[#5A534C] text-lg"
+              >No Cover</span
+            >
           </div>
 
           <!-- Book Info -->

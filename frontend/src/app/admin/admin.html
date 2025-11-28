@@ -115,6 +115,16 @@
     <!-- Books Grid -->
     <div *ngIf="!loading() && books().length > 0" class="books-grid">
       <div *ngFor="let book of books()" class="book-card">
+        <div class="book-cover">
+          <img
+            *ngIf="book.coverImage"
+            [src]="book.coverImage"
+            [alt]="book.title"
+            class="cover-image"
+            (error)="$event.target.style.display = 'none'"
+          />
+          <div *ngIf="!book.coverImage" class="no-cover">No Cover</div>
+        </div>
         <div class="book-info">
           <h3>{{ book.title }}</h3>
           <p class="author">by {{ book.author }}</p>
