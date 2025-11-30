@@ -1,0 +1,48 @@
+[dotenv@17.2.3] injecting env (6) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+MongoDB connected
+Order Service running on port 3002
+User authenticated via API Gateway headers: {
+  id: '692c05f24d05e6d18a0ff59d',
+  role: 'user',
+  email: 'test@example.com'
+}
+[Order Controller] Create order request received
+[Order Controller] Headers: {
+  authorization: undefined,
+  'x-user-id': '692c05f24d05e6d18a0ff59d',
+  'x-user-role': 'user',
+  'x-user-email': 'test@example.com',
+  cookie: 'refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMwNWYyNGQwNWU2ZDE4YTBmZjU5ZCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc2NDQ5NDQ3MywiZXhwIjoxNzY1MDk5MjczfQ.2tHrqEQYIkY8ZBacUf-rSlUc_fToBJBnqKNi6TvPsbM; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMwNWYyNGQwNWU2ZDE4YTBmZjU5ZCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc2NDQ5NDQ3MywiZXhwIjoxNzY0NDk4MDczfQ.3Rllt-fRBEixtU1zOeWWDVhPUC1rdl70sq9jqX7_i7U'
+}
+[Order Controller] req.user: {
+  id: '692c05f24d05e6d18a0ff59d',
+  role: 'user',
+  email: 'test@example.com'
+}
+[Order Controller] Body: {
+  name: 'Test User',
+  shippingAddress: '123 Test St',
+  cardNumber: '4111111111111111',
+  CVV: '123',
+  expiredDate: '12/25',
+  orderNote: 'Test order'
+}
+[Order Controller] User ID: 692c05f24d05e6d18a0ff59d
+Calling Cart Service GET /cart: http://localhost:3001/api/cart
+[Order Controller] Forwarding user headers to cart service: {
+  'x-user-id': '692c05f24d05e6d18a0ff59d',
+  'x-user-role': 'user',
+  'x-user-email': 'test@example.com'
+}
+Cart data: {
+  cartId: '692c0761b23105f702a6d558',
+  items: [
+    {
+      _id: '692c0cbb51cc5309a405d625',
+      quantity: 1,
+      price: 15.99,
+      book: [Object]
+    }
+  ]
+}
+Calling Cart Service DELETE /cart/clear

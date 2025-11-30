@@ -1,26 +1,138 @@
-[dotenv@17.2.3] injecting env (6) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
-2025-11-30 15:58:48 [[32minfo[39m]: Redis disabled, using in-memory rate limiting
-2025-11-30 15:58:48 [[32minfo[39m]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
-2025-11-30 15:58:48 [[32minfo[39m]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
-2025-11-30 15:58:48 [[32minfo[39m]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
-2025-11-30 15:58:48 [[32minfo[39m]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
-2025-11-30 15:58:48 [[32minfo[39m]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
-2025-11-30 15:58:48 [[32minfo[39m]: 🚀 API Gateway started successfully
-2025-11-30 15:58:48 [[32minfo[39m]: 📍 Environment: development
-2025-11-30 15:58:48 [[32minfo[39m]: 🌐 Port: 3000
-2025-11-30 15:58:48 [[32minfo[39m]: 🔒 CORS Origin: http://localhost:4200
-2025-11-30 15:58:48 [[32minfo[39m]: 📊 Redis: Disabled
-2025-11-30 15:58:48 [[32minfo[39m]: 🛡️  Rate Limiting: Enabled
-2025-11-30 15:58:48 [[32minfo[39m]: ✅ Ready to handle requests
-2025-11-30 15:58:53 [[32minfo[39m]: POST /v1/auth/login
-2025-11-30 15:58:53 [[32minfo[39m]: GET /v1/cart
-2025-11-30 15:59:13 [[32minfo[39m]: POST /v1/cart/add
-2025-11-30 15:59:13 [[32minfo[39m]: GET /v1/cart
-2025-11-30 16:00:16 [[32minfo[39m]: GET /v1/auth/refresh
-2025-11-30 16:00:16 [[32minfo[39m]: GET /v1/cart
-2025-11-30 16:00:18 [[32minfo[39m]: GET /v1/books
-2025-11-30 16:00:20 [[32minfo[39m]: POST /v1/cart/add
-2025-11-30 16:00:21 [[32minfo[39m]: POST /v1/cart/add
-2025-11-30 16:00:23 [[32minfo[39m]: GET /v1/auth/refresh
-2025-11-30 16:00:23 [[32minfo[39m]: GET /v1/cart
-2025-11-30 16:00:38 [[32minfo[39m]: GET /v1/books
+[dotenv@17.2.3] injecting env (6) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2025-11-30 17:37:25 [[32minfo[39m]: Redis disabled, using in-memory rate limiting
+2025-11-30 17:37:25 [[32minfo[39m]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 17:37:25 [[32minfo[39m]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 17:37:25 [[32minfo[39m]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 17:37:25 [[32minfo[39m]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 17:37:25 [[32minfo[39m]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 17:37:25 [[32minfo[39m]: 🚀 API Gateway started successfully
+2025-11-30 17:37:25 [[32minfo[39m]: 📍 Environment: development
+2025-11-30 17:37:25 [[32minfo[39m]: 🌐 Port: 3000
+2025-11-30 17:37:25 [[32minfo[39m]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 17:37:25 [[32minfo[39m]: 📊 Redis: Disabled
+2025-11-30 17:37:25 [[32minfo[39m]: 🛡️  Rate Limiting: Enabled
+2025-11-30 17:37:25 [[32minfo[39m]: ✅ Ready to handle requests
+2025-11-30 17:38:01 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:38:05 [[32minfo[39m]: GET /v1/orders/all
+2025-11-30 17:38:05 [[33mwarn[39m]: Authentication failed: No token provided for GET /all
+2025-11-30 17:38:06 [[32minfo[39m]: GET /v1/orders/all
+2025-11-30 17:38:06 [[33mwarn[39m]: Authentication failed: No token provided for GET /all
+2025-11-30 17:38:07 [[32minfo[39m]: GET /v1/orders/all
+2025-11-30 17:38:07 [[33mwarn[39m]: Authentication failed: No token provided for GET /all
+2025-11-30 17:38:07 [[32minfo[39m]: GET /v1/orders/all
+2025-11-30 17:38:07 [[33mwarn[39m]: Authentication failed: No token provided for GET /all
+2025-11-30 17:38:07 [[32minfo[39m]: GET /v1/orders/all
+2025-11-30 17:38:07 [[33mwarn[39m]: Authentication failed: No token provided for GET /all
+2025-11-30 17:39:15 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:39:40 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:40:17 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:40:21 [[32minfo[39m]: POST /v1/auth/login
+2025-11-30 17:40:21 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:40:23 [[32minfo[39m]: POST /v1/cart/add
+2025-11-30 17:40:23 [[32minfo[39m]: POST /v1/cart/add
+2025-11-30 17:40:35 [[32minfo[39m]: POST /v1/orders
+2025-11-30 17:40:36 [[32minfo[39m]: GET /v1/orders
+2025-11-30 17:40:41 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 17:40:41 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:40:41 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:42:10 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:42:15 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 17:42:15 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:42:15 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:43:03 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 17:43:03 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:43:03 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:43:04 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 17:43:04 [[32minfo[39m]: GET /v1/orders
+2025-11-30 17:43:04 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:43:13 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 17:43:13 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:43:13 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:43:14 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 17:43:14 [[32minfo[39m]: GET /v1/orders
+2025-11-30 17:43:14 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:45:01 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 17:45:01 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:45:01 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:45:03 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 17:45:03 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:45:04 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:45:38 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 17:45:38 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:45:38 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:45:49 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 17:45:49 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 17:45:49 [[32minfo[39m]: GET /v1/orders
+2025-11-30 17:45:49 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:45:49 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:45:49 [[32minfo[39m]: GET /v1/cart
+2025-11-30 17:45:53 [[32minfo[39m]: GET /v1/books
+2025-11-30 17:45:53 [[32minfo[39m]: GET /v1/orders
+2025-11-30 18:35:08 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:35:08 [[32minfo[39m]: GET /v1/orders
+2025-11-30 18:35:41 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 18:35:41 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:35:41 [[32minfo[39m]: GET /v1/cart
+2025-11-30 18:35:46 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 18:35:46 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:35:46 [[32minfo[39m]: GET /v1/cart
+2025-11-30 18:36:04 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 18:36:04 [[32minfo[39m]: GET /v1/orders
+2025-11-30 18:36:04 [[32minfo[39m]: GET /v1/cart
+2025-11-30 18:36:08 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 18:36:08 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:36:08 [[32minfo[39m]: GET /v1/cart
+2025-11-30 18:36:19 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 18:36:19 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:36:19 [[32minfo[39m]: GET /v1/cart
+2025-11-30 18:37:49 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:37:49 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:37:57 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:37:57 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:38:09 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:38:09 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:39:03 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 18:39:03 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:39:03 [[32minfo[39m]: GET /v1/cart
+2025-11-30 18:39:09 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 18:39:09 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:39:09 [[32minfo[39m]: GET /v1/cart
+2025-11-30 18:39:24 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:40:18 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:40:33 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:42:52 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:43:29 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:43:38 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:43:54 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:44:48 [[32minfo[39m]: GET /v1/books
+2025-11-30 18:46:31 [[32minfo[39m]: GET /v1/books
+2025-11-30 20:20:10 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 20:20:10 [[32minfo[39m]: GET /v1/books
+2025-11-30 20:20:10 [[32minfo[39m]: GET /v1/cart
+2025-11-30 20:20:12 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 20:20:12 [[32minfo[39m]: GET /v1/books
+2025-11-30 20:20:12 [[32minfo[39m]: GET /v1/cart
+2025-11-30 20:22:05 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 20:22:05 [[32minfo[39m]: GET /v1/books
+2025-11-30 20:22:05 [[32minfo[39m]: GET /v1/cart
+2025-11-30 20:23:35 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 20:23:35 [[32minfo[39m]: GET /v1/books
+2025-11-30 20:23:35 [[32minfo[39m]: GET /v1/cart
+2025-11-30 20:27:04 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 20:27:04 [[32minfo[39m]: GET /v1/books
+2025-11-30 20:27:04 [[32minfo[39m]: GET /v1/cart
+2025-11-30 20:27:07 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 20:27:07 [[32minfo[39m]: GET /v1/books
+2025-11-30 20:27:07 [[32minfo[39m]: GET /v1/cart
+2025-11-30 20:27:24 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 20:27:24 [[32minfo[39m]: GET /v1/books
+2025-11-30 20:27:24 [[32minfo[39m]: GET /v1/cart
+2025-11-30 20:27:26 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 20:27:26 [[32minfo[39m]: GET /v1/books
+2025-11-30 20:27:26 [[32minfo[39m]: GET /v1/cart
+2025-11-30 20:27:31 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 20:27:31 [[32minfo[39m]: GET /v1/books
+2025-11-30 20:27:31 [[32minfo[39m]: GET /v1/cart
+2025-11-30 20:27:42 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 20:27:42 [[32minfo[39m]: GET /v1/books
+2025-11-30 20:27:42 [[32minfo[39m]: GET /v1/cart

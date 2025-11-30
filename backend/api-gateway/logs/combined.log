@@ -1474,3 +1474,457 @@
 2025-11-30 16:00:23 [info]: GET /v1/auth/refresh
 2025-11-30 16:00:23 [info]: GET /v1/cart
 2025-11-30 16:00:38 [info]: GET /v1/books
+2025-11-30 16:02:33 [info]: GET /v1/auth/refresh
+2025-11-30 16:02:33 [info]: GET /v1/books
+2025-11-30 16:02:33 [info]: GET /v1/cart
+2025-11-30 16:02:47 [info]: GET /v1/auth/refresh
+2025-11-30 16:02:47 [info]: GET /v1/books
+2025-11-30 16:02:47 [info]: GET /v1/cart
+2025-11-30 16:03:10 [info]: GET /v1/auth/refresh
+2025-11-30 16:03:10 [info]: GET /v1/books
+2025-11-30 16:03:10 [info]: GET /v1/cart
+2025-11-30 16:03:40 [info]: GET /v1/auth/refresh
+2025-11-30 16:03:40 [info]: GET /v1/books
+2025-11-30 16:03:40 [info]: GET /v1/cart
+2025-11-30 16:03:48 [info]: GET /v1/auth/refresh
+2025-11-30 16:03:48 [info]: GET /v1/books
+2025-11-30 16:03:48 [info]: GET /v1/cart
+2025-11-30 16:03:51 [info]: GET /v1/books
+2025-11-30 16:03:59 [info]: GET /v1/books
+2025-11-30 16:04:51 [info]: POST /v1/auth/logout
+2025-11-30 16:04:53 [info]: GET /v1/books
+2025-11-30 16:05:04 [info]: POST /v1/auth/login
+2025-11-30 16:05:05 [info]: GET /v1/cart
+2025-11-30 16:05:07 [info]: GET /v1/books
+2025-11-30 16:10:39 [info]: GET /v1/auth/refresh
+2025-11-30 16:10:39 [info]: GET /v1/cart
+2025-11-30 16:10:42 [info]: GET /v1/auth/refresh
+2025-11-30 16:10:42 [info]: GET /v1/cart
+2025-11-30 16:11:25 [info]: GET /v1/auth/refresh
+2025-11-30 16:11:25 [info]: GET /v1/cart
+2025-11-30 16:11:26 [info]: GET /v1/books
+2025-11-30 16:11:36 [info]: POST /v1/auth/logout
+2025-11-30 16:11:40 [info]: GET /v1/books
+2025-11-30 16:11:56 [info]: GET /v1/books
+2025-11-30 16:11:56 [info]: GET /v1/books
+2025-11-30 16:12:16 [info]: GET /v1/books
+2025-11-30 16:12:16 [info]: GET /v1/books
+2025-11-30 16:12:48 [info]: GET /v1/books
+2025-11-30 16:12:48 [info]: GET /v1/books
+2025-11-30 16:13:16 [info]: POST /v1/books
+2025-11-30 16:13:22 [info]: GET /v1/books
+2025-11-30 16:13:35 [info]: GET /v1/books
+2025-11-30 16:13:41 [info]: GET /v1/books
+2025-11-30 16:13:42 [info]: GET /v1/books
+2025-11-30 16:13:45 [info]: POST /v1/auth/login
+2025-11-30 16:13:46 [info]: GET /v1/cart
+2025-11-30 16:13:47 [info]: GET /v1/orders
+2025-11-30 16:13:49 [info]: GET /v1/books
+2025-11-30 16:13:53 [info]: POST /v1/cart/add
+2025-11-30 16:13:54 [info]: POST /v1/cart/add
+2025-11-30 16:14:30 [info]: POST /v1/orders
+2025-11-30 16:14:41 [info]: GET /v1/orders
+2025-11-30 16:14:42 [info]: GET /v1/books
+2025-11-30 16:17:10 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 16:17:10 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 16:17:10 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 16:17:10 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 16:17:10 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 16:17:10 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 16:17:10 [info]: 🚀 API Gateway started successfully
+2025-11-30 16:17:10 [info]: 📍 Environment: development
+2025-11-30 16:17:10 [info]: 🌐 Port: 3000
+2025-11-30 16:17:10 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 16:17:10 [info]: 📊 Redis: Disabled
+2025-11-30 16:17:10 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 16:17:10 [info]: ✅ Ready to handle requests
+2025-11-30 16:17:15 [info]: GET /v1/books
+2025-11-30 16:18:03 [info]: POST /v1/auth/login
+2025-11-30 16:18:03 [info]: GET /v1/cart
+2025-11-30 16:18:13 [info]: POST /v1/orders
+2025-11-30 16:18:15 [info]: POST /v1/orders
+2025-11-30 16:18:21 [info]: GET /v1/auth/refresh
+2025-11-30 16:18:21 [info]: GET /v1/cart
+2025-11-30 16:18:41 [info]: POST /v1/orders
+2025-11-30 16:19:09 [info]: GET /v1/books
+2025-11-30 16:20:39 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 16:20:39 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 16:20:39 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 16:20:39 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 16:20:39 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 16:20:39 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 16:20:39 [info]: 🚀 API Gateway started successfully
+2025-11-30 16:20:39 [info]: 📍 Environment: development
+2025-11-30 16:20:39 [info]: 🌐 Port: 3000
+2025-11-30 16:20:39 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 16:20:39 [info]: 📊 Redis: Disabled
+2025-11-30 16:20:39 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 16:20:39 [info]: ✅ Ready to handle requests
+2025-11-30 16:21:13 [info]: POST /v1/auth/login
+2025-11-30 16:21:22 [info]: POST /v1/orders
+2025-11-30 16:21:54 [info]: GET /v1/cart
+2025-11-30 16:22:03 [info]: POST /v1/cart/add
+2025-11-30 16:22:11 [info]: POST /v1/orders
+2025-11-30 16:22:44 [info]: POST /v1/orders
+2025-11-30 16:23:10 [info]: GET /v1/auth/refresh
+2025-11-30 16:23:10 [info]: GET /v1/books
+2025-11-30 16:23:10 [info]: GET /v1/cart
+2025-11-30 16:23:11 [info]: POST /v1/cart/add
+2025-11-30 16:23:17 [info]: DELETE /v1/cart/item/692c0ad2b23105f702a6d585
+2025-11-30 16:23:17 [info]: DELETE /v1/cart/item/692c0ad2b23105f702a6d58a
+2025-11-30 16:23:18 [info]: DELETE /v1/cart/item/692c0cff51cc5309a405d630
+2025-11-30 16:23:19 [info]: GET /v1/books
+2025-11-30 16:23:21 [info]: GET /v1/auth/refresh
+2025-11-30 16:23:21 [info]: GET /v1/cart
+2025-11-30 16:23:22 [info]: GET /v1/books
+2025-11-30 16:23:23 [info]: POST /v1/cart/add
+2025-11-30 16:23:25 [info]: POST /v1/cart/add
+2025-11-30 16:23:54 [info]: POST /v1/orders
+2025-11-30 16:23:54 [error]: Proxy error to http://localhost:3002: 
+2025-11-30 16:24:00 [info]: POST /v1/auth/logout
+2025-11-30 16:24:39 [info]: GET /v1/books
+2025-11-30 16:24:44 [info]: POST /v1/auth/login
+2025-11-30 16:24:44 [info]: GET /v1/cart
+2025-11-30 16:24:52 [info]: POST /v1/orders
+2025-11-30 16:24:52 [error]: Proxy error to http://localhost:3002: 
+2025-11-30 16:26:36 [info]: POST /v1/auth/login
+2025-11-30 16:26:36 [info]: POST /v1/orders
+2025-11-30 16:26:36 [error]: Proxy error to http://localhost:3002: 
+2025-11-30 16:44:32 [info]: POST /v1/auth/login
+2025-11-30 16:44:32 [info]: POST /v1/orders
+2025-11-30 16:44:32 [error]: Proxy error to http://localhost:3002: 
+2025-11-30 16:45:46 [info]: GET /v1/orders/health
+2025-11-30 16:45:46 [warn]: Authentication failed: No token provided for GET /health
+2025-11-30 16:46:38 [info]: GET /v1/orders/health
+2025-11-30 16:46:38 [error]: Proxy error to http://localhost:3002: 
+2025-11-30 16:51:12 [info]: GET /v1/auth/refresh
+2025-11-30 16:51:12 [info]: GET /v1/cart
+2025-11-30 16:51:17 [info]: POST /v1/orders
+2025-11-30 16:51:17 [error]: Proxy error to http://localhost:3002: 
+2025-11-30 16:51:22 [info]: GET /v1/auth/refresh
+2025-11-30 16:51:22 [info]: GET /v1/cart
+2025-11-30 16:51:24 [info]: POST /v1/auth/logout
+2025-11-30 16:51:26 [info]: GET /v1/books
+2025-11-30 16:51:31 [info]: POST /v1/auth/login
+2025-11-30 16:51:31 [info]: GET /v1/cart
+2025-11-30 16:51:45 [info]: POST /v1/orders
+2025-11-30 16:51:45 [error]: Proxy error to http://localhost:3002: 
+2025-11-30 16:54:52 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 16:54:52 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 16:54:52 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 16:54:52 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 16:54:52 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 16:54:52 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 16:54:52 [info]: 🚀 API Gateway started successfully
+2025-11-30 16:54:52 [info]: 📍 Environment: development
+2025-11-30 16:54:52 [info]: 🌐 Port: 3000
+2025-11-30 16:54:52 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 16:54:52 [info]: 📊 Redis: Disabled
+2025-11-30 16:54:52 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 16:54:52 [info]: ✅ Ready to handle requests
+2025-11-30 16:55:05 [info]: GET /v1/auth/refresh
+2025-11-30 16:55:05 [info]: GET /v1/cart
+2025-11-30 16:55:07 [info]: GET /v1/books
+2025-11-30 16:55:11 [info]: POST /v1/auth/logout
+2025-11-30 16:55:14 [info]: POST /v1/auth/login
+2025-11-30 16:55:14 [info]: GET /v1/cart
+2025-11-30 16:55:24 [info]: POST /v1/orders
+2025-11-30 16:55:27 [info]: GET /v1/orders
+2025-11-30 16:55:32 [info]: GET /v1/books
+2025-11-30 16:55:54 [info]: POST /v1/cart/add
+2025-11-30 16:55:55 [info]: POST /v1/cart/add
+2025-11-30 16:55:56 [info]: POST /v1/cart/add
+2025-11-30 16:56:26 [info]: POST /v1/orders
+2025-11-30 16:56:29 [info]: GET /v1/orders
+2025-11-30 16:56:36 [info]: GET /v1/books
+2025-11-30 16:56:39 [info]: GET /v1/orders
+2025-11-30 16:56:47 [info]: GET /v1/books
+2025-11-30 16:56:49 [info]: POST /v1/cart/add
+2025-11-30 16:58:51 [info]: GET /v1/auth/refresh
+2025-11-30 16:58:51 [info]: GET /v1/cart
+2025-11-30 16:59:36 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 16:59:36 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 16:59:36 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 16:59:36 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 16:59:36 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 16:59:36 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 16:59:36 [info]: 🚀 API Gateway started successfully
+2025-11-30 16:59:36 [info]: 📍 Environment: development
+2025-11-30 16:59:36 [info]: 🌐 Port: 3000
+2025-11-30 16:59:36 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 16:59:36 [info]: 📊 Redis: Disabled
+2025-11-30 16:59:36 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 16:59:36 [info]: ✅ Ready to handle requests
+2025-11-30 17:00:24 [info]: GET /v1/books
+2025-11-30 17:00:26 [info]: POST /v1/auth/logout
+2025-11-30 17:00:28 [info]: POST /v1/auth/login
+2025-11-30 17:00:28 [info]: GET /v1/cart
+2025-11-30 17:00:41 [info]: POST /v1/orders
+2025-11-30 17:00:43 [info]: GET /v1/orders
+2025-11-30 17:01:15 [info]: GET /v1/books
+2025-11-30 17:01:16 [info]: POST /v1/cart/add
+2025-11-30 17:01:21 [info]: POST /v1/orders
+2025-11-30 17:01:22 [info]: GET /v1/orders
+2025-11-30 17:01:25 [info]: GET /v1/books
+2025-11-30 17:01:32 [info]: GET /v1/orders
+2025-11-30 17:01:33 [info]: GET /v1/books
+2025-11-30 17:01:40 [info]: POST /v1/auth/logout
+2025-11-30 17:02:50 [info]: GET /v1/books
+2025-11-30 17:03:00 [info]: GET /v1/books
+2025-11-30 17:03:18 [info]: GET /v1/books
+2025-11-30 17:03:39 [info]: GET /v1/books
+2025-11-30 17:07:08 [info]: POST /v1/auth/login
+2025-11-30 17:07:16 [info]: POST /v1/auth/register
+2025-11-30 17:07:16 [info]: GET /v1/cart
+2025-11-30 17:07:21 [info]: GET /v1/orders
+2025-11-30 17:07:23 [info]: GET /v1/books
+2025-11-30 17:07:25 [info]: POST /v1/cart/add
+2025-11-30 17:07:26 [info]: POST /v1/cart/add
+2025-11-30 17:07:38 [info]: GET /v1/books
+2025-11-30 17:07:46 [info]: POST /v1/orders
+2025-11-30 17:07:47 [info]: GET /v1/orders
+2025-11-30 17:07:50 [info]: GET /v1/books
+2025-11-30 17:07:51 [info]: GET /v1/orders
+2025-11-30 17:07:52 [info]: GET /v1/books
+2025-11-30 17:07:53 [info]: POST /v1/auth/logout
+2025-11-30 17:08:10 [info]: GET /v1/books
+2025-11-30 17:08:19 [info]: GET /v1/books
+2025-11-30 17:08:32 [info]: GET /v1/books
+2025-11-30 17:08:44 [info]: GET /v1/books
+2025-11-30 17:09:08 [info]: POST /v1/auth/register
+2025-11-30 17:09:08 [info]: GET /v1/cart
+2025-11-30 17:09:11 [info]: GET /v1/orders
+2025-11-30 17:09:22 [info]: GET /v1/auth/refresh
+2025-11-30 17:09:22 [info]: GET /v1/orders
+2025-11-30 17:09:22 [info]: GET /v1/cart
+2025-11-30 17:09:25 [info]: GET /v1/books
+2025-11-30 17:09:27 [info]: POST /v1/cart/add
+2025-11-30 17:09:28 [info]: POST /v1/cart/add
+2025-11-30 17:09:30 [info]: GET /v1/orders
+2025-11-30 17:09:31 [info]: POST /v1/auth/logout
+2025-11-30 17:09:34 [info]: POST /v1/auth/login
+2025-11-30 17:09:34 [info]: GET /v1/cart
+2025-11-30 17:09:37 [info]: GET /v1/books
+2025-11-30 17:09:38 [info]: GET /v1/orders
+2025-11-30 17:09:40 [info]: GET /v1/books
+2025-11-30 17:09:48 [info]: POST /v1/auth/logout
+2025-11-30 17:10:24 [info]: GET /v1/books
+2025-11-30 17:12:21 [info]: GET /v1/books
+2025-11-30 17:13:15 [info]: GET /v1/books
+2025-11-30 17:13:46 [info]: GET /v1/books
+2025-11-30 17:14:13 [info]: GET /v1/books
+2025-11-30 17:15:39 [info]: GET /v1/books
+2025-11-30 17:16:23 [info]: POST /v1/books
+2025-11-30 17:16:29 [info]: GET /v1/books
+2025-11-30 17:16:37 [info]: POST /v1/auth/login
+2025-11-30 17:16:37 [info]: GET /v1/cart
+2025-11-30 17:16:39 [info]: GET /v1/orders
+2025-11-30 17:16:42 [info]: GET /v1/books
+2025-11-30 17:16:44 [info]: POST /v1/cart/add
+2025-11-30 17:16:44 [info]: POST /v1/cart/add
+2025-11-30 17:16:45 [info]: POST /v1/cart/add
+2025-11-30 17:16:48 [info]: GET /v1/books
+2025-11-30 17:16:49 [info]: POST /v1/auth/logout
+2025-11-30 17:16:53 [info]: POST /v1/auth/login
+2025-11-30 17:16:53 [info]: GET /v1/cart
+2025-11-30 17:17:01 [info]: GET /v1/books
+2025-11-30 17:17:24 [info]: GET /v1/books
+2025-11-30 17:19:46 [info]: GET /v1/books
+2025-11-30 17:20:10 [info]: GET /v1/auth/refresh
+2025-11-30 17:20:10 [info]: GET /v1/books
+2025-11-30 17:20:11 [info]: GET /v1/cart
+2025-11-30 17:20:11 [info]: GET /v1/auth/refresh
+2025-11-30 17:20:11 [info]: GET /v1/books
+2025-11-30 17:20:11 [info]: GET /v1/cart
+2025-11-30 17:20:38 [info]: GET /v1/books
+2025-11-30 17:20:52 [info]: GET /v1/auth/refresh
+2025-11-30 17:20:52 [info]: GET /v1/books
+2025-11-30 17:20:52 [info]: GET /v1/cart
+2025-11-30 17:21:07 [info]: GET /v1/auth/refresh
+2025-11-30 17:21:07 [info]: GET /v1/books
+2025-11-30 17:21:07 [info]: GET /v1/cart
+2025-11-30 17:21:10 [info]: GET /v1/auth/refresh
+2025-11-30 17:21:10 [info]: GET /v1/books
+2025-11-30 17:21:10 [info]: GET /v1/cart
+2025-11-30 17:21:12 [info]: POST /v1/auth/logout
+2025-11-30 17:21:18 [info]: POST /v1/auth/login
+2025-11-30 17:21:18 [info]: GET /v1/cart
+2025-11-30 17:21:19 [info]: GET /v1/books
+2025-11-30 17:21:25 [info]: GET /v1/auth/refresh
+2025-11-30 17:21:25 [info]: GET /v1/books
+2025-11-30 17:21:25 [info]: GET /v1/cart
+2025-11-30 17:22:26 [info]: GET /v1/auth/refresh
+2025-11-30 17:22:26 [info]: GET /v1/books
+2025-11-30 17:22:26 [info]: GET /v1/cart
+2025-11-30 17:24:15 [info]: GET /v1/books
+2025-11-30 17:24:27 [info]: GET /v1/auth/refresh
+2025-11-30 17:24:27 [info]: GET /v1/books
+2025-11-30 17:24:27 [info]: GET /v1/cart
+2025-11-30 17:24:31 [info]: GET /v1/books
+2025-11-30 17:24:47 [info]: GET /v1/auth/refresh
+2025-11-30 17:24:47 [info]: GET /v1/books
+2025-11-30 17:24:47 [info]: GET /v1/cart
+2025-11-30 17:24:50 [info]: GET /v1/books
+2025-11-30 17:25:05 [info]: POST /v1/auth/logout
+2025-11-30 17:25:08 [info]: GET /v1/books
+2025-11-30 17:26:02 [info]: GET /v1/books
+2025-11-30 17:26:02 [info]: GET /v1/books
+2025-11-30 17:26:23 [info]: GET /v1/books
+2025-11-30 17:26:23 [info]: GET /v1/books
+2025-11-30 17:26:33 [info]: GET /v1/books
+2025-11-30 17:26:38 [info]: GET /v1/books
+2025-11-30 17:26:43 [info]: GET /v1/books
+2025-11-30 17:26:46 [info]: GET /v1/books
+2025-11-30 17:27:38 [info]: GET /v1/books
+2025-11-30 17:27:44 [info]: GET /v1/books
+2025-11-30 17:27:54 [info]: GET /v1/books
+2025-11-30 17:28:11 [info]: GET /v1/books
+2025-11-30 17:28:27 [info]: GET /v1/books
+2025-11-30 17:28:29 [info]: GET /v1/books
+2025-11-30 17:33:26 [info]: GET /v1/books
+2025-11-30 17:33:58 [info]: GET /v1/books
+2025-11-30 17:34:03 [info]: GET /v1/books
+2025-11-30 17:34:11 [info]: GET /v1/books
+2025-11-30 17:34:13 [info]: GET /v1/books
+2025-11-30 17:35:16 [info]: GET /v1/books
+2025-11-30 17:36:19 [info]: GET /v1/books
+2025-11-30 17:36:40 [info]: GET /v1/books
+2025-11-30 17:36:54 [info]: GET /v1/books
+2025-11-30 17:37:01 [info]: GET /v1/books
+2025-11-30 17:37:25 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 17:37:25 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 17:37:25 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 17:37:25 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 17:37:25 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 17:37:25 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 17:37:25 [info]: 🚀 API Gateway started successfully
+2025-11-30 17:37:25 [info]: 📍 Environment: development
+2025-11-30 17:37:25 [info]: 🌐 Port: 3000
+2025-11-30 17:37:25 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 17:37:25 [info]: 📊 Redis: Disabled
+2025-11-30 17:37:25 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 17:37:25 [info]: ✅ Ready to handle requests
+2025-11-30 17:38:01 [info]: GET /v1/books
+2025-11-30 17:38:05 [info]: GET /v1/orders/all
+2025-11-30 17:38:05 [warn]: Authentication failed: No token provided for GET /all
+2025-11-30 17:38:06 [info]: GET /v1/orders/all
+2025-11-30 17:38:06 [warn]: Authentication failed: No token provided for GET /all
+2025-11-30 17:38:07 [info]: GET /v1/orders/all
+2025-11-30 17:38:07 [warn]: Authentication failed: No token provided for GET /all
+2025-11-30 17:38:07 [info]: GET /v1/orders/all
+2025-11-30 17:38:07 [warn]: Authentication failed: No token provided for GET /all
+2025-11-30 17:38:07 [info]: GET /v1/orders/all
+2025-11-30 17:38:07 [warn]: Authentication failed: No token provided for GET /all
+2025-11-30 17:39:15 [info]: GET /v1/books
+2025-11-30 17:39:40 [info]: GET /v1/books
+2025-11-30 17:40:17 [info]: GET /v1/books
+2025-11-30 17:40:21 [info]: POST /v1/auth/login
+2025-11-30 17:40:21 [info]: GET /v1/cart
+2025-11-30 17:40:23 [info]: POST /v1/cart/add
+2025-11-30 17:40:23 [info]: POST /v1/cart/add
+2025-11-30 17:40:35 [info]: POST /v1/orders
+2025-11-30 17:40:36 [info]: GET /v1/orders
+2025-11-30 17:40:41 [info]: GET /v1/auth/refresh
+2025-11-30 17:40:41 [info]: GET /v1/books
+2025-11-30 17:40:41 [info]: GET /v1/cart
+2025-11-30 17:42:10 [info]: GET /v1/books
+2025-11-30 17:42:15 [info]: GET /v1/auth/refresh
+2025-11-30 17:42:15 [info]: GET /v1/books
+2025-11-30 17:42:15 [info]: GET /v1/cart
+2025-11-30 17:43:03 [info]: GET /v1/auth/refresh
+2025-11-30 17:43:03 [info]: GET /v1/books
+2025-11-30 17:43:03 [info]: GET /v1/cart
+2025-11-30 17:43:04 [info]: GET /v1/auth/refresh
+2025-11-30 17:43:04 [info]: GET /v1/orders
+2025-11-30 17:43:04 [info]: GET /v1/cart
+2025-11-30 17:43:13 [info]: GET /v1/auth/refresh
+2025-11-30 17:43:13 [info]: GET /v1/books
+2025-11-30 17:43:13 [info]: GET /v1/cart
+2025-11-30 17:43:14 [info]: GET /v1/auth/refresh
+2025-11-30 17:43:14 [info]: GET /v1/orders
+2025-11-30 17:43:14 [info]: GET /v1/cart
+2025-11-30 17:45:01 [info]: GET /v1/auth/refresh
+2025-11-30 17:45:01 [info]: GET /v1/books
+2025-11-30 17:45:01 [info]: GET /v1/cart
+2025-11-30 17:45:03 [info]: GET /v1/auth/refresh
+2025-11-30 17:45:03 [info]: GET /v1/books
+2025-11-30 17:45:04 [info]: GET /v1/cart
+2025-11-30 17:45:38 [info]: GET /v1/auth/refresh
+2025-11-30 17:45:38 [info]: GET /v1/books
+2025-11-30 17:45:38 [info]: GET /v1/cart
+2025-11-30 17:45:49 [info]: GET /v1/auth/refresh
+2025-11-30 17:45:49 [info]: GET /v1/auth/refresh
+2025-11-30 17:45:49 [info]: GET /v1/orders
+2025-11-30 17:45:49 [info]: GET /v1/books
+2025-11-30 17:45:49 [info]: GET /v1/cart
+2025-11-30 17:45:49 [info]: GET /v1/cart
+2025-11-30 17:45:53 [info]: GET /v1/books
+2025-11-30 17:45:53 [info]: GET /v1/orders
+2025-11-30 18:35:08 [info]: GET /v1/books
+2025-11-30 18:35:08 [info]: GET /v1/orders
+2025-11-30 18:35:41 [info]: GET /v1/auth/refresh
+2025-11-30 18:35:41 [info]: GET /v1/books
+2025-11-30 18:35:41 [info]: GET /v1/cart
+2025-11-30 18:35:46 [info]: GET /v1/auth/refresh
+2025-11-30 18:35:46 [info]: GET /v1/books
+2025-11-30 18:35:46 [info]: GET /v1/cart
+2025-11-30 18:36:04 [info]: GET /v1/auth/refresh
+2025-11-30 18:36:04 [info]: GET /v1/orders
+2025-11-30 18:36:04 [info]: GET /v1/cart
+2025-11-30 18:36:08 [info]: GET /v1/auth/refresh
+2025-11-30 18:36:08 [info]: GET /v1/books
+2025-11-30 18:36:08 [info]: GET /v1/cart
+2025-11-30 18:36:19 [info]: GET /v1/auth/refresh
+2025-11-30 18:36:19 [info]: GET /v1/books
+2025-11-30 18:36:19 [info]: GET /v1/cart
+2025-11-30 18:37:49 [info]: GET /v1/books
+2025-11-30 18:37:49 [info]: GET /v1/books
+2025-11-30 18:37:57 [info]: GET /v1/books
+2025-11-30 18:37:57 [info]: GET /v1/books
+2025-11-30 18:38:09 [info]: GET /v1/books
+2025-11-30 18:38:09 [info]: GET /v1/books
+2025-11-30 18:39:03 [info]: GET /v1/auth/refresh
+2025-11-30 18:39:03 [info]: GET /v1/books
+2025-11-30 18:39:03 [info]: GET /v1/cart
+2025-11-30 18:39:09 [info]: GET /v1/auth/refresh
+2025-11-30 18:39:09 [info]: GET /v1/books
+2025-11-30 18:39:09 [info]: GET /v1/cart
+2025-11-30 18:39:24 [info]: GET /v1/books
+2025-11-30 18:40:18 [info]: GET /v1/books
+2025-11-30 18:40:33 [info]: GET /v1/books
+2025-11-30 18:42:52 [info]: GET /v1/books
+2025-11-30 18:43:29 [info]: GET /v1/books
+2025-11-30 18:43:38 [info]: GET /v1/books
+2025-11-30 18:43:54 [info]: GET /v1/books
+2025-11-30 18:44:48 [info]: GET /v1/books
+2025-11-30 18:46:31 [info]: GET /v1/books
+2025-11-30 20:20:10 [info]: GET /v1/auth/refresh
+2025-11-30 20:20:10 [info]: GET /v1/books
+2025-11-30 20:20:10 [info]: GET /v1/cart
+2025-11-30 20:20:12 [info]: GET /v1/auth/refresh
+2025-11-30 20:20:12 [info]: GET /v1/books
+2025-11-30 20:20:12 [info]: GET /v1/cart
+2025-11-30 20:22:05 [info]: GET /v1/auth/refresh
+2025-11-30 20:22:05 [info]: GET /v1/books
+2025-11-30 20:22:05 [info]: GET /v1/cart
+2025-11-30 20:23:35 [info]: GET /v1/auth/refresh
+2025-11-30 20:23:35 [info]: GET /v1/books
+2025-11-30 20:23:35 [info]: GET /v1/cart
+2025-11-30 20:27:04 [info]: GET /v1/auth/refresh
+2025-11-30 20:27:04 [info]: GET /v1/books
+2025-11-30 20:27:04 [info]: GET /v1/cart
+2025-11-30 20:27:07 [info]: GET /v1/auth/refresh
+2025-11-30 20:27:07 [info]: GET /v1/books
+2025-11-30 20:27:07 [info]: GET /v1/cart
+2025-11-30 20:27:24 [info]: GET /v1/auth/refresh
+2025-11-30 20:27:24 [info]: GET /v1/books
+2025-11-30 20:27:24 [info]: GET /v1/cart
+2025-11-30 20:27:26 [info]: GET /v1/auth/refresh
+2025-11-30 20:27:26 [info]: GET /v1/books
+2025-11-30 20:27:26 [info]: GET /v1/cart
+2025-11-30 20:27:31 [info]: GET /v1/auth/refresh
+2025-11-30 20:27:31 [info]: GET /v1/books
+2025-11-30 20:27:31 [info]: GET /v1/cart
+2025-11-30 20:27:42 [info]: GET /v1/auth/refresh
+2025-11-30 20:27:42 [info]: GET /v1/books
+2025-11-30 20:27:42 [info]: GET /v1/cart
