@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private API = 'http://localhost:3000/v1/auth'; // API Gateway
+  private API = 'https://gateway-service-mddd.onrender.com/v1/auth'; // API Gateway
 
   constructor(private http: HttpClient) {}
 
@@ -23,5 +23,15 @@ export class AuthService {
     return this.http.get(`${this.API}/refresh`, {
       withCredentials: true,
     });
+  }
+
+  logout() {
+    return this.http.post(
+      `${this.API}/logout`,
+      {},
+      {
+        withCredentials: true,
+      }
+    );
   }
 }

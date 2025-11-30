@@ -1,141 +1,251 @@
 <div class="admin-container">
   <header class="admin-header">
-    <button class="back-button" (click)="goBack()">← Back to Home</button>
-    <h1>Book Management</h1>
-    <button class="add-button" (click)="toggleAddForm()">
-      {{ showAddForm ? "Cancel" : "+ Add New Book" }}
-    </button>
+    <h1>Admin Dashboard</h1>
+    <div class="right-actions">
+      <button class="logout-button" (click)="adminLogout()">Logout</button>
+    </div>
   </header>
 
-  <div *ngIf="showAddForm" class="add-form">
-    <h2>Add New Book</h2>
-    <form (ngSubmit)="addBook()">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="title">Title *</label>
-          <input
-            type="text"
-            id="title"
-            [(ngModel)]="newBook.title"
-            name="title"
-            required
-            placeholder="Enter book title"
-          />
-        </div>
-        <div class="form-group">
-          <label for="author">Author *</label>
-          <input
-            type="text"
-            id="author"
-            [(ngModel)]="newBook.author"
-            name="author"
-            required
-            placeholder="Enter author name"
-          />
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="price">Price *</label>
-          <input
-            type="number"
-            id="price"
-            [(ngModel)]="newBook.price"
-            name="price"
-            required
-            min="0"
-            step="0.01"
-            placeholder="0.00"
-          />
-        </div>
-        <div class="form-group">
-          <label for="genre">Genre *</label>
-          <select id="genre" [(ngModel)]="newBook.genre" name="genre" required>
-            <option *ngFor="let genre of genres" [value]="genre">
-              {{ genre }}
-            </option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="description">Description</label>
-        <textarea
-          id="description"
-          [(ngModel)]="newBook.description"
-          name="description"
-          rows="3"
-          placeholder="Enter book description"
-        ></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="coverImage">Cover Image URL</label>
-        <input
-          type="url"
-          id="coverImage"
-          [(ngModel)]="newBook.coverImage"
-          name="coverImage"
-          placeholder="https://example.com/image.jpg"
-        />
-      </div>
-
-      <div class="form-actions">
-        <button type="submit" class="submit-button">Add Book</button>
-        <button type="button" class="cancel-button" (click)="resetForm()">
-          Reset
-        </button>
-      </div>
-    </form>
-  </div>
-
-  <div class="books-list">
-    <h2>All Books ({{ books().length }})</h2>
-
-    <!-- Loading State -->
-    <div *ngIf="loading()" class="loading-message">
-      <p>Loading books from database...</p>
-    </div>
-
-    <!-- Error State -->
-    <div *ngIf="error()" class="error-message">
-      <p>{{ error() }}</p>
-      <button (click)="bookService.fetchBooks()">Retry</button>
-    </div>
-
-    <!-- Empty State -->
-    <div
-      *ngIf="!loading() && !error() && books().length === 0"
-      class="empty-message"
+  <!-- Tabs -->
+  <div class="tabs">
+    <button
+      class="tab"
+      [class.active]="activeTab === 'books'"
+      (click)="setTab('books')"
     >
-      <p>No books found. Add your first book using the button above!</p>
+      Books
+    </button>
+    <button
+      class="tab"
+      [class.active]="activeTab === 'orders'"
+      (click)="setTab('orders')"
+    >
+      Orders
+    </button>
+  </div>
+
+  <!-- Books Tab Content -->
+  <ng-container *ngIf="activeTab === 'books'">
+    <div class="actions-row">
+      <button class="add-button" (click)="toggleAddForm()">
+        {{ showAddForm ? "Cancel" : "+ Add New Book" }}
+      </button>
     </div>
 
-    <!-- Books Grid -->
-    <div *ngIf="!loading() && books().length > 0" class="books-grid">
-      <div *ngFor="let book of books()" class="book-card">
-        <div class="book-cover">
-          <img
-            *ngIf="book.coverImage"
-            [src]="book.coverImage"
-            [alt]="book.title"
-            class="cover-image"
-            (error)="$event.target.style.display = 'none'"
+    <div *ngIf="showAddForm" class="add-form">
+      <h2>Add New Book</h2>
+      <form (ngSubmit)="addBook()">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="title">Title *</label>
+            <input
+              type="text"
+              id="title"
+              [(ngModel)]="newBook.title"
+              name="title"
+              required
+              placeholder="Enter book title"
+            />
+          </div>
+          <div class="form-group">
+            <label for="author">Author *</label>
+            <input
+              type="text"
+              id="author"
+              [(ngModel)]="newBook.author"
+              name="author"
+              required
+              placeholder="Enter author name"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="price">Price *</label>
+            <input
+              type="number"
+              id="price"
+              [(ngModel)]="newBook.price"
+              name="price"
+              required
+              min="0"
+              step="0.01"
+              placeholder="0.00"
+            />
+          </div>
+          <div class="form-group">
+            <label for="genre">Genre *</label>
+            <select
+              id="genre"
+              [(ngModel)]="newBook.genre"
+              name="genre"
+              required
+            >
+              <option *ngFor="let genre of genres" [value]="genre">
+                {{ genre }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            [(ngModel)]="newBook.description"
+            name="description"
+            rows="3"
+            placeholder="Enter book description"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="coverImage">Cover Image URL</label>
+          <input
+            type="url"
+            id="coverImage"
+            [(ngModel)]="newBook.coverImage"
+            name="coverImage"
+            placeholder="https://example.com/image.jpg"
           />
-          <div *ngIf="!book.coverImage" class="no-cover">No Cover</div>
         </div>
-        <div class="book-info">
-          <h3>{{ book.title }}</h3>
-          <p class="author">by {{ book.author }}</p>
-          <p class="genre">{{ book.genre }}</p>
-          <p class="price">${{ book.price.toFixed(2) }}</p>
-          <p *ngIf="book.description" class="description">
-            {{ book.description }}
-          </p>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-button">Add Book</button>
+          <button type="button" class="cancel-button" (click)="resetForm()">
+            Reset
+          </button>
         </div>
-        <button class="delete-button" (click)="deleteBook(book)">Delete</button>
+      </form>
+    </div>
+
+    <div class="books-list">
+      <h2>All Books ({{ books().length }})</h2>
+
+      <!-- Loading State -->
+      <div *ngIf="loading()" class="loading-message">
+        <p>Loading books from database...</p>
+      </div>
+
+      <!-- Error State -->
+      <div *ngIf="error()" class="error-message">
+        <p>{{ error() }}</p>
+        <button (click)="bookService.fetchBooks()">Retry</button>
+      </div>
+
+      <!-- Empty State -->
+      <div
+        *ngIf="!loading() && !error() && books().length === 0"
+        class="empty-message"
+      >
+        <p>No books found. Add your first book using the button above!</p>
+      </div>
+
+      <!-- Books Grid -->
+      <div *ngIf="!loading() && books().length > 0" class="books-grid">
+        <div *ngFor="let book of books()" class="book-card">
+          <div class="book-cover">
+            <img
+              *ngIf="book.coverImage"
+              [src]="book.coverImage"
+              [alt]="book.title"
+              class="cover-image"
+              (error)="$event.target.style.display = 'none'"
+            />
+            <div *ngIf="!book.coverImage" class="no-cover">No Cover</div>
+          </div>
+          <div class="book-info">
+            <h3>{{ book.title }}</h3>
+            <p class="author">by {{ book.author }}</p>
+            <p class="genre">{{ book.genre }}</p>
+            <p class="price">${{ book.price.toFixed(2) }}</p>
+            <p *ngIf="book.description" class="description">
+              {{ book.description }}
+            </p>
+          </div>
+          <button class="delete-button" (click)="deleteBook(book)">
+            Delete
+          </button>
+        </div>
       </div>
     </div>
-  </div>
+  </ng-container>
+
+  <!-- Orders Tab Content -->
+  <ng-container *ngIf="activeTab === 'orders'">
+    <div class="orders-panel">
+      <h2>All Orders</h2>
+
+      <div *ngIf="ordersLoading()" class="loading-message">
+        <p>Loading orders...</p>
+      </div>
+
+      <div *ngIf="ordersError()" class="error-message">
+        <p>{{ ordersError() }}</p>
+        <button (click)="setTab('orders')">Retry</button>
+      </div>
+
+      <div
+        *ngIf="!ordersLoading() && !ordersError() && orders().length === 0"
+        class="empty-message"
+      >
+        <p>No orders found.</p>
+      </div>
+
+      <div *ngIf="!ordersLoading() && orders().length > 0" class="orders-list">
+        <div *ngFor="let order of orders()" class="order-card">
+          <div class="order-header">
+            <div class="order-header-left">
+              <div class="order-id">#{{ order._id }}</div>
+              <div class="order-date">
+                {{ order.createdAt | date : "medium" }}
+              </div>
+            </div>
+            <div class="order-header-right">
+              <div class="order-total">${{ order.totalPrice.toFixed(2) }}</div>
+            </div>
+          </div>
+
+          <div class="order-meta">
+            <div><strong>Name:</strong> {{ order.name }}</div>
+            <div><strong>Address:</strong> {{ order.shippingAddress }}</div>
+            <div *ngIf="order.orderNote">
+              <strong>Note:</strong> {{ order.orderNote }}
+            </div>
+          </div>
+
+          <div class="order-items">
+            <div class="order-item" *ngFor="let it of order.items">
+              <div class="item-title">{{ it.title }}</div>
+              <div class="item-qty">x{{ it.quantity }}</div>
+              <div class="item-price">
+                ${{ (it.price * it.quantity).toFixed(2) }}
+              </div>
+            </div>
+          </div>
+          <div class="order-status-row order-status-bottom">
+            <label for="status-{{ order._id }}"><strong>Status:</strong></label>
+            <select
+              id="status-{{ order._id }}"
+              class="status-select"
+              [class.pending]="(order.status || 'pending') === 'pending'"
+              [class.success]="order.status === 'success'"
+              [class.fail]="order.status === 'fail'"
+              [disabled]="savingOrderId() === order._id"
+              [ngModel]="order.status || 'pending'"
+              (ngModelChange)="onChangeStatus(order._id, $event)"
+            >
+              <option value="pending">pending</option>
+              <option value="success">success</option>
+              <option value="fail">fail</option>
+            </select>
+            <span *ngIf="savingOrderId() === order._id" class="saving-indicator"
+              >saving...</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
 </div>

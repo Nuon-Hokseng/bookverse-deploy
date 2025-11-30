@@ -4,6 +4,7 @@ import { CartService } from '../services/cart.service';
 import { BookService } from '../services/book.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { PopupService } from '../shared/popup.service';
 
 @Component({
   selector: 'app-homescreen',
@@ -14,8 +15,9 @@ import { Title } from '@angular/platform-browser';
 })
 export class Homescreen {
   private cart = inject(CartService);
-  private bookService = inject(BookService);
+  bookService = inject(BookService); // Make public for template access
   private router = inject(Router);
+  private popup = inject(PopupService);
 
   // toast UI state for add-to-cart confirmation
   toastVisible = false;
@@ -26,10 +28,28 @@ export class Homescreen {
 
   get books() {
     const allBooks = this.bookService.books();
-    if (this.selectedCategory === 'All') {
-      return allBooks;
+    const searchQuery = this.bookService.searchQuery().toLowerCase().trim();
+
+    let filtered = allBooks;
+
+    // Filter by category
+    if (this.selectedCategory !== 'All') {
+      filtered = filtered.filter(
+        (book) => book.genre === this.selectedCategory
+      );
     }
-    return allBooks.filter((book) => book.genre === this.selectedCategory);
+
+    // Filter by search query (search in title, author, and genre)
+    if (searchQuery) {
+      filtered = filtered.filter(
+        (book) =>
+          book.title.toLowerCase().includes(searchQuery) ||
+          book.author.toLowerCase().includes(searchQuery) ||
+          book.genre.toLowerCase().includes(searchQuery)
+      );
+    }
+
+    return filtered;
   }
 
   constructor() {
@@ -37,6 +57,15 @@ export class Homescreen {
   }
 
   addToCart(book: any) {
+    const authed = localStorage.getItem('isAuthenticated') === 'true';
+    if (!authed) {
+      this.popup.show('Please log in to add items to your cart.', {
+        type: 'error',
+        durationMs: 2500,
+      });
+      // Stay on page; user can click Login from navbar
+      return;
+    }
     this.cart.add({
       title: book.title,
       author: book.author,
@@ -49,6 +78,14 @@ export class Homescreen {
   }
 
   purchase(book: any) {
+    const authed = localStorage.getItem('isAuthenticated') === 'true';
+    if (!authed) {
+      this.popup.show('Please log in before purchasing.', {
+        type: 'error',
+        durationMs: 2500,
+      });
+      return;
+    }
     // add the single item and navigate to payment
     this.cart.add({
       title: book.title,
@@ -65,6 +102,11 @@ export class Homescreen {
 
   selectCategory(category: string) {
     this.selectedCategory = category;
+  }
+
+  clearSearch() {
+    console.log('[Homescreen] Clearing search');
+    this.bookService.clearSearch();
   }
 
   private showToast(msg: string, ms = 1800) {

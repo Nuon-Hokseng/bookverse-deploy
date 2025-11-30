@@ -1,17 +1,15 @@
-# Use Node.js LTS
+# Production Dockerfile for Cart Service
 FROM node:24-alpine
 
 WORKDIR /usr/src/app
 
-# Copy package files and install dependencies
-COPY package*.json ./
-RUN npm install
+ENV NODE_ENV=production
 
-# Copy all other files
+COPY package*.json ./
+RUN npm ci --only=production
+
 COPY . .
 
-# Expose the port your app listens on
-EXPOSE 3000
+EXPOSE 3001
 
-# Start the app
-CMD ["npm", "run", "dev"]
+CMD ["node", "src/app.js"]

@@ -56,3 +56,37 @@
 2025-11-30 16:46:38 [error]: Proxy error to http://localhost:3002: 
 2025-11-30 16:51:17 [error]: Proxy error to http://localhost:3002: 
 2025-11-30 16:51:45 [error]: Proxy error to http://localhost:3002: 
+2025-11-30 13:41:01 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:41:06 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:41:08 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:41:22 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:42:41 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:42:44 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:42:45 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:42:57 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:42:58 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:16 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:23 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:24 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:24 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:25 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:25 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:25 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:46:07 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:46:08 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:46:12 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:46:14 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:46:16 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:46:52 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:47:40 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:47:42 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:48:09 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:50:07 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:50:09 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:50:12 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:50:14 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 21:26:02 [error]: Proxy error to http://localhost:3004: 
+2025-11-30 21:26:05 [error]: Proxy error to http://localhost:3004: 
+2025-11-30 21:26:06 [error]: Proxy error to http://localhost:3004: 
+2025-11-30 21:26:11 [error]: Proxy error to http://localhost:3004: 
+2025-11-30 21:26:15 [error]: Proxy error to http://localhost:3004: 

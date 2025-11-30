@@ -17,13 +17,17 @@
         <input
           type="text"
           placeholder="Full name"
-          (input)="name = $any($event.target).value"
+          [(ngModel)]="name"
+          name="name"
+          required
           class="p-3 rounded-lg bg-[#2A2520] border border-[#5A534C] placeholder:opacity-70"
         />
         <input
           type="text"
           placeholder="Shipping address"
-          (input)="address = $any($event.target).value"
+          [(ngModel)]="shippingAddress"
+          name="shippingAddress"
+          required
           class="p-3 rounded-lg bg-[#2A2520] border border-[#5A534C] placeholder:opacity-70"
         />
       </div>
@@ -35,13 +39,17 @@
           <input
             type="text"
             placeholder="Card number"
-            (input)="cardNumber = $any($event.target).value"
+            [(ngModel)]="cardNumber"
+            name="cardNumber"
+            required
             class="md:col-span-2 p-3 rounded-lg bg-[#2A2520] border border-[#5A534C] placeholder:opacity-70"
           />
           <input
             type="text"
             placeholder="MM/YY"
-            (input)="exp = $any($event.target).value"
+            [(ngModel)]="expiredDate"
+            name="expiredDate"
+            required
             class="p-3 rounded-lg bg-[#2A2520] border border-[#5A534C] placeholder:opacity-70"
           />
         </div>
@@ -49,7 +57,9 @@
           <input
             type="text"
             placeholder="CVV"
-            (input)="cvv = $any($event.target).value"
+            [(ngModel)]="CVV"
+            name="CVV"
+            required
             class="p-3 rounded-lg bg-[#2A2520] border border-[#5A534C] placeholder:opacity-70 w-full md:w-1/2"
           />
         </div>
@@ -60,7 +70,8 @@
         <textarea
           rows="3"
           placeholder="Order notes (optional)"
-          (input)="notes = $any($event.target).value"
+          [(ngModel)]="orderNote"
+          name="orderNote"
           class="w-full p-3 rounded-lg bg-[#2A2520] border border-[#5A534C] placeholder:opacity-70"
         ></textarea>
       </div>
@@ -69,9 +80,18 @@
       <div class="flex justify-end">
         <button
           (click)="pay()"
-          class="px-6 py-3 rounded-xl bg-[#D4AF37] text-black font-bold hover:bg-[#b7942f] transition"
+          [disabled]="isProcessing()"
+          [class]="
+            isProcessing()
+              ? 'px-6 py-3 rounded-xl bg-gray-500 text-white font-bold cursor-not-allowed'
+              : 'px-6 py-3 rounded-xl bg-[#D4AF37] text-black font-bold hover:bg-[#b7942f] transition'
+          "
         >
-          Pay {{ getTotal() | currency : "USD" : true }}
+          {{
+            isProcessing()
+              ? "Processing..."
+              : "Pay " + (getTotal() | currency : "USD" : true)
+          }}
         </button>
       </div>
     </div>
@@ -105,4 +125,65 @@
       </div>
     </aside>
   </section>
+
+  <!-- Success Modal -->
+  <div
+    *ngIf="showSuccessModal()"
+    class="fixed inset-0 z-50 flex items-center justify-center"
+  >
+    <div
+      class="absolute inset-0 bg-black/70 backdrop-blur-sm"
+      (click)="closeModal()"
+    ></div>
+    <div
+      class="relative bg-[#2A2520] border-2 border-[#D4AF37] rounded-xl w-11/12 max-w-md mx-auto p-8 shadow-2xl animate-bounce-in"
+      (click)="$event.stopPropagation()"
+    >
+      <!-- Success Icon -->
+      <div class="text-center mb-6">
+        <div
+          class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4"
+        >
+          <svg
+            class="w-12 h-12 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M5 13l4 4L19 7"
+            ></path>
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold text-[#D4AF37] mb-2">
+          Payment Successful!
+        </h2>
+        <p class="text-[#CFC3B6] text-lg">
+          Your order has been placed successfully.
+        </p>
+      </div>
+
+      <!-- Order Details -->
+      <div class="bg-[#3A322B] rounded-lg p-4 mb-6">
+        <p class="text-sm text-[#CFC3B6] mb-2">Order Total</p>
+        <p class="text-3xl font-bold text-[#D4AF37]">
+          {{ paymentTotal | currency : "USD" : true }}
+        </p>
+      </div>
+
+      <p class="text-center text-[#CFC3B6] text-sm mb-4">
+        Redirecting to your order history...
+      </p>
+
+      <button
+        (click)="closeModal()"
+        class="w-full px-6 py-3 bg-[#D4AF37] text-black font-bold rounded-xl hover:bg-[#b7942f] transition"
+      >
+        View Order History
+      </button>
+    </div>
+  </div>
 </main>

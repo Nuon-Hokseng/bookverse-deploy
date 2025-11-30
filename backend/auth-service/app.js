@@ -8,7 +8,7 @@ import cookieParser from "cookie-parser";
 
 dotenv.config();
 
-const SERVICE_PORT = process.env.SERVICE_PORT || process.env.PORT || 5000;
+const PORT = process.env.PORT || process.env.SERVICE_PORT || 5000;
 
 const app = express();
 app.use(
@@ -25,6 +25,11 @@ app.get("/health", (req, res) => res.json({ status: "UP" }));
 
 connectDB();
 
-app.listen(SERVICE_PORT, () =>
-  console.log(`Auth Service running on port ${SERVICE_PORT}`)
+const server = app.listen(PORT, () =>
+  console.log(`Auth Service running on port ${PORT}`)
 );
+
+process.on("SIGTERM", () => {
+  console.log("SIGTERM received, shutting down Auth Service gracefully...");
+  server.close(() => process.exit(0));
+});

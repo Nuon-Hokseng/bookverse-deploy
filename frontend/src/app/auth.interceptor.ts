@@ -1,19 +1,10 @@
 import { HttpInterceptorFn } from '@angular/common/http';
-import { inject } from '@angular/core';
-import { AuthService } from './services/auth.service';
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
-  const auth = inject(AuthService);
-  const token = localStorage.getItem('accessToken');
+  // Since we're using cookie-based authentication with withCredentials: true,
+  // we don't need to manually add Authorization headers.
+  // The browser automatically sends cookies with each request.
 
-  let newReq = req;
-  if (token) {
-    newReq = req.clone({
-      setHeaders: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-  }
-
-  return next(newReq);
+  // Just pass the request through unchanged
+  return next(req);
 };

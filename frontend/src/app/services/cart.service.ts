@@ -23,28 +23,37 @@ interface BackendCartItem {
     author: string;
     category: string;
     price: number;
+    coverImage?: string;
+    image_url?: string;
   };
 }
 
 @Injectable({ providedIn: 'root' })
 export class CartService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:3000/v1/cart'; // API Gateway
+  private apiUrl = 'https://gateway-service-mddd.onrender.com/v1'; // API Gateway base URL
   private _items = signal<CartItem[]>([]);
   private useBackend = signal<boolean>(false); // Flag to enable backend sync
 
   readonly items = computed(() => this._items());
 
+  // Enable backend sync (called after successful auth)
+  enableBackend() {
+    this.useBackend.set(true);
+  }
+
   // Fetch cart from backend (requires auth)
   fetchCart() {
+    console.log('[CartService] Fetching cart from backend...');
     this.http
       .get<{ cartId: string; items: BackendCartItem[] }>(
         `${this.apiUrl}/cart`,
         { withCredentials: true }
       )
       .pipe(
-        map((response) =>
-          response.items.map((item) => ({
+        map((response) => {
+          console.log('[CartService] Backend cart response:', response);
+          return response.items.map((item) => ({
             _id: item._id,
             title: item.book.title,
             author: item.book.author,
@@ -52,25 +61,37 @@ export class CartService {
             price: item.book.price,
             quantity: item.quantity,
             bookId: item.book._id,
-          }))
-        ),
+            coverImage:
+              (item.book as any).coverImage || (item.book as any).image_url,
+          }));
+        }),
         catchError((err) => {
-          console.warn('Failed to fetch cart from backend:', err);
+          console.error(
+            '[CartService] Failed to fetch cart from backend:',
+            err
+          );
           this.useBackend.set(false);
           return of([]);
         })
       )
       .subscribe((items) => {
-        if (items.length > 0) {
-          this.useBackend.set(true);
-          this._items.set(items);
-        }
+        console.log('[CartService] Fetched items:', items);
+        // Enable backend mode if fetch was successful (even if empty)
+        this.useBackend.set(true);
+        this._items.set(items);
       });
   }
 
   add(item: Omit<CartItem, 'quantity'> & { quantity?: number }) {
+    console.log(
+      '[CartService] Adding item:',
+      item,
+      'useBackend:',
+      this.useBackend()
+    );
     if (this.useBackend() && item.bookId) {
       // Use backend
+      console.log('[CartService] Adding to backend cart...');
       this.http
         .post<{ cartId: string; items: BackendCartItem[] }>(
           `${this.apiUrl}/cart/add`,
@@ -78,8 +99,9 @@ export class CartService {
           { withCredentials: true }
         )
         .pipe(
-          map((response) =>
-            response.items.map((i) => ({
+          map((response) => {
+            console.log('[CartService] Backend add response:', response);
+            return response.items.map((i) => ({
               _id: i._id,
               title: i.book.title,
               author: i.book.author,
@@ -87,22 +109,26 @@ export class CartService {
               price: i.book.price,
               quantity: i.quantity,
               bookId: i.book._id,
-            }))
-          ),
+              coverImage:
+                (i.book as any).coverImage || (i.book as any).image_url,
+            }));
+          }),
           catchError((err) => {
-            console.warn('Backend add failed, using local cart:', err);
+            console.error('[CartService] Backend add failed:', err);
             this.useBackend.set(false);
             return of(null);
           })
         )
         .subscribe((items) => {
           if (items) {
+            console.log('[CartService] Cart updated with items:', items);
             this._items.set(items);
           } else {
             this.addLocal(item);
           }
         });
     } else {
+      console.log('[CartService] Adding to local cart');
       this.addLocal(item);
     }
   }
@@ -167,6 +193,8 @@ export class CartService {
               price: i.book.price,
               quantity: i.quantity,
               bookId: i.book._id,
+              coverImage:
+                (i.book as any).coverImage || (i.book as any).image_url,
             }))
           ),
           catchError(() => of(null))
@@ -207,6 +235,8 @@ export class CartService {
               price: i.book.price,
               quantity: i.quantity,
               bookId: i.book._id,
+              coverImage:
+                (i.book as any).coverImage || (i.book as any).image_url,
             }))
           ),
           catchError(() => of(null))

@@ -13,7 +13,7 @@ const __dirname = dirname(__filename);
 // Load .env from parent directory
 dotenv.config({ path: join(__dirname, "..", ".env") });
 
-const SERVICE_PORT = process.env.SERVICE_PORT || process.env.PORT || 3001;
+const PORT = process.env.PORT || process.env.SERVICE_PORT || 3001;
 
 const app = express();
 app.use(
@@ -34,8 +34,12 @@ mongoose
   })
   .then(() => {
     console.log("MongoDB connected");
-    app.listen(SERVICE_PORT, () =>
-      console.log(`Cart Service running on port ${SERVICE_PORT}`)
-    );
+    const server = app.listen(PORT, () => {
+      console.log(`Cart Service running on port ${PORT}`);
+    });
+    process.on("SIGTERM", () => {
+      console.log("SIGTERM received, shutting down Cart Service gracefully...");
+      server.close(() => process.exit(0));
+    });
   })
   .catch((err) => console.error(err));

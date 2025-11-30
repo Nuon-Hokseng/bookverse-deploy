@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.join(__dirname, "..", ".env") });
 
-const SERVICE_PORT = process.env.SERVICE_PORT || process.env.PORT || 3002;
+const PORT = process.env.PORT || process.env.SERVICE_PORT || 3002;
 
 const app = express();
 app.use(
@@ -32,8 +32,14 @@ mongoose
   })
   .then(() => {
     console.log("MongoDB connected");
-    app.listen(SERVICE_PORT, () =>
-      console.log(`Order Service running on port ${SERVICE_PORT}`)
-    );
+    const server = app.listen(PORT, () => {
+      console.log(`Order Service running on port ${PORT}`);
+    });
+    process.on("SIGTERM", () => {
+      console.log(
+        "SIGTERM received, shutting down Order Service gracefully..."
+      );
+      server.close(() => process.exit(0));
+    });
   })
   .catch((err) => console.error(err));

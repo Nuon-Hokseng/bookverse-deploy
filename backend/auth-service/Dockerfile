@@ -1,17 +1,19 @@
-# Use Node.js LTS
+# Production Dockerfile for Auth Service
 FROM node:24-alpine
 
 WORKDIR /usr/src/app
 
-# Copy package files and install dependencies
-COPY package*.json ./
-RUN npm install
+ENV NODE_ENV=production
 
-# Copy all other files
+# Install production dependencies
+COPY package*.json ./
+RUN npm ci --only=production
+
+# Copy source
 COPY . .
 
-# Expose the port your app listens on
-EXPOSE 3000
+# Do not rely on a fixed EXPOSE for Render; kept for local use
+EXPOSE 5000
 
-# Start the app
-CMD ["npm", "run", "dev"]
+# Run with node (no dev watcher)
+CMD ["node", "app.js"]

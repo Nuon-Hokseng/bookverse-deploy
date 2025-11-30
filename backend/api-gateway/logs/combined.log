@@ -1928,3 +1928,381 @@
 2025-11-30 20:27:42 [info]: GET /v1/auth/refresh
 2025-11-30 20:27:42 [info]: GET /v1/books
 2025-11-30 20:27:42 [info]: GET /v1/cart
+2025-11-30 13:40:51 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 13:40:51 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-30 13:40:51 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-30 13:40:51 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-30 13:40:51 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-30 13:40:51 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-30 13:40:51 [info]: 🚀 API Gateway started successfully
+2025-11-30 13:40:51 [info]: 📍 Environment: development
+2025-11-30 13:40:51 [info]: 🌐 Port: 3000
+2025-11-30 13:40:51 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 13:40:51 [info]: 📊 Redis: Disabled
+2025-11-30 13:40:51 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 13:40:51 [info]: ✅ Ready to handle requests
+2025-11-30 13:41:01 [info]: GET /v1/auth/refresh
+2025-11-30 13:41:01 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 13:41:01 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 13:41:01 [info]: GET /v1/books
+2025-11-30 13:41:01 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:41:01 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:41:01 [debug]: Response from http://auth-service:5000: 200
+2025-11-30 13:41:01 [debug]: Forwarding Set-Cookie headers from backend
+2025-11-30 13:41:01 [info]: GET /v1/cart
+2025-11-30 13:41:01 [debug]: Auth middleware - Headers: {"host":"localhost:3000","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0","accept":"application/json, text/plain, */*","accept-language":"km,en-US;q=0.5","accept-encoding":"gzip, deflate, br, zstd","origin":"http://localhost:4200","connection":"keep-alive","referer":"http://localhost:4200/","cookie":"refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ0OTkyMjEsImV4cCI6MTc2NTEwNDAyMX0.spkaZ8GXYGkWBMA6aW9llS7rdXuQSkVX44n7tKbW458; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTAwNjEsImV4cCI6MTc2NDUxMzY2MX0.Nh9x-2fw-TBeoJ8yMUa0zZmMpoxvMcxk-3PU-fS6wsE","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site"}
+2025-11-30 13:41:01 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-30 13:41:01 [debug]: Auth middleware - Authorization header: undefined
+2025-11-30 13:41:01 [debug]: Auth middleware - Token extracted from cookie
+2025-11-30 13:41:01 [debug]: User authenticated: sengnoname168@gmail.com (692c1754b21bb8ec44f82cb4)
+2025-11-30 13:41:01 [debug]: Proxying: /v1/cart -> http://cart-service:3001/api/cart
+2025-11-30 13:41:02 [debug]: Response from http://cart-service:3001: 200
+2025-11-30 13:41:06 [info]: GET /v1/auth/refresh
+2025-11-30 13:41:06 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 13:41:06 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 13:41:06 [info]: GET /v1/books
+2025-11-30 13:41:06 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:41:06 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:41:06 [debug]: Response from http://auth-service:5000: 200
+2025-11-30 13:41:06 [debug]: Forwarding Set-Cookie headers from backend
+2025-11-30 13:41:06 [info]: GET /v1/cart
+2025-11-30 13:41:06 [debug]: Auth middleware - Headers: {"host":"localhost:3000","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0","accept":"application/json, text/plain, */*","accept-language":"km,en-US;q=0.5","accept-encoding":"gzip, deflate, br, zstd","origin":"http://localhost:4200","connection":"keep-alive","referer":"http://localhost:4200/","cookie":"refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ0OTkyMjEsImV4cCI6MTc2NTEwNDAyMX0.spkaZ8GXYGkWBMA6aW9llS7rdXuQSkVX44n7tKbW458; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTAwNjYsImV4cCI6MTc2NDUxMzY2Nn0.vv0ayMuEhTYQgeIXIhjUP9_PNBc2U2qbQqw0eFiOCoA","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site","if-none-match":"W/\"30-2GanGmywz/mdO3q0VIArs450OX0\""}
+2025-11-30 13:41:06 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-30 13:41:06 [debug]: Auth middleware - Authorization header: undefined
+2025-11-30 13:41:06 [debug]: Auth middleware - Token extracted from cookie
+2025-11-30 13:41:06 [debug]: User authenticated: sengnoname168@gmail.com (692c1754b21bb8ec44f82cb4)
+2025-11-30 13:41:06 [debug]: Proxying: /v1/cart -> http://cart-service:3001/api/cart
+2025-11-30 13:41:08 [info]: GET /v1/auth/refresh
+2025-11-30 13:41:08 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 13:41:08 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 13:41:08 [info]: GET /v1/books
+2025-11-30 13:41:08 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:41:08 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:41:08 [debug]: Response from http://auth-service:5000: 200
+2025-11-30 13:41:08 [debug]: Forwarding Set-Cookie headers from backend
+2025-11-30 13:41:08 [info]: GET /v1/cart
+2025-11-30 13:41:08 [debug]: Auth middleware - Headers: {"host":"localhost:3000","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0","accept":"application/json, text/plain, */*","accept-language":"km,en-US;q=0.5","accept-encoding":"gzip, deflate, br, zstd","origin":"http://localhost:4200","connection":"keep-alive","referer":"http://localhost:4200/","cookie":"refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ0OTkyMjEsImV4cCI6MTc2NTEwNDAyMX0.spkaZ8GXYGkWBMA6aW9llS7rdXuQSkVX44n7tKbW458; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTAwNjgsImV4cCI6MTc2NDUxMzY2OH0.Ccdpm-PrmEMFZjjFet5Y4nyYYF_rPULVkLkjHtwFY_A","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site","if-none-match":"W/\"30-2GanGmywz/mdO3q0VIArs450OX0\""}
+2025-11-30 13:41:08 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-30 13:41:08 [debug]: Auth middleware - Authorization header: undefined
+2025-11-30 13:41:08 [debug]: Auth middleware - Token extracted from cookie
+2025-11-30 13:41:08 [debug]: User authenticated: sengnoname168@gmail.com (692c1754b21bb8ec44f82cb4)
+2025-11-30 13:41:08 [debug]: Proxying: /v1/cart -> http://cart-service:3001/api/cart
+2025-11-30 13:41:20 [info]: POST /v1/auth/logout
+2025-11-30 13:41:20 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 13:41:20 [debug]: Proxying: /v1/auth/logout -> http://auth-service:5000/api/auth/logout
+2025-11-30 13:41:20 [debug]: Response from http://auth-service:5000: 204
+2025-11-30 13:41:20 [debug]: Forwarding Set-Cookie headers from backend
+2025-11-30 13:41:21 [info]: GET /health
+2025-11-30 13:41:22 [info]: GET /v1/books
+2025-11-30 13:41:22 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:41:22 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:41:51 [info]: GET /health
+2025-11-30 13:42:21 [info]: GET /health
+2025-11-30 20:42:34 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 20:42:34 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 20:42:34 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 20:42:34 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 20:42:34 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 20:42:34 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 20:42:34 [info]: 🚀 API Gateway started successfully
+2025-11-30 20:42:34 [info]: 📍 Environment: development
+2025-11-30 20:42:34 [info]: 🌐 Port: 3000
+2025-11-30 20:42:34 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 20:42:34 [info]: 📊 Redis: Disabled
+2025-11-30 20:42:34 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 20:42:34 [info]: ✅ Ready to handle requests
+2025-11-30 13:42:41 [info]: GET /v1/books
+2025-11-30 13:42:41 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:42:41 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:42:44 [info]: GET /v1/books
+2025-11-30 13:42:44 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:42:44 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:42:45 [info]: GET /v1/books
+2025-11-30 13:42:45 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:42:45 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:42:51 [info]: GET /health
+2025-11-30 13:42:57 [info]: GET /v1/books
+2025-11-30 13:42:57 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:42:57 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:42:58 [info]: GET /v1/books
+2025-11-30 13:42:58 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:42:58 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:16 [info]: GET /v1/books
+2025-11-30 13:43:16 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:43:16 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:21 [info]: GET /health
+2025-11-30 13:43:23 [info]: GET /v1/books
+2025-11-30 13:43:23 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:43:23 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:24 [info]: GET /v1/books
+2025-11-30 13:43:24 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:43:24 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:24 [info]: GET /v1/books
+2025-11-30 13:43:24 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:43:24 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:25 [info]: GET /v1/books
+2025-11-30 13:43:25 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:43:25 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:25 [info]: GET /v1/books
+2025-11-30 13:43:25 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:43:25 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:25 [info]: GET /v1/books
+2025-11-30 13:43:25 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:43:25 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.3:3000
+2025-11-30 13:43:51 [info]: GET /health
+2025-11-30 13:44:21 [info]: GET /health
+2025-11-30 13:44:28 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-30 13:44:28 [info]: HTTP server closed
+2025-11-30 13:44:28 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 13:44:28 [info]: HTTP server closed
+2025-11-30 13:44:28 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 13:44:28 [info]: HTTP server closed
+2025-11-30 13:44:29 [info]: Shutdown complete, exiting process
+2025-11-30 13:45:58 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 13:45:58 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-30 13:45:58 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-30 13:45:58 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-30 13:45:58 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-30 13:45:58 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-30 13:45:58 [info]: 🚀 API Gateway started successfully
+2025-11-30 13:45:58 [info]: 📍 Environment: development
+2025-11-30 13:45:58 [info]: 🌐 Port: 3000
+2025-11-30 13:45:58 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 13:45:58 [info]: 📊 Redis: Disabled
+2025-11-30 13:45:58 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 13:45:58 [info]: ✅ Ready to handle requests
+2025-11-30 13:46:07 [info]: GET /v1/books
+2025-11-30 13:46:07 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:46:07 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:46:08 [info]: GET /v1/books
+2025-11-30 13:46:08 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:46:08 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:46:12 [info]: GET /v1/books
+2025-11-30 13:46:12 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:46:12 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:46:14 [info]: GET /v1/books
+2025-11-30 13:46:14 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:46:14 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:46:16 [info]: GET /v1/books
+2025-11-30 13:46:16 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:46:16 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:46:28 [info]: GET /health
+2025-11-30 13:46:52 [info]: GET /v1/books
+2025-11-30 13:46:52 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:46:52 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:46:58 [info]: GET /health
+2025-11-30 13:47:28 [info]: GET /health
+2025-11-30 13:47:29 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-30 13:47:29 [info]: HTTP server closed
+2025-11-30 13:47:29 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 13:47:29 [info]: HTTP server closed
+2025-11-30 13:47:29 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 13:47:29 [info]: HTTP server closed
+2025-11-30 13:47:30 [info]: Shutdown complete, exiting process
+2025-11-30 13:47:31 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 13:47:31 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-30 13:47:31 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-30 13:47:31 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-30 13:47:31 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-30 13:47:31 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-30 13:47:31 [info]: 🚀 API Gateway started successfully
+2025-11-30 13:47:31 [info]: 📍 Environment: development
+2025-11-30 13:47:31 [info]: 🌐 Port: 3000
+2025-11-30 13:47:31 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 13:47:31 [info]: 📊 Redis: Disabled
+2025-11-30 13:47:31 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 13:47:31 [info]: ✅ Ready to handle requests
+2025-11-30 13:47:40 [info]: GET /v1/books
+2025-11-30 13:47:40 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:47:40 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:47:42 [info]: GET /v1/books
+2025-11-30 13:47:42 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:47:42 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:48:01 [info]: GET /health
+2025-11-30 13:48:09 [info]: GET /v1/books
+2025-11-30 13:48:09 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:48:09 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:48:31 [info]: GET /health
+2025-11-30 13:49:01 [info]: GET /health
+2025-11-30 13:49:31 [info]: GET /health
+2025-11-30 13:50:01 [info]: GET /health
+2025-11-30 13:50:07 [info]: GET /v1/books
+2025-11-30 13:50:07 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:50:07 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:50:09 [info]: GET /v1/books
+2025-11-30 13:50:09 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:50:09 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:50:12 [info]: GET /v1/books
+2025-11-30 13:50:12 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:50:12 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:50:14 [info]: GET /v1/books
+2025-11-30 13:50:14 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:50:14 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.5:3000
+2025-11-30 13:50:31 [info]: GET /health
+2025-11-30 13:51:01 [info]: GET /health
+2025-11-30 13:51:31 [info]: GET /health
+2025-11-30 13:51:43 [info]: GET /v1/books
+2025-11-30 13:51:43 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:51:44 [debug]: Response from http://book-service:3000: 200
+2025-11-30 13:52:01 [info]: GET /v1/books
+2025-11-30 13:52:01 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:52:01 [info]: GET /health
+2025-11-30 13:52:14 [info]: GET /v1/books
+2025-11-30 13:52:14 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:52:30 [info]: POST /v1/auth/login
+2025-11-30 13:52:30 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-30 13:52:30 [debug]: Response from http://auth-service:5000: 200
+2025-11-30 13:52:30 [debug]: Forwarding Set-Cookie headers from backend
+2025-11-30 13:52:30 [info]: GET /v1/cart
+2025-11-30 13:52:30 [debug]: Auth middleware - Headers: {"host":"localhost:3000","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0","accept":"application/json, text/plain, */*","accept-language":"km,en-US;q=0.5","accept-encoding":"gzip, deflate, br, zstd","origin":"http://localhost:4200","connection":"keep-alive","referer":"http://localhost:4200/","cookie":"token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NDUxNDM1MH0.fTjwz6JfSg9bjJmUafkS1vJ9ORSNnPikqZte15eaAvA; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NTExNTU1MH0.Qp94Y7Y3GIUfk12qJBovLzSezyZ4njauf5SNO7HBxeY","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site","if-none-match":"W/\"30-2GanGmywz/mdO3q0VIArs450OX0\""}
+2025-11-30 13:52:30 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-30 13:52:30 [debug]: Auth middleware - Authorization header: undefined
+2025-11-30 13:52:30 [debug]: Auth middleware - Token extracted from cookie
+2025-11-30 13:52:30 [debug]: User authenticated: sengnoname168@gmail.com (692c1754b21bb8ec44f82cb4)
+2025-11-30 13:52:30 [debug]: Proxying: /v1/cart -> http://cart-service:3001/api/cart
+2025-11-30 13:52:31 [info]: GET /health
+2025-11-30 13:52:34 [info]: POST /v1/cart/add
+2025-11-30 13:52:34 [debug]: Auth middleware - Headers: {"host":"localhost:3000","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0","accept":"application/json, text/plain, */*","accept-language":"km,en-US;q=0.5","accept-encoding":"gzip, deflate, br, zstd","content-type":"application/json","content-length":"37","origin":"http://localhost:4200","connection":"keep-alive","referer":"http://localhost:4200/","cookie":"token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NDUxNDM1MH0.fTjwz6JfSg9bjJmUafkS1vJ9ORSNnPikqZte15eaAvA; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NTExNTU1MH0.Qp94Y7Y3GIUfk12qJBovLzSezyZ4njauf5SNO7HBxeY","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site","priority":"u=0"}
+2025-11-30 13:52:34 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-30 13:52:34 [debug]: Auth middleware - Authorization header: undefined
+2025-11-30 13:52:34 [debug]: Auth middleware - Token extracted from cookie
+2025-11-30 13:52:34 [debug]: User authenticated: sengnoname168@gmail.com (692c1754b21bb8ec44f82cb4)
+2025-11-30 13:52:34 [debug]: Proxying: /v1/cart/add -> http://cart-service:3001/api/cart/add
+2025-11-30 13:52:35 [debug]: Response from http://cart-service:3001: 200
+2025-11-30 13:52:35 [info]: POST /v1/cart/add
+2025-11-30 13:52:35 [debug]: Auth middleware - Headers: {"host":"localhost:3000","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0","accept":"application/json, text/plain, */*","accept-language":"km,en-US;q=0.5","accept-encoding":"gzip, deflate, br, zstd","content-type":"application/json","content-length":"37","origin":"http://localhost:4200","connection":"keep-alive","referer":"http://localhost:4200/","cookie":"token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NDUxNDM1MH0.fTjwz6JfSg9bjJmUafkS1vJ9ORSNnPikqZte15eaAvA; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NTExNTU1MH0.Qp94Y7Y3GIUfk12qJBovLzSezyZ4njauf5SNO7HBxeY","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site","priority":"u=0"}
+2025-11-30 13:52:35 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-30 13:52:35 [debug]: Auth middleware - Authorization header: undefined
+2025-11-30 13:52:35 [debug]: Auth middleware - Token extracted from cookie
+2025-11-30 13:52:35 [debug]: User authenticated: sengnoname168@gmail.com (692c1754b21bb8ec44f82cb4)
+2025-11-30 13:52:35 [debug]: Proxying: /v1/cart/add -> http://cart-service:3001/api/cart/add
+2025-11-30 13:52:36 [info]: POST /v1/cart/add
+2025-11-30 13:52:36 [debug]: Auth middleware - Headers: {"host":"localhost:3000","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0","accept":"application/json, text/plain, */*","accept-language":"km,en-US;q=0.5","accept-encoding":"gzip, deflate, br, zstd","content-type":"application/json","content-length":"37","origin":"http://localhost:4200","connection":"keep-alive","referer":"http://localhost:4200/","cookie":"token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NDUxNDM1MH0.fTjwz6JfSg9bjJmUafkS1vJ9ORSNnPikqZte15eaAvA; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NTExNTU1MH0.Qp94Y7Y3GIUfk12qJBovLzSezyZ4njauf5SNO7HBxeY","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site","priority":"u=0"}
+2025-11-30 13:52:36 [debug]: Auth middleware - Path: /add, OriginalUrl: /v1/cart/add
+2025-11-30 13:52:36 [debug]: Auth middleware - Authorization header: undefined
+2025-11-30 13:52:36 [debug]: Auth middleware - Token extracted from cookie
+2025-11-30 13:52:36 [debug]: User authenticated: sengnoname168@gmail.com (692c1754b21bb8ec44f82cb4)
+2025-11-30 13:52:36 [debug]: Proxying: /v1/cart/add -> http://cart-service:3001/api/cart/add
+2025-11-30 13:52:36 [debug]: Response from http://cart-service:3001: 200
+2025-11-30 13:52:36 [debug]: Response from http://cart-service:3001: 200
+2025-11-30 13:52:48 [info]: POST /v1/orders
+2025-11-30 13:52:48 [debug]: Auth middleware - Headers: {"host":"localhost:3000","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0","accept":"application/json, text/plain, */*","accept-language":"km,en-US;q=0.5","accept-encoding":"gzip, deflate, br, zstd","content-type":"application/json","content-length":"142","origin":"http://localhost:4200","connection":"keep-alive","referer":"http://localhost:4200/","cookie":"token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NDUxNDM1MH0.fTjwz6JfSg9bjJmUafkS1vJ9ORSNnPikqZte15eaAvA; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NTExNTU1MH0.Qp94Y7Y3GIUfk12qJBovLzSezyZ4njauf5SNO7HBxeY","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site","priority":"u=0"}
+2025-11-30 13:52:48 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-30 13:52:48 [debug]: Auth middleware - Authorization header: undefined
+2025-11-30 13:52:48 [debug]: Auth middleware - Token extracted from cookie
+2025-11-30 13:52:48 [debug]: User authenticated: sengnoname168@gmail.com (692c1754b21bb8ec44f82cb4)
+2025-11-30 13:52:48 [debug]: Proxying: /v1/orders -> http://order-service:3002/api/orders
+2025-11-30 13:52:49 [debug]: Response from http://order-service:3002: 201
+2025-11-30 13:52:50 [info]: GET /v1/orders
+2025-11-30 13:52:50 [debug]: Auth middleware - Headers: {"host":"localhost:3000","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0","accept":"application/json, text/plain, */*","accept-language":"km,en-US;q=0.5","accept-encoding":"gzip, deflate, br, zstd","origin":"http://localhost:4200","connection":"keep-alive","referer":"http://localhost:4200/","cookie":"token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NDUxNDM1MH0.fTjwz6JfSg9bjJmUafkS1vJ9ORSNnPikqZte15eaAvA; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NTExNTU1MH0.Qp94Y7Y3GIUfk12qJBovLzSezyZ4njauf5SNO7HBxeY","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site","priority":"u=0"}
+2025-11-30 13:52:50 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/orders
+2025-11-30 13:52:50 [debug]: Auth middleware - Authorization header: undefined
+2025-11-30 13:52:50 [debug]: Auth middleware - Token extracted from cookie
+2025-11-30 13:52:50 [debug]: User authenticated: sengnoname168@gmail.com (692c1754b21bb8ec44f82cb4)
+2025-11-30 13:52:50 [debug]: Proxying: /v1/orders -> http://order-service:3002/api/orders
+2025-11-30 13:52:50 [debug]: Response from http://order-service:3002: 200
+2025-11-30 13:52:54 [info]: GET /v1/auth/refresh
+2025-11-30 13:52:54 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 13:52:54 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 13:52:54 [info]: GET /v1/books
+2025-11-30 13:52:54 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 13:52:54 [debug]: Response from http://auth-service:5000: 200
+2025-11-30 13:52:54 [debug]: Forwarding Set-Cookie headers from backend
+2025-11-30 13:52:54 [info]: GET /v1/cart
+2025-11-30 13:52:54 [debug]: Auth middleware - Headers: {"host":"localhost:3000","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0","accept":"application/json, text/plain, */*","accept-language":"km,en-US;q=0.5","accept-encoding":"gzip, deflate, br, zstd","origin":"http://localhost:4200","connection":"keep-alive","referer":"http://localhost:4200/","cookie":"token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NzQsImV4cCI6MTc2NDUxNDM3NH0.HS3Ux3Y6g89_UBNYNbn1aNsQL2rpPb9bQn2Ivl0sxag; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmMxNzU0YjIxYmI4ZWM0NGY4MmNiNCIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ1MTA3NTAsImV4cCI6MTc2NTExNTU1MH0.Qp94Y7Y3GIUfk12qJBovLzSezyZ4njauf5SNO7HBxeY","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site","if-none-match":"W/\"30-2GanGmywz/mdO3q0VIArs450OX0\""}
+2025-11-30 13:52:54 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-30 13:52:54 [debug]: Auth middleware - Authorization header: undefined
+2025-11-30 13:52:54 [debug]: Auth middleware - Token extracted from cookie
+2025-11-30 13:52:54 [debug]: User authenticated: sengnoname168@gmail.com (692c1754b21bb8ec44f82cb4)
+2025-11-30 13:52:54 [debug]: Proxying: /v1/cart -> http://cart-service:3001/api/cart
+2025-11-30 13:53:01 [info]: GET /health
+2025-11-30 13:53:31 [info]: GET /health
+2025-11-30 13:54:02 [info]: GET /health
+2025-11-30 13:54:32 [info]: GET /health
+2025-11-30 13:55:02 [info]: GET /health
+2025-11-30 13:55:32 [info]: GET /health
+2025-11-30 13:56:02 [info]: GET /health
+2025-11-30 13:56:32 [info]: GET /health
+2025-11-30 13:57:02 [info]: GET /health
+2025-11-30 13:57:32 [info]: GET /health
+2025-11-30 13:58:02 [info]: GET /health
+2025-11-30 13:58:32 [info]: GET /health
+2025-11-30 13:59:02 [info]: GET /health
+2025-11-30 13:59:32 [info]: GET /health
+2025-11-30 14:00:02 [info]: GET /health
+2025-11-30 14:00:32 [info]: GET /health
+2025-11-30 14:01:02 [info]: GET /health
+2025-11-30 14:01:32 [info]: GET /health
+2025-11-30 14:02:02 [info]: GET /health
+2025-11-30 14:02:32 [info]: GET /health
+2025-11-30 14:03:03 [info]: GET /health
+2025-11-30 14:03:16 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-30 14:03:16 [info]: HTTP server closed
+2025-11-30 14:03:16 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 14:03:16 [info]: HTTP server closed
+2025-11-30 14:03:16 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 14:03:16 [info]: HTTP server closed
+2025-11-30 14:03:17 [info]: Shutdown complete, exiting process
+2025-11-30 14:04:55 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 14:04:55 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-30 14:04:55 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-30 14:04:55 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-30 14:04:55 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-30 14:04:55 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-30 14:04:55 [info]: 🚀 API Gateway started successfully
+2025-11-30 14:04:55 [info]: 📍 Environment: development
+2025-11-30 14:04:55 [info]: 🌐 Port: 3000
+2025-11-30 14:04:55 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 14:04:55 [info]: 📊 Redis: Disabled
+2025-11-30 14:04:55 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 14:04:55 [info]: ✅ Ready to handle requests
+2025-11-30 14:05:24 [info]: GET /health
+2025-11-30 14:05:55 [info]: GET /health
+2025-11-30 14:06:25 [info]: GET /health
+2025-11-30 14:06:55 [info]: GET /health
+2025-11-30 14:07:25 [info]: GET /health
+2025-11-30 14:07:55 [info]: GET /health
+2025-11-30 14:08:25 [info]: GET /health
+2025-11-30 14:08:37 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-30 14:08:37 [info]: HTTP server closed
+2025-11-30 14:08:37 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 14:08:37 [info]: HTTP server closed
+2025-11-30 14:08:37 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 14:08:37 [info]: HTTP server closed
+2025-11-30 14:08:38 [info]: Shutdown complete, exiting process
+2025-11-30 21:25:54 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 21:25:54 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 21:25:54 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 21:25:54 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 21:25:54 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 21:25:54 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 21:25:54 [info]: 🚀 API Gateway started successfully
+2025-11-30 21:25:54 [info]: 📍 Environment: development
+2025-11-30 21:25:54 [info]: 🌐 Port: 3000
+2025-11-30 21:25:54 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 21:25:54 [info]: 📊 Redis: Disabled
+2025-11-30 21:25:54 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 21:25:54 [info]: ✅ Ready to handle requests
+2025-11-30 21:26:02 [info]: GET /v1/books
+2025-11-30 21:26:02 [error]: Proxy error to http://localhost:3004: 
+2025-11-30 21:26:05 [info]: GET /v1/books
+2025-11-30 21:26:05 [error]: Proxy error to http://localhost:3004: 
+2025-11-30 21:26:06 [info]: GET /v1/books
+2025-11-30 21:26:06 [error]: Proxy error to http://localhost:3004: 
+2025-11-30 21:26:11 [info]: GET /v1/books
+2025-11-30 21:26:11 [error]: Proxy error to http://localhost:3004: 
+2025-11-30 21:26:15 [info]: GET /v1/books
+2025-11-30 21:26:15 [error]: Proxy error to http://localhost:3004: 
+2025-11-30 21:26:58 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 21:26:58 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 21:26:58 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 21:26:58 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 21:26:58 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 21:26:58 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 21:26:58 [info]: 🚀 API Gateway started successfully
+2025-11-30 21:26:58 [info]: 📍 Environment: development
+2025-11-30 21:26:58 [info]: 🌐 Port: 3000
+2025-11-30 21:26:58 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 21:26:58 [info]: 📊 Redis: Disabled
+2025-11-30 21:26:58 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 21:26:58 [info]: ✅ Ready to handle requests

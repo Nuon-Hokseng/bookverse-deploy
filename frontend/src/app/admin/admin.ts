@@ -1,8 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BookService, Book } from '../services/book.service';
+import { AdminAuthService } from '../services/admin-auth.service';
+import { PopupService } from '../shared/popup.service';
 import { Router } from '@angular/router';
+import { OrderService, Order } from '../services/order.service';
 
 @Component({
   selector: 'app-admin',
@@ -14,11 +17,23 @@ import { Router } from '@angular/router';
 export class Admin {
   bookService = inject(BookService);
   private router = inject(Router);
+  private adminAuth = inject(AdminAuthService);
+  private popup = inject(PopupService);
+  private orderService = inject(OrderService);
 
   books = this.bookService.books;
   loading = this.bookService.loading;
   error = this.bookService.error;
   showAddForm = false;
+
+  // Tabs: 'books' | 'orders'
+  activeTab: 'books' | 'orders' = 'books';
+
+  // Orders state
+  orders = signal<Order[]>([]);
+  ordersLoading = signal<boolean>(false);
+  ordersError = signal<string | null>(null);
+  savingOrderId = signal<string | null>(null);
 
   newBook = {
     title: '',
@@ -113,5 +128,64 @@ export class Admin {
 
   goBack() {
     this.router.navigate(['/']);
+  }
+
+  adminLogout() {
+    this.adminAuth.logout();
+    this.popup.show('Logged out of admin', {
+      type: 'success',
+      durationMs: 1200,
+    });
+    this.router.navigate(['/admin-login']);
+  }
+
+  setTab(tab: 'books' | 'orders') {
+    this.activeTab = tab;
+    if (tab === 'orders') {
+      this.fetchAllOrders();
+    }
+  }
+
+  private fetchAllOrders() {
+    this.ordersLoading.set(true);
+    this.ordersError.set(null);
+    this.orderService.getAllOrders().subscribe({
+      next: (list) => {
+        this.orders.set(list || []);
+        this.ordersLoading.set(false);
+      },
+      error: (err) => {
+        console.error('Failed to fetch all orders:', err);
+        this.ordersError.set('Failed to load orders.');
+        this.ordersLoading.set(false);
+      },
+    });
+  }
+
+  onChangeStatus(orderId: string, status: 'pending' | 'success' | 'fail') {
+    this.savingOrderId.set(orderId);
+    this.orderService.updateOrderStatus(orderId, status).subscribe({
+      next: (updated) => {
+        // Update local list
+        this.orders.update((curr) =>
+          curr.map((o) =>
+            o._id === orderId ? { ...o, status: updated.status } : o
+          )
+        );
+        this.savingOrderId.set(null);
+        this.popup.show('Order status updated', {
+          type: 'success',
+          durationMs: 1200,
+        });
+      },
+      error: (err) => {
+        console.error('Failed to update status:', err);
+        this.savingOrderId.set(null);
+        this.popup.show('Failed to update order status', {
+          type: 'error',
+          durationMs: 2200,
+        });
+      },
+    });
   }
 }

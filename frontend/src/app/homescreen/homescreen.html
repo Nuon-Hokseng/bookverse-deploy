@@ -17,6 +17,22 @@
   <section id="main" class="text-white text-xl p-5 md:p-10 space-y-5">
     <h1 class="text-2xl md:text-3xl font-semibold">Browse by Genre</h1>
 
+    <!-- Search Active Message -->
+    <div
+      *ngIf="bookService.searchQuery()"
+      class="bg-[#D4AF37] text-black px-4 py-2 rounded-xl flex items-center justify-between"
+    >
+      <span
+        >Searching for: <strong>{{ bookService.searchQuery() }}</strong></span
+      >
+      <button
+        (click)="clearSearch()"
+        class="ml-4 px-3 py-1 bg-[#2A2520] text-white rounded-lg hover:bg-[#3A322B] transition"
+      >
+        Clear Search
+      </button>
+    </div>
+
     <!-- Categories -->
     <div class="overflow-x-auto">
       <ul class="flex space-x-4 md:space-x-10 mt-5">

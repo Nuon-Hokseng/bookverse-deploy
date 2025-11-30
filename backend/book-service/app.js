@@ -6,7 +6,7 @@ import bookRoutes from "./src/routes/book.routes.js";
 
 dotenv.config();
 
-const SERVICE_PORT = process.env.SERVICE_PORT || process.env.PORT || 3004;
+const PORT = process.env.PORT || process.env.SERVICE_PORT || 3000;
 
 const app = express();
 app.use(
@@ -26,8 +26,12 @@ mongoose
   })
   .then(() => {
     console.log("MongoDB connected");
-    app.listen(SERVICE_PORT, () =>
-      console.log(`Book Service running on port ${SERVICE_PORT}`)
+    const server = app.listen(PORT, () =>
+      console.log(`Book Service running on port ${PORT}`)
     );
+    process.on("SIGTERM", () => {
+      console.log("SIGTERM received, shutting down Book Service gracefully...");
+      server.close(() => process.exit(0));
+    });
   })
   .catch((err) => console.error(err));

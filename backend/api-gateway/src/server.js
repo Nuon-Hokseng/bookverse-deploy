@@ -190,6 +190,22 @@ app.get("/health", (req, res) => {
   res.json(health);
 });
 
+// ==================== Root Route ====================
+app.get("/", (req, res) => {
+  res.json({
+    service: "BookVerse API Gateway",
+    version: "1.0.0",
+    status: "running",
+    endpoints: {
+      health: "/health",
+      auth: "/v1/auth",
+      books: "/v1/books",
+      cart: "/v1/cart",
+      orders: "/v1/orders",
+    },
+  });
+});
+
 // ==================== Service Routes ====================
 
 // Configure routes based on service registry

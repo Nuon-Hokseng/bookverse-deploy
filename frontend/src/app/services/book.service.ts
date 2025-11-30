@@ -15,11 +15,12 @@ export interface Book {
 @Injectable({ providedIn: 'root' })
 export class BookService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:3000/v1/books'; // API Gateway
+  private apiUrl = 'https://gateway-service-mddd.onrender.com/v1/books'; // API Gateway
 
   books = signal<Book[]>([]);
   loading = signal<boolean>(false);
   error = signal<string | null>(null);
+  searchQuery = signal<string>('');
 
   fetchBooks() {
     this.loading.set(true);
@@ -71,5 +72,14 @@ export class BookService {
         return id;
       })
     );
+  }
+
+  setSearchQuery(query: string) {
+    console.log('[BookService] Setting search query:', query);
+    this.searchQuery.set(query);
+  }
+
+  clearSearch() {
+    this.searchQuery.set('');
   }
 }
