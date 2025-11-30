@@ -1,5 +1,24 @@
-[dotenv@17.2.3] injecting env (4) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
-[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (4) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
 Auth Service running on port 5000
-MongoDB connection error: C0689955EC7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
-
+MongoDB connected!
+[Refresh Token] Request received, cookie present: true
+[Refresh Token] Cookies: {
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjlmNzc2Mzg1ODhhZjA0NGRkMzY1NSIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ0OTI5OTksImV4cCI6MTc2NTA5Nzc5OX0.vAS0BC6Ub78LUT-fLQEyy_fIOdL8_2qQegfuVLAgJjI',
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjlmNzc2Mzg1ODhhZjA0NGRkMzY1NSIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ0OTMwMjMsImV4cCI6MTc2NDQ5NjYyM30.EnG_Aqic7wUT2oeAG6ECCHB_sEmEMPgHDWynAFyE4Po'
+}
+[Refresh Token] Token decoded, user ID: 6929f77638588af044dd3655
+[Refresh Token] User found: true
+[Refresh Token] Token from cookie: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M...
+[Refresh Token] Token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M...
+[Refresh Token] Tokens match: true
+[Refresh Token] Request received, cookie present: true
+[Refresh Token] Cookies: {
+  refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjlmNzc2Mzg1ODhhZjA0NGRkMzY1NSIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ0OTI5OTksImV4cCI6MTc2NTA5Nzc5OX0.vAS0BC6Ub78LUT-fLQEyy_fIOdL8_2qQegfuVLAgJjI',
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjlmNzc2Mzg1ODhhZjA0NGRkMzY1NSIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ0OTMyMTYsImV4cCI6MTc2NDQ5NjgxNn0.CgoTqLxC8HnU43C88CyDqg3A3q6Bhbnmiuw5OViBCyU'
+}
+[Refresh Token] Token decoded, user ID: 6929f77638588af044dd3655
+[Refresh Token] User found: true
+[Refresh Token] Token from cookie: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M...
+[Refresh Token] Token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M...
+[Refresh Token] Tokens match: true

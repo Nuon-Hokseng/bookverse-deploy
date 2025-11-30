@@ -984,3 +984,493 @@
 2025-11-29 02:17:17 [info]: GET /v1/books
 2025-11-29 02:17:32 [info]: GET /v1/books
 2025-11-29 02:17:36 [info]: DELETE /v1/books/692573bc154d8e8a803b4952
+2025-11-29 10:00:54 [info]: Redis disabled, using in-memory rate limiting
+2025-11-29 10:00:54 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-29 10:00:54 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-29 10:00:54 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-29 10:00:54 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-29 10:00:54 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-29 10:00:54 [info]: 🚀 API Gateway started successfully
+2025-11-29 10:00:54 [info]: 📍 Environment: development
+2025-11-29 10:00:54 [info]: 🌐 Port: 3000
+2025-11-29 10:00:54 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-29 10:00:54 [info]: 📊 Redis: Disabled
+2025-11-29 10:00:54 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-29 10:00:54 [info]: ✅ Ready to handle requests
+2025-11-29 10:02:06 [info]: GET /v1/books
+2025-11-29 10:02:16 [info]: GET /v1/books
+2025-11-29 10:02:21 [info]: GET /v1/books
+2025-11-29 10:02:32 [info]: GET /v1/books
+2025-11-29 10:03:06 [info]: POST /v1/books
+2025-11-29 10:03:12 [info]: GET /v1/books
+2025-11-29 10:05:22 [info]: GET /v1/auth/refresh
+2025-11-29 10:05:22 [info]: GET /v1/books
+2025-11-29 10:05:40 [info]: GET /v1/books
+2025-11-29 10:05:48 [info]: GET /v1/books
+2025-11-29 10:06:27 [info]: Redis disabled, using in-memory rate limiting
+2025-11-29 10:06:27 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-29 10:06:27 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-29 10:06:27 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-29 10:06:27 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-29 10:06:27 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-29 10:06:27 [info]: 🚀 API Gateway started successfully
+2025-11-29 10:06:27 [info]: 📍 Environment: development
+2025-11-29 10:06:27 [info]: 🌐 Port: 3000
+2025-11-29 10:06:27 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-29 10:06:27 [info]: 📊 Redis: Disabled
+2025-11-29 10:06:27 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-29 10:06:27 [info]: ✅ Ready to handle requests
+2025-11-29 10:06:44 [info]: GET /v1/auth/refresh
+2025-11-29 10:06:44 [info]: GET /v1/books
+2025-11-29 10:07:56 [info]: POST /v1/auth/login
+2025-11-29 10:07:56 [info]: GET /v1/cart/cart
+2025-11-29 10:07:56 [warn]: Authentication failed: No token provided for GET /cart
+2025-11-29 10:07:59 [info]: GET /v1/books
+2025-11-29 10:08:04 [info]: GET /v1/books
+2025-11-29 10:08:30 [info]: GET /v1/books
+2025-11-29 10:13:30 [info]: GET /v1/auth/refresh
+2025-11-29 10:13:30 [info]: GET /v1/books
+2025-11-29 10:13:48 [info]: POST /v1/auth/login
+2025-11-29 10:13:48 [info]: GET /v1/cart/cart
+2025-11-29 10:13:48 [warn]: Authentication failed: No token provided for GET /cart
+2025-11-29 10:14:06 [info]: GET /v1/auth/refresh
+2025-11-29 10:14:06 [info]: GET /v1/books
+2025-11-29 10:14:22 [info]: POST /v1/auth/register
+2025-11-29 10:14:22 [info]: GET /v1/cart/cart
+2025-11-29 10:14:22 [warn]: Authentication failed: No token provided for GET /cart
+2025-11-29 10:16:26 [info]: Redis disabled, using in-memory rate limiting
+2025-11-29 10:16:26 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-29 10:16:26 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-29 10:16:26 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-29 10:16:26 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-29 10:16:26 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-29 10:16:26 [info]: 🚀 API Gateway started successfully
+2025-11-29 10:16:26 [info]: 📍 Environment: development
+2025-11-29 10:16:26 [info]: 🌐 Port: 3000
+2025-11-29 10:16:26 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-29 10:16:26 [info]: 📊 Redis: Disabled
+2025-11-29 10:16:26 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-29 10:16:26 [info]: ✅ Ready to handle requests
+2025-11-29 10:17:20 [info]: GET /v1/books
+2025-11-29 10:18:41 [info]: POST /v1/cart/cart/add
+2025-11-29 10:18:41 [warn]: Invalid token for POST /cart/add: jwt malformed
+2025-11-29 10:20:32 [info]: GET /v1/auth/refresh
+2025-11-29 10:20:32 [info]: GET /v1/books
+2025-11-29 10:20:45 [info]: POST /v1/auth/login
+2025-11-29 10:20:45 [info]: GET /v1/cart/cart
+2025-11-29 10:20:45 [warn]: Authentication failed: No token provided for GET /cart
+2025-11-29 10:23:08 [info]: Redis disabled, using in-memory rate limiting
+2025-11-29 10:23:08 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-29 10:23:08 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-29 10:23:08 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-29 10:23:08 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-29 10:23:08 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-29 10:23:08 [info]: 🚀 API Gateway started successfully
+2025-11-29 10:23:08 [info]: 📍 Environment: development
+2025-11-29 10:23:08 [info]: 🌐 Port: 3000
+2025-11-29 10:23:08 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-29 10:23:08 [info]: 📊 Redis: Disabled
+2025-11-29 10:23:08 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-29 10:23:08 [info]: ✅ Ready to handle requests
+2025-11-29 10:23:34 [info]: GET /v1/auth/refresh
+2025-11-29 10:23:38 [info]: GET /v1/auth/refresh
+2025-11-29 10:23:38 [info]: GET /v1/books
+2025-11-29 10:23:55 [info]: POST /v1/auth/login
+2025-11-29 10:24:01 [info]: POST /v1/auth/login
+2025-11-29 10:24:01 [info]: GET /v1/cart/cart
+2025-11-29 10:24:01 [warn]: Invalid token for GET /cart: invalid signature
+2025-11-29 13:48:49 [info]: GET /
+2025-11-29 13:48:49 [warn]: 404 Not Found: GET /
+2025-11-29 13:48:49 [info]: GET /favicon.ico
+2025-11-29 13:48:49 [warn]: 404 Not Found: GET /favicon.ico
+2025-11-29 14:14:16 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-29 14:14:16 [info]: HTTP server closed
+2025-11-29 14:14:17 [info]: Shutdown complete, exiting process
+2025-11-30 15:22:17 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 15:22:17 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 15:22:17 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 15:22:17 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 15:22:17 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 15:22:17 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 15:22:17 [info]: 🚀 API Gateway started successfully
+2025-11-30 15:22:17 [info]: 📍 Environment: development
+2025-11-30 15:22:17 [info]: 🌐 Port: 3000
+2025-11-30 15:22:17 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 15:22:17 [info]: 📊 Redis: Disabled
+2025-11-30 15:22:17 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 15:22:17 [info]: ✅ Ready to handle requests
+2025-11-30 15:24:23 [info]: GET /v1/auth/refresh
+2025-11-30 15:24:23 [info]: GET /v1/books
+2025-11-30 15:25:04 [info]: POST /v1/auth/login
+2025-11-30 15:25:04 [info]: GET /v1/cart/cart
+2025-11-30 15:25:04 [warn]: Invalid token for GET /cart: invalid signature
+2025-11-30 15:27:38 [info]: GET /v1/auth/refresh
+2025-11-30 15:27:40 [info]: GET /v1/auth/refresh
+2025-11-30 15:28:54 [info]: GET /v1/auth/refresh
+2025-11-30 15:29:38 [info]: GET /v1/auth/refresh
+2025-11-30 15:29:39 [info]: GET /v1/books
+2025-11-30 15:30:25 [info]: GET /v1/books
+2025-11-30 15:30:38 [info]: POST /v1/auth/login
+2025-11-30 15:30:38 [info]: GET /v1/cart
+2025-11-30 15:30:38 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:30:40 [info]: POST /v1/cart/add
+2025-11-30 15:30:40 [warn]: Invalid token for POST /add: invalid signature
+2025-11-30 15:30:44 [info]: GET /v1/auth/refresh
+2025-11-30 15:30:46 [info]: GET /v1/books
+2025-11-30 08:34:09 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 08:34:09 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-30 08:34:09 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-30 08:34:09 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-30 08:34:09 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-30 08:34:09 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-30 08:34:09 [info]: 🚀 API Gateway started successfully
+2025-11-30 08:34:09 [info]: 📍 Environment: development
+2025-11-30 08:34:09 [info]: 🌐 Port: 3000
+2025-11-30 08:34:09 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 08:34:09 [info]: 📊 Redis: Disabled
+2025-11-30 08:34:09 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 08:34:09 [info]: ✅ Ready to handle requests
+2025-11-30 08:34:52 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-30 08:34:52 [info]: HTTP server closed
+2025-11-30 08:34:52 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 08:34:52 [info]: HTTP server closed
+2025-11-30 08:34:52 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 08:34:52 [info]: HTTP server closed
+2025-11-30 08:34:53 [info]: Shutdown complete, exiting process
+2025-11-30 08:35:07 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 08:35:07 [info]: Configuring route: /v1/auth -> http://auth-service:5000 (Auth: false)
+2025-11-30 08:35:07 [info]: Configuring route: /v1/user -> http://auth-service:5000 (Auth: true)
+2025-11-30 08:35:07 [info]: Configuring route: /v1/books -> http://book-service:3000 (Auth: false)
+2025-11-30 08:35:07 [info]: Configuring route: /v1/cart -> http://cart-service:3001 (Auth: true)
+2025-11-30 08:35:07 [info]: Configuring route: /v1/orders -> http://order-service:3002 (Auth: true)
+2025-11-30 08:35:07 [info]: 🚀 API Gateway started successfully
+2025-11-30 08:35:07 [info]: 📍 Environment: development
+2025-11-30 08:35:07 [info]: 🌐 Port: 3000
+2025-11-30 08:35:07 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 08:35:07 [info]: 📊 Redis: Disabled
+2025-11-30 08:35:07 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 08:35:07 [info]: ✅ Ready to handle requests
+2025-11-30 08:35:49 [info]: GET /v1/auth/refresh
+2025-11-30 08:35:49 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:35:49 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:35:49 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:35:50 [info]: GET /v1/auth/refresh
+2025-11-30 08:35:50 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:35:50 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:35:50 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:35:50 [info]: GET /v1/auth/refresh
+2025-11-30 08:35:50 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:35:50 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:35:50 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:35:50 [info]: GET /v1/auth/refresh
+2025-11-30 08:35:50 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:35:50 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:35:50 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:35:51 [info]: GET /v1/books
+2025-11-30 08:35:51 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:35:51 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:35:51 [info]: GET /v1/auth/refresh
+2025-11-30 08:35:51 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:35:51 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:35:51 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:35:51 [info]: GET /v1/books
+2025-11-30 08:35:51 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:35:51 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:35:52 [info]: GET /v1/auth/refresh
+2025-11-30 08:35:52 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:35:52 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:35:52 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:35:52 [info]: GET /v1/books
+2025-11-30 08:35:52 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:35:52 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:35:52 [info]: GET /v1/auth/refresh
+2025-11-30 08:35:52 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:35:52 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:35:52 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:35:52 [info]: GET /v1/books
+2025-11-30 08:35:52 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:35:52 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:36:04 [info]: POST /v1/auth/login
+2025-11-30 08:36:04 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:36:04 [debug]: Proxying: /v1/auth/login -> http://auth-service:5000/api/auth/login
+2025-11-30 08:36:04 [debug]: Response from http://auth-service:5000: 200
+2025-11-30 08:36:04 [info]: GET /v1/cart
+2025-11-30 08:36:04 [debug]: Auth middleware - Headers: {"host":"localhost:3000","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0","accept":"application/json, text/plain, */*","accept-language":"km,en-US;q=0.5","accept-encoding":"gzip, deflate, br, zstd","origin":"http://localhost:4200","connection":"keep-alive","referer":"http://localhost:4200/","cookie":"refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjlmNzc2Mzg1ODhhZjA0NGRkMzY1NSIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ0OTE3NjQsImV4cCI6MTc2NTA5NjU2NH0.s4LqpozolDJFdzNDR2SAWvHRkzsH-PKuA7qttUBXw_M; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjlmNzc2Mzg1ODhhZjA0NGRkMzY1NSIsImVtYWlsIjoic2VuZ25vbmFtZTE2OEBnbWFpbC5jb20iLCJpYXQiOjE3NjQ0OTE3NjQsImV4cCI6MTc2NDQ5NTM2NH0.CwWjE9DXpIzwlmXZ8y7htr6q4vVjLD6cDdyVz_2g-iU","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site"}
+2025-11-30 08:36:04 [debug]: Auth middleware - Path: /, OriginalUrl: /v1/cart
+2025-11-30 08:36:04 [debug]: Auth middleware - Authorization header: undefined
+2025-11-30 08:36:04 [debug]: Auth middleware - Token extracted from cookie
+2025-11-30 08:36:04 [debug]: User authenticated: sengnoname168@gmail.com (6929f77638588af044dd3655)
+2025-11-30 08:36:04 [debug]: Proxying: /v1/cart -> http://cart-service:3001/api/cart
+2025-11-30 08:36:04 [debug]: Response from http://cart-service:3001: 200
+2025-11-30 08:36:08 [info]: GET /v1/auth/refresh
+2025-11-30 08:36:08 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:36:08 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:36:08 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:36:08 [info]: GET /v1/books
+2025-11-30 08:36:08 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:36:08 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:37:02 [info]: GET /v1/auth/refresh
+2025-11-30 08:37:02 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:37:02 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:37:02 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:37:02 [info]: GET /v1/books
+2025-11-30 08:37:02 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:37:02 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:37:04 [info]: GET /v1/auth/refresh
+2025-11-30 08:37:04 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:37:04 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:37:04 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:37:04 [info]: GET /v1/books
+2025-11-30 08:37:04 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:37:04 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:37:23 [info]: GET /v1/auth/refresh
+2025-11-30 08:37:23 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:37:23 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:37:23 [info]: GET /v1/books
+2025-11-30 08:37:23 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:37:23 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 15:37:34 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 15:37:34 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 15:37:34 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 15:37:34 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 15:37:34 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 15:37:34 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 15:37:34 [info]: 🚀 API Gateway started successfully
+2025-11-30 15:37:34 [info]: 📍 Environment: development
+2025-11-30 15:37:34 [info]: 🌐 Port: 3000
+2025-11-30 15:37:34 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 15:37:34 [info]: 📊 Redis: Disabled
+2025-11-30 15:37:34 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 15:37:34 [info]: ✅ Ready to handle requests
+2025-11-30 08:37:48 [info]: GET /v1/auth/refresh
+2025-11-30 08:37:48 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:37:48 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:37:48 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:37:48 [info]: GET /v1/books
+2025-11-30 08:37:48 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:37:48 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:37:49 [info]: GET /v1/auth/refresh
+2025-11-30 08:37:49 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:37:49 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:37:49 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:37:49 [info]: GET /v1/books
+2025-11-30 08:37:49 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:37:49 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:38:06 [info]: GET /v1/auth/refresh
+2025-11-30 08:38:06 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:38:06 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:38:06 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:38:06 [info]: GET /v1/books
+2025-11-30 08:38:06 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:38:06 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:38:07 [info]: GET /v1/auth/refresh
+2025-11-30 08:38:07 [debug]: Optional auth: User authenticated: sengnoname168@gmail.com
+2025-11-30 08:38:07 [debug]: Proxying: /v1/auth/refresh -> http://auth-service:5000/api/auth/refresh
+2025-11-30 08:38:07 [debug]: Response from http://auth-service:5000: 404
+2025-11-30 08:38:07 [info]: GET /v1/books
+2025-11-30 08:38:07 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:38:07 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:39:39 [info]: GET /health
+2025-11-30 08:39:45 [info]: GET /v1/books
+2025-11-30 08:39:45 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:39:45 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 15:41:01 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 15:41:01 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 15:41:01 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 15:41:01 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 15:41:01 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 15:41:01 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 15:41:01 [info]: 🚀 API Gateway started successfully
+2025-11-30 15:41:01 [info]: 📍 Environment: development
+2025-11-30 15:41:01 [info]: 🌐 Port: 3000
+2025-11-30 15:41:01 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 15:41:01 [info]: 📊 Redis: Disabled
+2025-11-30 15:41:01 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 15:41:01 [info]: ✅ Ready to handle requests
+2025-11-30 08:41:41 [info]: GET /v1/books
+2025-11-30 08:41:41 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:41:41 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:41:41 [info]: GET /v1/books
+2025-11-30 08:41:41 [debug]: Proxying: /v1/books -> http://book-service:3000/api/books
+2025-11-30 08:41:41 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:41:56 [info]: SIGTERM received, starting graceful shutdown...
+2025-11-30 08:41:56 [info]: HTTP server closed
+2025-11-30 08:41:56 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 08:41:56 [info]: HTTP server closed
+2025-11-30 08:41:56 [info]: SIGINT received, starting graceful shutdown...
+2025-11-30 08:41:56 [info]: HTTP server closed
+2025-11-30 08:41:57 [info]: Shutdown complete, exiting process
+2025-11-30 15:42:18 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 15:42:18 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 15:42:18 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 15:42:18 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 15:42:18 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 15:42:18 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 15:42:18 [info]: 🚀 API Gateway started successfully
+2025-11-30 15:42:18 [info]: 📍 Environment: development
+2025-11-30 15:42:18 [info]: 🌐 Port: 3000
+2025-11-30 15:42:18 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 15:42:18 [info]: 📊 Redis: Disabled
+2025-11-30 15:42:18 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 15:42:18 [info]: ✅ Ready to handle requests
+2025-11-30 15:42:29 [info]: GET /v1/books
+2025-11-30 15:42:41 [info]: GET /health
+2025-11-30 15:43:23 [info]: GET /v1/auth/refresh
+2025-11-30 15:43:23 [info]: GET /v1/books
+2025-11-30 15:43:39 [info]: POST /v1/auth/login
+2025-11-30 15:43:40 [info]: GET /v1/cart
+2025-11-30 15:43:40 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:43:44 [info]: GET /v1/books
+2025-11-30 15:43:45 [info]: POST /v1/cart/add
+2025-11-30 15:43:45 [warn]: Invalid token for POST /add: invalid signature
+2025-11-30 15:43:53 [info]: GET /v1/auth/refresh
+2025-11-30 15:46:15 [info]: GET /v1/auth/refresh
+2025-11-30 15:46:16 [info]: GET /v1/auth/refresh
+2025-11-30 15:46:18 [info]: GET /v1/auth/refresh
+2025-11-30 15:47:07 [info]: GET /v1/auth/refresh
+2025-11-30 15:47:20 [info]: GET /v1/auth/refresh
+2025-11-30 15:47:42 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 15:47:42 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 15:47:42 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 15:47:42 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 15:47:42 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 15:47:42 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 15:47:42 [info]: 🚀 API Gateway started successfully
+2025-11-30 15:47:42 [info]: 📍 Environment: development
+2025-11-30 15:47:42 [info]: 🌐 Port: 3000
+2025-11-30 15:47:42 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 15:47:42 [info]: 📊 Redis: Disabled
+2025-11-30 15:47:42 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 15:47:42 [info]: ✅ Ready to handle requests
+2025-11-30 15:48:00 [info]: GET /v1/auth/refresh
+2025-11-30 15:48:33 [info]: GET /v1/auth/refresh
+2025-11-30 15:48:34 [info]: GET /v1/books
+2025-11-30 15:48:44 [info]: POST /v1/auth/login
+2025-11-30 15:48:44 [info]: GET /v1/cart
+2025-11-30 15:48:44 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:48:47 [info]: GET /v1/auth/refresh
+2025-11-30 15:48:47 [info]: GET /v1/books
+2025-11-30 15:49:00 [info]: POST /v1/auth/login
+2025-11-30 15:49:00 [info]: GET /v1/cart
+2025-11-30 15:49:00 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:49:03 [info]: POST /v1/cart/add
+2025-11-30 15:49:03 [warn]: Invalid token for POST /add: invalid signature
+2025-11-30 15:49:07 [info]: GET /v1/books
+2025-11-30 15:49:10 [info]: GET /v1/books
+2025-11-30 15:50:59 [info]: GET /v1/auth/refresh
+2025-11-30 15:51:16 [info]: POST /v1/auth/login
+2025-11-30 15:51:41 [info]: GET /v1/auth/refresh
+2025-11-30 15:51:41 [info]: GET /v1/books
+2025-11-30 15:52:41 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 15:52:41 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 15:52:41 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 15:52:41 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 15:52:41 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 15:52:41 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 15:52:41 [info]: 🚀 API Gateway started successfully
+2025-11-30 15:52:41 [info]: 📍 Environment: development
+2025-11-30 15:52:41 [info]: 🌐 Port: 3000
+2025-11-30 15:52:41 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 15:52:41 [info]: 📊 Redis: Disabled
+2025-11-30 15:52:41 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 15:52:41 [info]: ✅ Ready to handle requests
+2025-11-30 15:52:56 [info]: POST /v1/auth/login
+2025-11-30 15:53:06 [info]: POST /v1/auth/register
+2025-11-30 15:53:14 [info]: GET /v1/auth/refresh
+2025-11-30 15:53:40 [info]: POST /v1/auth/login
+2025-11-30 15:53:48 [info]: POST /v1/auth/login
+2025-11-30 15:53:55 [info]: GET /v1/auth/refresh
+2025-11-30 15:54:31 [info]: GET /v1/auth/refresh
+2025-11-30 15:54:52 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 15:54:52 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 15:54:52 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 15:54:52 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 15:54:52 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 15:54:52 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 15:54:52 [info]: 🚀 API Gateway started successfully
+2025-11-30 15:54:52 [info]: 📍 Environment: development
+2025-11-30 15:54:52 [info]: 🌐 Port: 3000
+2025-11-30 15:54:52 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 15:54:52 [info]: 📊 Redis: Disabled
+2025-11-30 15:54:52 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 15:54:52 [info]: ✅ Ready to handle requests
+2025-11-30 15:55:02 [info]: GET /v1/auth/refresh
+2025-11-30 15:55:32 [info]: POST /v1/auth/login
+2025-11-30 15:55:41 [info]: GET /v1/auth/refresh
+2025-11-30 15:56:07 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 15:56:07 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 15:56:07 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 15:56:07 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 15:56:07 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 15:56:07 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 15:56:07 [info]: 🚀 API Gateway started successfully
+2025-11-30 15:56:07 [info]: 📍 Environment: development
+2025-11-30 15:56:07 [info]: 🌐 Port: 3000
+2025-11-30 15:56:07 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 15:56:07 [info]: 📊 Redis: Disabled
+2025-11-30 15:56:07 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 15:56:07 [info]: ✅ Ready to handle requests
+2025-11-30 15:56:17 [info]: POST /v1/auth/login
+2025-11-30 15:56:18 [info]: GET /v1/auth/refresh
+2025-11-30 15:56:36 [info]: GET /v1/books
+2025-11-30 15:56:39 [info]: POST /v1/auth/login
+2025-11-30 15:56:39 [info]: GET /v1/cart
+2025-11-30 15:56:39 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:56:41 [info]: GET /v1/auth/refresh
+2025-11-30 15:56:41 [info]: GET /v1/books
+2025-11-30 15:56:41 [info]: GET /v1/cart
+2025-11-30 15:56:41 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:56:43 [info]: GET /v1/auth/refresh
+2025-11-30 15:56:44 [info]: GET /v1/books
+2025-11-30 15:56:44 [info]: GET /v1/cart
+2025-11-30 15:56:44 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:56:45 [info]: POST /v1/cart/add
+2025-11-30 15:56:45 [warn]: Invalid token for POST /add: invalid signature
+2025-11-30 15:56:48 [info]: GET /v1/auth/refresh
+2025-11-30 15:56:48 [info]: GET /v1/cart
+2025-11-30 15:56:48 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:56:51 [info]: GET /v1/books
+2025-11-30 15:56:51 [info]: GET /v1/auth/refresh
+2025-11-30 15:56:51 [info]: GET /v1/books
+2025-11-30 15:56:52 [info]: GET /v1/cart
+2025-11-30 15:56:52 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:56:53 [info]: GET /v1/auth/refresh
+2025-11-30 15:56:53 [info]: GET /v1/books
+2025-11-30 15:56:54 [info]: GET /v1/cart
+2025-11-30 15:56:54 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:56:59 [info]: POST /v1/cart/add
+2025-11-30 15:56:59 [warn]: Invalid token for POST /add: invalid signature
+2025-11-30 15:57:03 [info]: GET /v1/auth/refresh
+2025-11-30 15:57:03 [info]: GET /v1/cart
+2025-11-30 15:57:03 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:57:39 [info]: GET /v1/cart
+2025-11-30 15:57:39 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:57:39 [info]: POST /v1/cart/add
+2025-11-30 15:57:39 [warn]: Invalid token for POST /add: invalid signature
+2025-11-30 15:58:30 [info]: GET /v1/cart
+2025-11-30 15:58:30 [warn]: Invalid token for GET /: invalid signature
+2025-11-30 15:58:48 [info]: Redis disabled, using in-memory rate limiting
+2025-11-30 15:58:48 [info]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 15:58:48 [info]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 15:58:48 [info]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 15:58:48 [info]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 15:58:48 [info]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 15:58:48 [info]: 🚀 API Gateway started successfully
+2025-11-30 15:58:48 [info]: 📍 Environment: development
+2025-11-30 15:58:48 [info]: 🌐 Port: 3000
+2025-11-30 15:58:48 [info]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 15:58:48 [info]: 📊 Redis: Disabled
+2025-11-30 15:58:48 [info]: 🛡️  Rate Limiting: Enabled
+2025-11-30 15:58:48 [info]: ✅ Ready to handle requests
+2025-11-30 15:58:53 [info]: POST /v1/auth/login
+2025-11-30 15:58:53 [info]: GET /v1/cart
+2025-11-30 15:59:13 [info]: POST /v1/cart/add
+2025-11-30 15:59:13 [info]: GET /v1/cart
+2025-11-30 16:00:16 [info]: GET /v1/auth/refresh
+2025-11-30 16:00:16 [info]: GET /v1/cart
+2025-11-30 16:00:18 [info]: GET /v1/books
+2025-11-30 16:00:20 [info]: POST /v1/cart/add
+2025-11-30 16:00:21 [info]: POST /v1/cart/add
+2025-11-30 16:00:23 [info]: GET /v1/auth/refresh
+2025-11-30 16:00:23 [info]: GET /v1/cart
+2025-11-30 16:00:38 [info]: GET /v1/books

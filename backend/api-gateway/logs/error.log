@@ -34,3 +34,18 @@
     at Socket.emit (node:events:519:28)
     at TCP.<anonymous> (node:net:346:12)
 2025-11-25 16:06:57 [error]: Unhandled Rejection at: [object Promise], reason: MaxRetriesPerRequestError: Reached the max retries per request limit (which is 3). Refer to "maxRetriesPerRequest" option for details.
+2025-11-30 08:35:51 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:35:51 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:35:52 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:35:52 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:36:08 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:37:02 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:37:04 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:37:23 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:37:48 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:37:49 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:38:06 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:38:07 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:39:45 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:41:41 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000
+2025-11-30 08:41:41 [error]: Proxy error to http://book-service:3000: connect ECONNREFUSED 172.18.0.2:3000

@@ -1,51 +1,26 @@
-[dotenv@17.2.3] injecting env (5) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
-2025-11-29 02:01:16 [[32minfo[39m]: Redis disabled, using in-memory rate limiting
-2025-11-29 02:01:16 [[32minfo[39m]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
-2025-11-29 02:01:16 [[32minfo[39m]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
-2025-11-29 02:01:16 [[32minfo[39m]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
-2025-11-29 02:01:16 [[32minfo[39m]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
-2025-11-29 02:01:16 [[32minfo[39m]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
-2025-11-29 02:01:16 [[32minfo[39m]: 🚀 API Gateway started successfully
-2025-11-29 02:01:16 [[32minfo[39m]: 📍 Environment: development
-2025-11-29 02:01:16 [[32minfo[39m]: 🌐 Port: 3000
-2025-11-29 02:01:16 [[32minfo[39m]: 🔒 CORS Origin: http://localhost:4200
-2025-11-29 02:01:16 [[32minfo[39m]: 📊 Redis: Disabled
-2025-11-29 02:01:16 [[32minfo[39m]: 🛡️  Rate Limiting: Enabled
-2025-11-29 02:01:16 [[32minfo[39m]: ✅ Ready to handle requests
-2025-11-29 02:01:40 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:01:49 [[32minfo[39m]: DELETE /v1/books/1
-2025-11-29 02:02:11 [[32minfo[39m]: DELETE /v1/books/2
-2025-11-29 02:02:27 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:02:46 [[32minfo[39m]: DELETE /v1/books/692573bc154d8e8a803b494f
-2025-11-29 02:04:19 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:05:05 [[32minfo[39m]: POST /v1/books
-2025-11-29 02:05:36 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:05:58 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:06:24 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:06:59 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:07:07 [[32minfo[39m]: DELETE /v1/books/692573bc154d8e8a803b4950
-2025-11-29 02:07:47 [[32minfo[39m]: POST /v1/books
-2025-11-29 02:07:54 [[32minfo[39m]: POST /v1/books
-2025-11-29 02:09:57 [[32minfo[39m]: POST /v1/books
-2025-11-29 02:10:28 [[32minfo[39m]: POST /v1/books
-2025-11-29 02:10:36 [[32minfo[39m]: DELETE /v1/books/6929f3a4d0bc1ebc58877328
-2025-11-29 02:11:21 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:11:36 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:11:52 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:12:02 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:12:06 [[32minfo[39m]: DELETE /v1/books/692573bc154d8e8a803b4951
-2025-11-29 02:12:09 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:12:15 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:12:42 [[32minfo[39m]: POST /v1/books
-2025-11-29 02:12:47 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:14:14 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:14:27 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:15:00 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:15:18 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:15:35 [[32minfo[39m]: POST /v1/books
-2025-11-29 02:15:42 [[32minfo[39m]: GET /v1/books/6929f4d7d0bc1ebc58877339
-2025-11-29 02:15:54 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:17:07 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:17:17 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:17:32 [[32minfo[39m]: GET /v1/books
-2025-11-29 02:17:36 [[32minfo[39m]: DELETE /v1/books/692573bc154d8e8a803b4952
+[dotenv@17.2.3] injecting env (6) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2025-11-30 15:58:48 [[32minfo[39m]: Redis disabled, using in-memory rate limiting
+2025-11-30 15:58:48 [[32minfo[39m]: Configuring route: /v1/auth -> http://localhost:5000 (Auth: false)
+2025-11-30 15:58:48 [[32minfo[39m]: Configuring route: /v1/user -> http://localhost:5000 (Auth: true)
+2025-11-30 15:58:48 [[32minfo[39m]: Configuring route: /v1/books -> http://localhost:3004 (Auth: false)
+2025-11-30 15:58:48 [[32minfo[39m]: Configuring route: /v1/cart -> http://localhost:3001 (Auth: true)
+2025-11-30 15:58:48 [[32minfo[39m]: Configuring route: /v1/orders -> http://localhost:3002 (Auth: true)
+2025-11-30 15:58:48 [[32minfo[39m]: 🚀 API Gateway started successfully
+2025-11-30 15:58:48 [[32minfo[39m]: 📍 Environment: development
+2025-11-30 15:58:48 [[32minfo[39m]: 🌐 Port: 3000
+2025-11-30 15:58:48 [[32minfo[39m]: 🔒 CORS Origin: http://localhost:4200
+2025-11-30 15:58:48 [[32minfo[39m]: 📊 Redis: Disabled
+2025-11-30 15:58:48 [[32minfo[39m]: 🛡️  Rate Limiting: Enabled
+2025-11-30 15:58:48 [[32minfo[39m]: ✅ Ready to handle requests
+2025-11-30 15:58:53 [[32minfo[39m]: POST /v1/auth/login
+2025-11-30 15:58:53 [[32minfo[39m]: GET /v1/cart
+2025-11-30 15:59:13 [[32minfo[39m]: POST /v1/cart/add
+2025-11-30 15:59:13 [[32minfo[39m]: GET /v1/cart
+2025-11-30 16:00:16 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 16:00:16 [[32minfo[39m]: GET /v1/cart
+2025-11-30 16:00:18 [[32minfo[39m]: GET /v1/books
+2025-11-30 16:00:20 [[32minfo[39m]: POST /v1/cart/add
+2025-11-30 16:00:21 [[32minfo[39m]: POST /v1/cart/add
+2025-11-30 16:00:23 [[32minfo[39m]: GET /v1/auth/refresh
+2025-11-30 16:00:23 [[32minfo[39m]: GET /v1/cart
+2025-11-30 16:00:38 [[32minfo[39m]: GET /v1/books
